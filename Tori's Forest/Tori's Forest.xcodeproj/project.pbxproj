@@ -11,6 +11,16 @@
 		13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBE2A2AD970009543C6 /* ContentView.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
 		13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */; };
+		5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */; };
+		5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FAD2A2CCC3500E426EE /* MainView.swift */; };
+		5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */; };
+		5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FB12A2CCFB200E426EE /* PlantPotView.swift */; };
+		5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FB32A2CD1C600E426EE /* MissionBox.swift */; };
+		5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */; };
+		5B254FBC2A2CE7D300E426EE /* Stroy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FBB2A2CE7D300E426EE /* Stroy.swift */; };
+		5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FBD2A2CEE2300E426EE /* GardenView.swift */; };
+		5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */; };
+		5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		13E09BBE2A2AD970009543C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13E09BC02A2AD971009543C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChangeButton.swift; sourceTree = "<group>"; };
+		5B254FAD2A2CCC3500E426EE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBox.swift; sourceTree = "<group>"; };
+		5B254FB12A2CCFB200E426EE /* PlantPotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPotView.swift; sourceTree = "<group>"; };
+		5B254FB32A2CD1C600E426EE /* MissionBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionBox.swift; sourceTree = "<group>"; };
+		5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSelectView.swift; sourceTree = "<group>"; };
+		5B254FBB2A2CE7D300E426EE /* Stroy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroy.swift; sourceTree = "<group>"; };
+		5B254FBD2A2CEE2300E426EE /* GardenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenView.swift; sourceTree = "<group>"; };
+		5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantHistoryView.swift; sourceTree = "<group>"; };
+		5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +72,17 @@
 			isa = PBXGroup;
 			children = (
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
+				5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */,
+				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
 				13E09BBE2A2AD970009543C6 /* ContentView.swift */,
+				5B254FAD2A2CCC3500E426EE /* MainView.swift */,
+				5B254FB32A2CD1C600E426EE /* MissionBox.swift */,
+				5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */,
+				5B254FB12A2CCFB200E426EE /* PlantPotView.swift */,
+				5B254FBD2A2CEE2300E426EE /* GardenView.swift */,
+				5B254FBB2A2CE7D300E426EE /* Stroy.swift */,
+				5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */,
+				5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */,
 				13E09BC02A2AD971009543C6 /* Assets.xcassets */,
 				13E09BC22A2AD971009543C6 /* Preview Content */,
 			);
@@ -138,7 +168,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */,
+				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
+				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
+				5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */,
+				5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */,
 				13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */,
+				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
+				5B254FBC2A2CE7D300E426EE /* Stroy.swift in Sources */,
+				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
+				5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */,
+				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
+				5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
