@@ -21,6 +21,8 @@
 		5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FBD2A2CEE2300E426EE /* GardenView.swift */; };
 		5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */; };
 		5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */; };
+		5B254FC42A2DF98300E426EE /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */; };
+		5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC52A2E00C700E426EE /* DiaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		5B254FBD2A2CEE2300E426EE /* GardenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenView.swift; sourceTree = "<group>"; };
 		5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantHistoryView.swift; sourceTree = "<group>"; };
 		5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterOverView.swift; sourceTree = "<group>"; };
+		5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
+		5B254FC52A2E00C700E426EE /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 				5B254FAD2A2CCC3500E426EE /* MainView.swift */,
 				5B254FB32A2CD1C600E426EE /* MissionBox.swift */,
 				5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */,
+				5B254FC52A2E00C700E426EE /* DiaryView.swift */,
 				5B254FB12A2CCFB200E426EE /* PlantPotView.swift */,
 				5B254FBD2A2CEE2300E426EE /* GardenView.swift */,
 				5B254FBB2A2CE7D300E426EE /* Stroy.swift */,
 				5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */,
 				5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */,
+				5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */,
 				13E09BC02A2AD971009543C6 /* Assets.xcassets */,
 				13E09BC22A2AD971009543C6 /* Preview Content */,
 			);
@@ -167,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B254FC42A2DF98300E426EE /* CustomProgressBar.swift in Sources */,
 				13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */,
 				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
@@ -176,6 +183,7 @@
 				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
 				5B254FBC2A2CE7D300E426EE /* Stroy.swift in Sources */,
 				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
+				5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */,
 				5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */,
 				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
 				5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */,
