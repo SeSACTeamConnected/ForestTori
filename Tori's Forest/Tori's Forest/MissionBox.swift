@@ -10,6 +10,7 @@ import SwiftUI
 struct MissionBox: View {
     @State var idx: Int = 0
     @Binding var mission: String
+    @Binding var showDiaryView: Bool
     @Binding var isMissionCompleted: Bool
     
     var body: some View {
@@ -21,11 +22,11 @@ struct MissionBox: View {
         }
         .padding()
         .onTapGesture {
+            showDiaryView.toggle()
             isMissionCompleted.toggle()
         }
     }
 }
-
 
 struct MissionBox_Previews: PreviewProvider {
     static var previews: some View {

@@ -15,6 +15,7 @@ struct MessageBox: View {
     @Binding var messages: Message
     @Binding var isMissionCompleted: Bool
     @Binding var isChapterCompleted: Bool
+    @Binding var isEmpty: Bool
     @Binding var days: Int
     
     var body: some View {
@@ -34,6 +35,7 @@ struct MessageBox: View {
                     if plantStage == days {
                         plantStage = 0
                         isChapterCompleted.toggle()
+                        isEmpty.toggle()
                     }
             }
         }

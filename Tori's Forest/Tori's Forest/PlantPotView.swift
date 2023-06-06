@@ -14,6 +14,7 @@ struct PlantPotView: View {
     @State var plantIndex: Int = 0
     @State var plantStage: Int = 0
     @State var showPlantSelectView: Bool = false
+    @State var showDiaryView: Bool = false
     @State var isMissionCompleted: Bool = false
     @State var isChapterCompleted: Bool = false
 
@@ -26,7 +27,7 @@ struct PlantPotView: View {
             HStack {
                 ViewChangeButton(viewName: $viewName)
                 Spacer()
-                Text("프로그레스")
+                CustomProgressBar(plantStage: $plantStage, days: $days)
             }
             .padding()
 //            MessageBox(messages: $messages)
@@ -37,19 +38,22 @@ struct PlantPotView: View {
                     .onTapGesture {
                         self.showPlantSelectView.toggle()
                     }
-                    .sheet(isPresented: self.$showPlantSelectView) {
-                        PlantSelectView(isEmpty: $isEmpty, showPlantSelectView: $showPlantSelectView, plants: $plants, plantIndex: $plantIndex)
-                        //                        .presentationBackground(.clear)
-                    }
                 } else {
                     if isMissionCompleted {
-                        MessageBox(plantStage: $plantStage, chapterID: $chapterID, messages: $plants[plantIndex].messages[plantStage], isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted, days: $days)
+                        MessageBox(plantStage: $plantStage, chapterID: $chapterID, messages: $plants[plantIndex].messages[plantStage], isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted, isEmpty: $isEmpty, days: $days)
                     }
                     Image(plants[plantIndex].images[plantStage])
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                    MissionBox(mission: $plants[plantIndex].missions[plantStage], isMissionCompleted: $isMissionCompleted)
+                    MissionBox(mission: $plants[plantIndex].missions[plantStage], showDiaryView: $showDiaryView, isMissionCompleted: $isMissionCompleted)
             }
+        }
+        .sheet(isPresented: self.$showPlantSelectView) {
+            PlantSelectView(isEmpty: $isEmpty, showPlantSelectView: $showPlantSelectView, plants: $plants, plantIndex: $plantIndex)
+            //                        .presentationBackground(.clear)
+        }
+        .sheet(isPresented: self.$showDiaryView) {
+            DiaryView(showDiaryView: $showDiaryView)
         }
         .sheet(isPresented: $isChapterCompleted) {
             ChapterOverView(chapterID: $chapterID, isChapterCompleted: $isChapterCompleted)
