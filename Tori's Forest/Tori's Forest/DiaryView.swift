@@ -10,8 +10,9 @@ import SwiftUI
 struct DiaryView: View {
     @Binding var showDiaryView: Bool
     @State private var imageDiscription : String =  ""
-    @State private var isShowingImagePicker = false
     @State private var isShowingActionSheet = false
+    @State private var isShowingCameraPicker = false
+    @State private var isShowingPhotoLibraryPicker = false
     @State private var selectedImage: UIImage?
     
     var body: some View {
@@ -31,7 +32,7 @@ struct DiaryView: View {
                          }
                          .padding()
                          Button(action: {
-                                              isShowingActionSheet = true
+                                           isShowingActionSheet = true
                                           }) {
                                               if let image = selectedImage {
                                                   Image(uiImage: image)
@@ -55,17 +56,20 @@ struct DiaryView: View {
                                           .actionSheet(isPresented: $isShowingActionSheet) {
                                               ActionSheet(title: Text("이미지 선택"), message: nil, buttons: [
                                                  .default(Text("사진 찍기"), action: {
-                                                     isShowingImagePicker = true
+                                                     isShowingCameraPicker = true
                                                  }),
                                                  .default(Text("이미지 선택"), action: {
-                                                     isShowingImagePicker = true
+                                                     isShowingPhotoLibraryPicker = true
                                                  }),
                                                  .cancel()
                                               ])
                                           }
-                                          .sheet(isPresented: $isShowingImagePicker, onDismiss: loadImage) {
-                                              ImagePicker(selectedImage: $selectedImage, sourceType: .camera)
-                                          }
+                                          .sheet(isPresented: $isShowingCameraPicker, onDismiss: loadImage) {
+                                                        ImagePicker(selectedImage: $selectedImage, sourceType: .camera)
+                                                    }
+                                          .sheet(isPresented: $isShowingPhotoLibraryPicker, onDismiss: loadImage) {
+                                                        ImagePicker(selectedImage: $selectedImage, sourceType: .photoLibrary)
+                                                    }
                         HStack{
                             TextField("오늘 하루 어땠나요?",text: $imageDiscription)
                                 .padding()

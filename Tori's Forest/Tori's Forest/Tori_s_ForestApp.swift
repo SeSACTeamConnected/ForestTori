@@ -11,7 +11,7 @@ import SwiftUI
 struct Tori_s_ForestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
