@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE4577B2A31469500B2B8FC /* Tree_small_regular.dae in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457702A31469500B2B8FC /* Tree_small_regular.dae */; };
+		0EE4577C2A31469500B2B8FC /* land.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457712A31469500B2B8FC /* land.scn */; };
+		0EE4577D2A31469500B2B8FC /* Flower_blue.dae in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457722A31469500B2B8FC /* Flower_blue.dae */; };
+		0EE4577E2A31469500B2B8FC /* Tree_small_bare.dae in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457732A31469500B2B8FC /* Tree_small_bare.dae */; };
+		0EE4577F2A31469500B2B8FC /* Grass.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457742A31469500B2B8FC /* Grass.scn */; };
+		0EE457802A31469500B2B8FC /* Tree_small_regular.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457752A31469500B2B8FC /* Tree_small_regular.scn */; };
+		0EE457812A31469500B2B8FC /* Flower_blue.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457762A31469500B2B8FC /* Flower_blue.scn */; };
+		0EE457822A31469500B2B8FC /* land.dae in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457772A31469500B2B8FC /* land.dae */; };
+		0EE457832A31469500B2B8FC /* Grass_bush_low_01.dae in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457782A31469500B2B8FC /* Grass_bush_low_01.dae */; };
+		0EE457842A31469500B2B8FC /* Tree_small_bare.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457792A31469500B2B8FC /* Tree_small_bare.scn */; };
+		0EE4578A2A31514600B2B8FC /* Grass1.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE457892A31514600B2B8FC /* Grass1.scn */; };
+		0EE4578C2A31541F00B2B8FC /* Tree.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EE4578B2A31541F00B2B8FC /* Tree.scn */; };
+		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
+		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
+		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
 		13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */; };
 		13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBE2A2AD970009543C6 /* ContentView.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
@@ -26,6 +41,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EE457702A31469500B2B8FC /* Tree_small_regular.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Tree_small_regular.dae; sourceTree = "<group>"; };
+		0EE457712A31469500B2B8FC /* land.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = land.scn; sourceTree = "<group>"; };
+		0EE457722A31469500B2B8FC /* Flower_blue.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Flower_blue.dae; sourceTree = "<group>"; };
+		0EE457732A31469500B2B8FC /* Tree_small_bare.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Tree_small_bare.dae; sourceTree = "<group>"; };
+		0EE457742A31469500B2B8FC /* Grass.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Grass.scn; sourceTree = "<group>"; };
+		0EE457752A31469500B2B8FC /* Tree_small_regular.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Tree_small_regular.scn; sourceTree = "<group>"; };
+		0EE457762A31469500B2B8FC /* Flower_blue.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Flower_blue.scn; sourceTree = "<group>"; };
+		0EE457772A31469500B2B8FC /* land.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = land.dae; sourceTree = "<group>"; };
+		0EE457782A31469500B2B8FC /* Grass_bush_low_01.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Grass_bush_low_01.dae; sourceTree = "<group>"; };
+		0EE457792A31469500B2B8FC /* Tree_small_bare.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Tree_small_bare.scn; sourceTree = "<group>"; };
+		0EE457892A31514600B2B8FC /* Grass1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Grass1.scn; sourceTree = "<group>"; };
+		0EE4578B2A31541F00B2B8FC /* Tree.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Tree.scn; sourceTree = "<group>"; };
+		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
+		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
+		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
 		13E09BB92A2AD970009543C6 /* Tori's Forest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_ForestApp.swift; sourceTree = "<group>"; };
 		13E09BBE2A2AD970009543C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +86,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EE4576E2A31469500B2B8FC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0EE457702A31469500B2B8FC /* Tree_small_regular.dae */,
+				0EE4578B2A31541F00B2B8FC /* Tree.scn */,
+				0EE457712A31469500B2B8FC /* land.scn */,
+				0EE457722A31469500B2B8FC /* Flower_blue.dae */,
+				0EE457732A31469500B2B8FC /* Tree_small_bare.dae */,
+				0EE457742A31469500B2B8FC /* Grass.scn */,
+				0EE457752A31469500B2B8FC /* Tree_small_regular.scn */,
+				0EE457762A31469500B2B8FC /* Flower_blue.scn */,
+				0EE457772A31469500B2B8FC /* land.dae */,
+				0EE457782A31469500B2B8FC /* Grass_bush_low_01.dae */,
+				0EE457892A31514600B2B8FC /* Grass1.scn */,
+				0EE457792A31469500B2B8FC /* Tree_small_bare.scn */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		13E09BB02A2AD970009543C6 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +124,7 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
+				0EE4576E2A31469500B2B8FC /* Objects */,
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
 				5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */,
 				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
@@ -91,6 +141,9 @@
 				5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */,
 				13E09BC02A2AD971009543C6 /* Assets.xcassets */,
 				13E09BC22A2AD971009543C6 /* Preview Content */,
+				0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */,
+				0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */,
+				0EE457912A315A9000B2B8FC /* Garden.swift */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
@@ -161,8 +214,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EE457822A31469500B2B8FC /* land.dae in Resources */,
+				0EE4577E2A31469500B2B8FC /* Tree_small_bare.dae in Resources */,
+				0EE4578C2A31541F00B2B8FC /* Tree.scn in Resources */,
+				0EE4577C2A31469500B2B8FC /* land.scn in Resources */,
+				0EE4578A2A31514600B2B8FC /* Grass1.scn in Resources */,
+				0EE457842A31469500B2B8FC /* Tree_small_bare.scn in Resources */,
+				0EE4577F2A31469500B2B8FC /* Grass.scn in Resources */,
+				0EE457802A31469500B2B8FC /* Tree_small_regular.scn in Resources */,
 				13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */,
 				13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */,
+				0EE457812A31469500B2B8FC /* Flower_blue.scn in Resources */,
+				0EE4577B2A31469500B2B8FC /* Tree_small_regular.dae in Resources */,
+				0EE4577D2A31469500B2B8FC /* Flower_blue.dae in Resources */,
+				0EE457832A31469500B2B8FC /* Grass_bush_low_01.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,10 +248,13 @@
 				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
 				5B254FBC2A2CE7D300E426EE /* Stroy.swift in Sources */,
 				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
+				0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */,
+				0EE457922A315A9000B2B8FC /* Garden.swift in Sources */,
 				5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */,
 				5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */,
 				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
 				5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */,
+				0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,7 +34,7 @@ class ChapterStore: ObservableObject {
     
     private init() {
         let chapter1 = Chapter(id: 0, days: 3, plants: [
-            Plant(id: 0, name: "데이지", detail: "하루에 한 번 샤워하기", images: ["test1", "test2", "test3"], missions: Array(repeating: "샤워하기", count: 3), messages: [
+            Plant(id: 0, name: "데이지", detail: "하루에 한 번 샤워하기", images: ["Grass1.scn", "Tree.scn", "Tree_small_bare.scn"], missions: Array(repeating: "샤워하기", count: 3), messages: [
             Message(id: 0, message: ["안녕?", "메시지1"]),
             Message(id: 1, message: ["안녕?", "메시지2"]),
             Message(id: 2, message: ["안녕?", "메시지3"])
