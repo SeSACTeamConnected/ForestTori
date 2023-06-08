@@ -23,6 +23,12 @@ struct GardenSceneView: UIViewRepresentable {
         sceneView.allowsCameraControl = true
         sceneView.defaultCameraController.maximumVerticalAngle = 0.001
         
+        for gestureRecognizer in sceneView.gestureRecognizers ?? [] {
+            if !(gestureRecognizer is UIPanGestureRecognizer) {
+                gestureRecognizer.isEnabled = false
+            }
+        }
+        
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: context.coordinator,
             action: #selector(Coordinator.handleTap(_:))

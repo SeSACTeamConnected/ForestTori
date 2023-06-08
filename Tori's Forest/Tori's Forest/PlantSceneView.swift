@@ -19,6 +19,12 @@ struct PlantSceneView: UIViewRepresentable {
         sceneView.allowsCameraControl = true
         sceneView.defaultCameraController.maximumVerticalAngle = 0.001
         
+        for gestureRecognizer in sceneView.gestureRecognizers ?? [] {
+            if !(gestureRecognizer is UIPanGestureRecognizer) {
+                gestureRecognizer.isEnabled = false
+            }
+        }
+        
         return sceneView
     }
     
