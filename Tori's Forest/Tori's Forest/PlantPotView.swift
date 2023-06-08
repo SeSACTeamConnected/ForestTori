@@ -10,7 +10,7 @@ import SwiftUI
 struct PlantPotView: View {
     @State var viewName: String = "Main"
     @State var isEmpty: Bool = true
-    @State var emptyPot: String = "test"
+    @State var emptyPot: String = "land.scn"
     @State var plantIndex: Int = 0
     @State var plantStage: Int = 0
     @State var showPlantSelectView: Bool = false
@@ -32,20 +32,39 @@ struct PlantPotView: View {
             .padding()
 //            MessageBox(messages: $messages)
             if isEmpty {
-                Image(emptyPot)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .onTapGesture {
-                        self.showPlantSelectView.toggle()
-                    }
-                } else {
-                    if isMissionCompleted {
-                        MessageBox(plantStage: $plantStage, chapterID: $chapterID, messages: $plants[plantIndex].messages[plantStage], isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted, isEmpty: $isEmpty, days: $days)
-                    }
-                    Image(plants[plantIndex].images[plantStage])
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                    MissionBox(mission: $plants[plantIndex].missions[plantStage], showDiaryView: $showDiaryView, isMissionCompleted: $isMissionCompleted)
+//                Image(emptyPot)
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+//                    .onTapGesture {
+//                        self.showPlantSelectView.toggle()
+//                    }
+                PlantSceneView(sceneViewName: $emptyPot)
+                .onTapGesture {
+                    self.showPlantSelectView.toggle()
+                }
+            } else {
+                if isMissionCompleted {
+                    MessageBox(
+                        plantStage: $plantStage,
+                        chapterID: $chapterID,
+                        messages: $plants[plantIndex].messages[plantStage],
+                        isMissionCompleted: $isMissionCompleted,
+                        isChapterCompleted: $isChapterCompleted,
+                        isEmpty: $isEmpty, days: $days
+                    )
+                }
+                
+                
+//                Image(plants[plantIndex].images[plantStage])
+//                    .resizable()
+//                    .aspectRatio(contentMode: .fit)
+                PlantSceneView(sceneViewName: $plants[plantIndex].images[plantStage])
+                
+                MissionBox(
+                    mission: $plants[plantIndex].missions[plantStage],
+                    showDiaryView: $showDiaryView,
+                    isMissionCompleted: $isMissionCompleted
+                )
             }
         }
         .sheet(isPresented: self.$showPlantSelectView) {
