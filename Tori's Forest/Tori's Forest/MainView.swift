@@ -24,6 +24,8 @@ struct MainView: View {
     @AppStorage("postIndex") var postIndex: Int = 0
     
     @Environment(\.managedObjectContext) private var viewContext
+    @ObservedObject var model = ViewModelPhone()
+
     
     @State var selectedTab: Int = 0
     
@@ -82,6 +84,11 @@ struct MainView: View {
 //            
 //            deleteAllDataFromAllEntities()
             loadData()
+            self.model.sendMessageToWatch(message: [
+                "민들레씨": "창문 30분 열어 환기하기",
+                "???": "아침에 이불 정리하기",
+                "????": "하루에 한 번 샤워하기"
+            ])
         }
 //        .ignoresSafeArea()
     }

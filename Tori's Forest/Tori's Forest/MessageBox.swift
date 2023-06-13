@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import WatchConnectivity
 
 struct MessageBox: View {
 //    @Environment(\.managedObjectContext) private var viewContext
-    
+    @ObservedObject var model = ViewModelPhone()
     @FetchRequest(sortDescriptors: [])
     var dialogs: FetchedResults<Dialog>
     
@@ -57,15 +58,23 @@ struct MessageBox: View {
             }
             if (chapterIndex + 1) < missions[missionIndex].chapterID {
                 chapterIndex += 1
+                
+                if chapterIndex == 1 {
+                    self.model.sendMessageToWatch(message: [
+                        "단풍나무": "창문 30분 열어 환기하기",
+                        "???": "아침에 이불 정리하기",
+                        "????": "하루에 한 번 샤워하기"
+                    ])
+                }
                 isEmpty.toggle()
                 isChapterCompleted.toggle()
             }
         }
     }
 }
-
-struct MessageBox_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//
+//struct MessageBox_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
