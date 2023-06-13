@@ -57,15 +57,22 @@ struct GardenView: View {
                 Spacer()
                 
                 //TODO: AR 버튼 -> AR 뷰 이동 추가
-                ZStack {
-                    Image(systemName: "cube.transparent")
-                        .resizable()
-                        .frame(width: 23.87, height: 25.68)
-                    Image(systemName: "viewfinder")
-                        .resizable()
-                        .frame(width: 46.45, height: 46.43)
-                }
-                .foregroundColor(Color("STR_White"))
+                Button(action: {},
+                       label: {
+                            NavigationLink(destination: {
+                                ARContentView(chapterIndex: $chapterIndex)
+                            }, label: {
+                                ZStack{
+                                    Image(systemName: "cube.transparent")
+                                        .resizable()
+                                        .frame(width: 23.87, height: 25.68)
+                                    Image(systemName: "viewfinder")
+                                        .resizable()
+                                        .frame(width: 46.45, height: 46.43)
+                                }
+                                .foregroundColor(Color("STR_White"))
+                            })
+                })
             }
         }
     }
