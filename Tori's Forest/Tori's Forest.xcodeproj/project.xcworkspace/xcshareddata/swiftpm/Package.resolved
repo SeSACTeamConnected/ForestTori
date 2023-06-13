@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "popupview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/PopupView.git",
+      "state" : {
+        "revision" : "c382cb80e2148daf1da2d7077a6b0e11faae8269",
+        "version" : "2.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}

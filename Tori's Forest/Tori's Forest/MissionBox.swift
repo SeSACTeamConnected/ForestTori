@@ -8,23 +8,55 @@
 import SwiftUI
 
 struct MissionBox: View {
-    @State var idx: Int = 0
-    @Binding var mission: String
-    @Binding var showDiaryView: Bool
+    @FetchRequest(sortDescriptors: [])
+    private var missions: FetchedResults<Mission>
+    
+    @Binding var isShowDiaryView: Bool
     @Binding var isMissionCompleted: Bool
+    @Binding var missionIndex: Int
+    
+    @State var circleName: String = "circle"
+    @State var circleColor: String = "STR_Brown"
+    @State var circleOpacity: Double = 0.15
     
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(.gray)
-                .opacity(0.2)
-            Text(mission)
+            RoundedRectangle(cornerRadius: 100)
+                .fill(.white)
+            HStack {
+                Text(missions[missionIndex].missionDescription!)
+                    .font(.system(size: 18))
+                    .foregroundColor(Color("STR_Brown"))
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+//                if !isMissionCompleted {
+                    Image(systemName: circleName)
+                        .resizable()
+                        .frame(width: 38, height: 38)
+                        .foregroundColor(Color(circleColor))
+                        .opacity(circleOpacity)
+                        .onTapGesture {
+                            circleName = "checkmark.circle.fill"
+                            circleColor = "STR_Green"
+                            circleOpacity = 1
+                            DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
+                                isShowDiaryView.toggle()
+                            }
+                        }
+//                } else {
+//                    Image(systemName: "checkmark.circle.fill")
+//                        .resizable()
+//                        .frame(width: 38, height: 38)
+//                        .foregroundColor(Color("STR_Green"))
+//                }
+            }
+            .padding(.leading, 30)
+            .padding(.trailing, 20)
         }
-        .padding()
-        .onTapGesture {
-            showDiaryView.toggle()
-            isMissionCompleted.toggle()
-        }
+        .frame(width: 342, height: 68)
+        .padding(.bottom, 20)
     }
 }
 

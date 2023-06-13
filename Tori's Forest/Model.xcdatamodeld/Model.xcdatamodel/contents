@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Chapters" representedClassName="Chapters" syncable="YES" codeGenerationType="class">
+        <attribute name="chapterDescription" optional="YES" attributeType="String"/>
+        <attribute name="chapterHeader" optional="YES" attributeType="String"/>
+        <attribute name="chapterID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="chapterSubHeader" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Dialogue" representedClassName="Dialogue" syncable="YES" codeGenerationType="class">
+        <attribute name="dialogID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dialogLine" optional="YES" attributeType="String"/>
+        <attribute name="isPrev" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="missionID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Missions" representedClassName="Missions" syncable="YES" codeGenerationType="class">
+        <attribute name="missionDescription" optional="YES" attributeType="String"/>
+        <attribute name="missionHeader" optional="YES" attributeType="String"/>
+        <attribute name="missionID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="plantID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Plants" representedClassName="Plants" syncable="YES" codeGenerationType="class">
+        <attribute name="objectName" optional="YES" attributeType="String"/>
+        <attribute name="plantDescription" optional="YES" attributeType="String"/>
+        <attribute name="plantID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="plantLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="plantName" optional="YES" attributeType="String"/>
+        <attribute name="positionX" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="positionY" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="positionZ" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Posts" representedClassName="Posts" syncable="YES" codeGenerationType="class">
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="missionID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="postDescription" optional="YES" attributeType="String"/>
+        <attribute name="postID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+</model>
