@@ -7,14 +7,20 @@
 
 import SwiftUI
 
-struct OnboardingViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class OnboardingViewModel: ObservableObject {
+    @Published var currentPage: Int = 1
+    
+    func nextPage() {
+        currentPage += 1
+    }
+    
+    func skipPage() {
+        currentPage = 4
+    }
+    
+    func previousPage() {
+        currentPage -= 1
     }
 }
 
-struct OnboardingViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingViewModel()
-    }
-}
+

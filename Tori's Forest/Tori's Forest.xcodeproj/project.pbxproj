@@ -17,6 +17,15 @@
 		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
 		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
 		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
+		135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7D72A38750E00A99A50 /* SplashView.swift */; };
+		135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */; };
+		135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DC2A38755000A99A50 /* Onboarding1.swift */; };
+		135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DE2A38761800A99A50 /* OnboardingView.swift */; };
+		135FD7E12A38762E00A99A50 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E02A38762E00A99A50 /* Onboarding2.swift */; };
+		135FD7E32A38765900A99A50 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E22A38765900A99A50 /* Onboarding3.swift */; };
+		135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E42A38767300A99A50 /* OnboardingTap.swift */; };
+		135FD7E72A38774700A99A50 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E62A38774700A99A50 /* Notification.swift */; };
+		135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */; };
 		13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */; };
 		13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBE2A2AD970009543C6 /* ContentView.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
@@ -138,6 +147,15 @@
 		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
 		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
 		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		135FD7D72A38750E00A99A50 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		135FD7DC2A38755000A99A50 /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
+		135FD7DE2A38761800A99A50 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		135FD7E02A38762E00A99A50 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
+		135FD7E22A38765900A99A50 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
+		135FD7E42A38767300A99A50 /* OnboardingTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTap.swift; sourceTree = "<group>"; };
+		135FD7E62A38774700A99A50 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSkipBtn.swift; sourceTree = "<group>"; };
 		13E09BB92A2AD970009543C6 /* Tori's Forest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_ForestApp.swift; sourceTree = "<group>"; };
 		13E09BBE2A2AD970009543C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -263,6 +281,35 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		135FD7D62A3874F800A99A50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				135FD7D72A38750E00A99A50 /* SplashView.swift */,
+				135FD7DE2A38761800A99A50 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		135FD7D92A38751B00A99A50 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */,
+				135FD7DC2A38755000A99A50 /* Onboarding1.swift */,
+				135FD7E02A38762E00A99A50 /* Onboarding2.swift */,
+				135FD7E22A38765900A99A50 /* Onboarding3.swift */,
+				135FD7E42A38767300A99A50 /* OnboardingTap.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		135FD7EF2A39072500A99A50 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		13E09BB02A2AD970009543C6 = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +333,9 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
+				135FD7EF2A39072500A99A50 /* Component */,
+				135FD7D92A38751B00A99A50 /* Onboarding */,
+				135FD7D62A3874F800A99A50 /* View */,
 				5BCD49802A3554200058079D /* Objects */,
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
 				5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */,
@@ -307,6 +357,7 @@
 				0EE457912A315A9000B2B8FC /* Garden.swift */,
 				5B6FE3702A340D8100B86712 /* UserDefault.swift */,
 				0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */,
+				135FD7E62A38774700A99A50 /* Notification.swift */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
@@ -678,17 +729,26 @@
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
 				0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */,
 				5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */,
+				135FD7E32A38765900A99A50 /* Onboarding3.swift in Sources */,
 				5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */,
 				13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */,
+				135FD7E12A38762E00A99A50 /* Onboarding2.swift in Sources */,
 				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
 				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
 				0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */,
+				135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */,
 				0EE457922A315A9000B2B8FC /* Garden.swift in Sources */,
 				5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */,
 				5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */,
+				135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */,
 				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
+				135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */,
+				135FD7E72A38774700A99A50 /* Notification.swift in Sources */,
 				5B6FE3712A340D8100B86712 /* UserDefault.swift in Sources */,
+				135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */,
 				5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */,
+				135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */,
+				135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */,
 				0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
