@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct ViewChangeButton: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(sortDescriptors: [])
+    var posts: FetchedResults<Post>
+    
+    @Binding var chapterIndex: Int
+    @Binding var plantIndex: Int
+    @Binding var postIndex: Int
     @Binding var viewName: String
     
     var body: some View {
-        Button {
-            print("View is changed.")
-        } label: {
-            Text(viewName=="Main" ? "정원" : "메인")
+            NavigationLink(
+                destination: destinationView
+                    .environment(\.managedObjectContext, viewContext)
+                    .navigationBarBackButtonHidden()
+            ) {
+                Image(viewName == "Main" ? "STR_Img_asset_button_main" : "STR_Img_asset_button_garden")
+                    .resizable()
+                    .frame(width: 45, height: 45)            }
+        }
+    
+    @ViewBuilder
+    private var destinationView: some View {
+        Group {
+            if viewName == "Main" {
+                GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
+            } else {
+                MainView()
+            }
         }
     }
 }

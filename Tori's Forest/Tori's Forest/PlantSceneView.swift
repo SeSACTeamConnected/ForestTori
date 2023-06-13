@@ -9,15 +9,23 @@ import SwiftUI
 import SceneKit
 
 struct PlantSceneView: UIViewRepresentable {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(sortDescriptors: [])
+    private var plants: FetchedResults<Plant>
+    
     let sceneView = SCNView()
-    @Binding var sceneViewName: String
+    
+//    @Binding var sceneViewName: String
+    var sceneViewName: String
     
     func makeUIView(context: Context) -> SCNView {
         sceneView.backgroundColor = .clear
         sceneView.scene = SCNScene(named: sceneViewName)
+        sceneView.scene?.rootNode.scale = SCNVector3(x: 0.1, y: 0.1, z: 0.1)
         sceneView.autoenablesDefaultLighting = true
         sceneView.allowsCameraControl = true
-        sceneView.defaultCameraController.maximumVerticalAngle = 0.001
+        sceneView.defaultCameraController.maximumVerticalAngle = 30
         
         for gestureRecognizer in sceneView.gestureRecognizers ?? [] {
             if !(gestureRecognizer is UIPanGestureRecognizer) {
@@ -36,13 +44,11 @@ struct PlantSceneView: UIViewRepresentable {
         Coordinator(self)
     }
     
-    
     class Coordinator: NSObject {
         let parent: PlantSceneView
         
         init(_ parent: PlantSceneView) {
             self.parent = parent
         }
-        
     }
 }

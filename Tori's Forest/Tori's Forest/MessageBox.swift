@@ -8,35 +8,57 @@
 import SwiftUI
 
 struct MessageBox: View {
-    @State var idx: Int = 0
+//    @Environment(\.managedObjectContext) private var viewContext
     
-    @Binding var plantStage: Int
-    @Binding var chapterID: Int
-    @Binding var messages: Message
+    @FetchRequest(sortDescriptors: [])
+    var dialogs: FetchedResults<Dialog>
+    
+    @FetchRequest(sortDescriptors: [])
+    var missions: FetchedResults<Mission>
+
+//    @AppStorage("dialogIndex") var dialogIndex: Int = 0
+//    @AppStorage("chapterIndex") var chapterIndex: Int = 0
+
+    @Binding var chapterIndex: Int
+    @Binding var plantIndex: Int
+    @Binding var dialogIndex: Int
+    @Binding var missionIndex: Int
+    @Binding var isEmpty: Bool
     @Binding var isMissionCompleted: Bool
     @Binding var isChapterCompleted: Bool
-    @Binding var isEmpty: Bool
-    @Binding var days: Int
-    
+
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10)
-                .fill(.gray)
-                .opacity(0.2)
-            Text(messages.message[idx])
-        }
+                .fill(Color("STR_White"))
+                .opacity(0.75)
+                
+            Text(dialogs[dialogIndex].dialogLine!)
+                .font(.system(size: 16))
+                .foregroundColor(Color("STR_Black"))
+                .padding(.horizontal)
+            
+            Image("STR_Img_asset_button_dialog")
+                .resizable()
+                .frame(width: 15, height: 10)
+                .offset(x: 150, y: 20)
+            }
+        .frame(width: 342, height: 72)
         .padding()
-            .onTapGesture {
-                idx += 1
-                if idx == messages.message.count {
-                    self.isMissionCompleted.toggle()
-                    idx = 0
-                    plantStage += 1
-                    if plantStage == days {
-                        plantStage = 0
-                        isChapterCompleted.toggle()
-                        isEmpty.toggle()
-                    }
+        .onTapGesture {
+            dialogIndex += 1
+            
+            let nextMission = dialogs[dialogIndex].missionID
+            if (missionIndex + 1) < nextMission {
+                isMissionCompleted.toggle()
+                missionIndex += 1
+                plantIndex += 1
+                print(plantIndex)
+            }
+            if (chapterIndex + 1) < missions[missionIndex].chapterID {
+                chapterIndex += 1
+                isEmpty.toggle()
+                isChapterCompleted.toggle()
             }
         }
     }

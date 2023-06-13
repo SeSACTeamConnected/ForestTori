@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CustomProgressBar: View {
-    //    @State var progress: CGFloat = 0.0
+    let progress: CGFloat
     
-    @Binding var plantStage: Int
-    @Binding var days: Int
+    init(progress: CGFloat) {
+        self.progress = progress
+    }
     
     var body: some View {
-        let progress = CGFloat(plantStage) / CGFloat(days)
         VStack {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)

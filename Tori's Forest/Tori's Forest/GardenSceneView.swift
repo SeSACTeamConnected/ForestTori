@@ -10,8 +10,17 @@ import SceneKit
 
 struct GardenSceneView: UIViewRepresentable {
     let sceneView = SCNView()
+    
     @EnvironmentObject var gardenObject: GardenObject
-    @Binding var showModal: Bool
+    
+    @FetchRequest(sortDescriptors: [])
+    var plants: FetchedResults<Plant>
+    
+//    @FetchRequest(sortDescriptors: [])
+//    var missions: FetchedResults<Mission>
+    
+    @Binding var chapterIndex: Int
+    @Binding var isShowPlantHistoryView: Bool
     @Binding var selectedName: String
     
     func makeUIView(context: Context) -> SCNView {
@@ -21,7 +30,7 @@ struct GardenSceneView: UIViewRepresentable {
         sceneView.scene = createScene()
         sceneView.autoenablesDefaultLighting = true
         sceneView.allowsCameraControl = true
-        sceneView.defaultCameraController.maximumVerticalAngle = 0.001
+        sceneView.defaultCameraController.maximumVerticalAngle = 30
         
         for gestureRecognizer in sceneView.gestureRecognizers ?? [] {
             if !(gestureRecognizer is UIPanGestureRecognizer) {
@@ -45,7 +54,8 @@ struct GardenSceneView: UIViewRepresentable {
         let scene = SCNScene()
         let garden = gardenObject.garden
             
-        if let landNode = loadSCNFile(named: "land") {
+        if let landNode = loadSCNFile(named: "STR_3D_gardenground") {
+            print(chapterIndex)
             landNode.scale = SCNVector3(x: 0.5, y: 0.5, z: 0.5)
             scene.rootNode.addChildNode(landNode)
         }
@@ -54,6 +64,7 @@ struct GardenSceneView: UIViewRepresentable {
             let newNode = addNodeToScene()
             scene.rootNode.addChildNode(newNode!)
         }
+        
         return scene
     }
     
@@ -61,17 +72,22 @@ struct GardenSceneView: UIViewRepresentable {
         let addNode = SCNNode()
         let garden = gardenObject.garden
         
-        for i in 0..<garden.count {
+        for i in 0..<chapterIndex {
             guard let node = loadSCNFile(named: garden[i].fileName) else {
                 return nil
             }
+            
             node.position = SCNVector3(
                 x: garden[i].positionX,
                 y: garden[i].positionY,
                 z: garden[i].positionZ
             )
+            
+            node.scale = SCNVector3(x: 0.5, y: 0.5, z: 0.5)
+            
             addNode.addChildNode(node)
         }
+        
         return addNode
     }
     
@@ -114,8 +130,14 @@ struct GardenSceneView: UIViewRepresentable {
             let hitTestResults = parent.sceneView.hitTest(location, options: nil)
             
             if let hitNode = hitTestResults.first?.node {
-                parent.showModal = true
-                parent.selectedName = hitNode.geometry?.name ?? ""
+                if let selectedName = hitNode.geometry?.name {
+                    parent.isShowPlantHistoryView = true
+                    parent.selectedName = selectedName
+                    
+                    print(parent.selectedName + "is selected")
+                }
+//                parent.isShowPlantHistoryView = true
+//                parent.selectedName = hitNode.geometry?.name ?? ""
             }
         }
     }

@@ -20,11 +20,33 @@ class GardenObject: ObservableObject {
     init() {
         garden.append(
             Garden(
-                fileName: "Tree_small_bare",
-                positionX: 0.2,
-                positionY: 0,
-                positionZ: 0
+                fileName: "STR_3D_dandelion_garden_animation",
+                positionX: -1,
+                positionY: 0.2,
+                positionZ: 1
             )
         )
+        
+        garden.append(
+            Garden(fileName: "STR_3D_cactus_garden_animation",
+                   positionX: 1,
+                   positionY: 0.2,
+                   positionZ: -1)
+        )
+        
+        garden.append(
+            Garden(fileName: "STR_3D_maple_garden_animation",
+                   positionX: 1,
+                   positionY: 0.2,
+                   positionZ: 1)
+        )
+        
+        garden.append(
+            Garden(fileName: "STR_3D_cotton_garden_animatino",
+                   positionX: -1,
+                   positionY: 0.2,
+                   positionZ: -1)
+        )
+        
     }
 }

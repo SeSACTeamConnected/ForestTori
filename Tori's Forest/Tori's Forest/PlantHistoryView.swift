@@ -7,39 +7,42 @@
 
 import SwiftUI
 
-struct History: Identifiable {
-    let id = UUID()
-    let image: String
-    let title: String
-    let day: String
-}
-
 struct PlantHistoryView: View {
-    let listItems = [
-        History(image: "test", title: "Day01", day: "2023.06.04"),
-        History(image: "test", title: "Day02", day: "2023.06.05"),
-        History(image: "test", title: "Day03", day: "2023.06.06")
-    ]
-    
-    @Binding var collectedPlantName: String
-    @Binding var collectedPlantImage: String
-    @Binding var collectedPlantDetail: String
-    
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(sortDescriptors: [])
+    var chapters: FetchedResults<Chapter>
+
+    @FetchRequest(sortDescriptors: [])
+    var plants: FetchedResults<Plant>
+
+    @FetchRequest(sortDescriptors: [])
+    var posts: FetchedResults<Post>
+
+    @Binding var selectedViewName: String
+
+    @State var objectNames = ["dandelion", "cactus", "maple", "cotton"]
+
     var body: some View {
+        var idx = objectNames.firstIndex(of: selectedViewName)
+        
         ScrollView {
             VStack {
-                Text(collectedPlantName)
-                Image(collectedPlantImage)
-                Text(collectedPlantDetail)
+                Text(chapters[idx!].chapterHeader!)
+                Text(plants[(idx!)*3].plantName!)
+                Image("test")
+                Text(plants[(idx!)*3].plantDescription!)
                 LazyVStack {
-                    ForEach(listItems) { item in
-                        HStack {
-                            Image(item.image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                            VStack {
-                                Text(item.title)
-                                Text(item.day)
+                    ForEach(posts) { item in
+                        if item.chapterID == (idx!+1) {
+                            HStack {
+                                Image(uiImage: UIImage(data: Data(base64Encoded: item.imageName!)!)!)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                VStack {
+                                    Text(item.postDescription!)
+                                    Text(formatDate(item.createdAt!))
+                                }
                             }
                         }
                     }
@@ -48,10 +51,17 @@ struct PlantHistoryView: View {
             }
         }
     }
+
+    func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+
+        return dateFormatter.string(from: date)
+    }
 }
 
 struct PlantHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        GardenView()
+        GardenView(chapterIndex: .constant(0), plantIndex: .constant(0), postIndex: .constant(0))
     }
 }
