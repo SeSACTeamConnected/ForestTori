@@ -23,34 +23,28 @@ struct MissionBox: View {
         ZStack {
             RoundedRectangle(cornerRadius: 100)
                 .fill(.white)
+            
             HStack {
                 Text(missions[missionIndex].missionDescription!)
                     .font(.system(size: 18))
                     .foregroundColor(Color("STR_Brown"))
                     .fontWeight(.bold)
-                
+
                 Spacer()
-                
-//                if !isMissionCompleted {
-                    Image(systemName: circleName)
-                        .resizable()
-                        .frame(width: 38, height: 38)
-                        .foregroundColor(Color(circleColor))
-                        .opacity(circleOpacity)
-                        .onTapGesture {
-                            circleName = "checkmark.circle.fill"
-                            circleColor = "STR_Green"
-                            circleOpacity = 1
-                            DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
-                                isShowDiaryView.toggle()
-                            }
+
+                Image(systemName: circleName)
+                    .resizable()
+                    .frame(width: 38, height: 38)
+                    .foregroundColor(Color(circleColor))
+                    .opacity(circleOpacity)
+                    .onTapGesture {
+                        circleName = "checkmark.circle.fill"
+                        circleColor = "STR_Green"
+                        circleOpacity = 1
+                        DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
+                            isShowDiaryView.toggle()
                         }
-//                } else {
-//                    Image(systemName: "checkmark.circle.fill")
-//                        .resizable()
-//                        .frame(width: 38, height: 38)
-//                        .foregroundColor(Color("STR_Green"))
-//                }
+                    }
             }
             .padding(.leading, 30)
             .padding(.trailing, 20)
@@ -60,8 +54,8 @@ struct MissionBox: View {
     }
 }
 
-struct MissionBox_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MissionBox_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}

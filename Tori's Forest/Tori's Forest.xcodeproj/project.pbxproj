@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E343AB32A37FB32006DB1CB /* Tori_s_Forest_forApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AB22A37FB32006DB1CB /* Tori_s_Forest_forApp.swift */; };
+		0E343AB52A37FB32006DB1CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AB42A37FB32006DB1CB /* ContentView.swift */; };
+		0E343AB72A37FB33006DB1CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AB62A37FB33006DB1CB /* Assets.xcassets */; };
+		0E343ABA2A37FB33006DB1CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AB92A37FB33006DB1CB /* Preview Assets.xcassets */; };
+		0E343ABD2A37FB33006DB1CB /* Tori's Forest for Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0E343AB02A37FB32006DB1CB /* Tori's Forest for Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0E343AC22A37FC5C006DB1CB /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AC12A37FC5C006DB1CB /* ViewModelWatch.swift */; };
+		0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */; };
 		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
 		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
 		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
@@ -96,7 +103,38 @@
 		5BE4D2F42A37F01600348CD2 /* STR_3D_cottontree_garden_animation.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5BE4D2EC2A37F01600348CD2 /* STR_3D_cottontree_garden_animation.scn */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0E343ABB2A37FB33006DB1CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13E09BB12A2AD970009543C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E343AAF2A37FB32006DB1CB;
+			remoteInfo = "Tori's Forest for Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E343AA82A37FAFB006DB1CB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0E343ABD2A37FB33006DB1CB /* Tori's Forest for Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0E343AB02A37FB32006DB1CB /* Tori's Forest for Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest for Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E343AB22A37FB32006DB1CB /* Tori_s_Forest_forApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_Forest_forApp.swift; sourceTree = "<group>"; };
+		0E343AB42A37FB32006DB1CB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E343AB62A37FB33006DB1CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0E343AB92A37FB33006DB1CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0E343AC12A37FC5C006DB1CB /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+		0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
 		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
 		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
 		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
@@ -187,6 +225,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E343AAD2A37FB32006DB1CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13E09BB62A2AD970009543C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,12 +243,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E343AB12A37FB32006DB1CB /* Tori's Forest for Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				0E343AB22A37FB32006DB1CB /* Tori_s_Forest_forApp.swift */,
+				0E343AC12A37FC5C006DB1CB /* ViewModelWatch.swift */,
+				0E343AB42A37FB32006DB1CB /* ContentView.swift */,
+				0E343AB62A37FB33006DB1CB /* Assets.xcassets */,
+				0E343AB82A37FB33006DB1CB /* Preview Content */,
+			);
+			path = "Tori's Forest for Watch App";
+			sourceTree = "<group>";
+		};
+		0E343AB82A37FB33006DB1CB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0E343AB92A37FB33006DB1CB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		13E09BB02A2AD970009543C6 = {
 			isa = PBXGroup;
 			children = (
 				5B6FE3772A34B0D600B86712 /* DataModel.xcdatamodeld */,
 				5B6FE3872A34CDB600B86712 /* Files */,
 				13E09BBB2A2AD970009543C6 /* Tori's Forest */,
+				0E343AB12A37FB32006DB1CB /* Tori's Forest for Watch App */,
 				13E09BBA2A2AD970009543C6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -212,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				13E09BB92A2AD970009543C6 /* Tori's Forest.app */,
+				0E343AB02A37FB32006DB1CB /* Tori's Forest for Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,6 +306,7 @@
 				0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */,
 				0EE457912A315A9000B2B8FC /* Garden.swift */,
 				5B6FE3702A340D8100B86712 /* UserDefault.swift */,
+				0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
@@ -422,6 +490,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E343AAF2A37FB32006DB1CB /* Tori's Forest for Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E343ABE2A37FB33006DB1CB /* Build configuration list for PBXNativeTarget "Tori's Forest for Watch App" */;
+			buildPhases = (
+				0E343AAC2A37FB32006DB1CB /* Sources */,
+				0E343AAD2A37FB32006DB1CB /* Frameworks */,
+				0E343AAE2A37FB32006DB1CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tori's Forest for Watch App";
+			productName = "Tori's Forest for Watch App";
+			productReference = 0E343AB02A37FB32006DB1CB /* Tori's Forest for Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		13E09BB82A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13E09BC72A2AD971009543C6 /* Build configuration list for PBXNativeTarget "Tori's Forest" */;
@@ -429,10 +514,12 @@
 				13E09BB52A2AD970009543C6 /* Sources */,
 				13E09BB62A2AD970009543C6 /* Frameworks */,
 				13E09BB72A2AD970009543C6 /* Resources */,
+				0E343AA82A37FAFB006DB1CB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0E343ABC2A37FB33006DB1CB /* PBXTargetDependency */,
 			);
 			name = "Tori's Forest";
 			packageProductDependencies = (
@@ -452,6 +539,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					0E343AAF2A37FB32006DB1CB = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
 					13E09BB82A2AD970009543C6 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -474,11 +564,21 @@
 			projectRoot = "";
 			targets = (
 				13E09BB82A2AD970009543C6 /* Tori's Forest */,
+				0E343AAF2A37FB32006DB1CB /* Tori's Forest for Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E343AAE2A37FB32006DB1CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E343ABA2A37FB33006DB1CB /* Preview Assets.xcassets in Resources */,
+				0E343AB72A37FB33006DB1CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13E09BB72A2AD970009543C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -557,6 +657,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E343AAC2A37FB32006DB1CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E343AB52A37FB32006DB1CB /* ContentView.swift in Sources */,
+				0E343AC22A37FC5C006DB1CB /* ViewModelWatch.swift in Sources */,
+				0E343AB32A37FB32006DB1CB /* Tori_s_Forest_forApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13E09BB52A2AD970009543C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -566,6 +676,7 @@
 				13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */,
 				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
+				0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */,
 				5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */,
 				5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */,
 				13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */,
@@ -584,7 +695,77 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0E343ABC2A37FB33006DB1CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E343AAF2A37FB32006DB1CB /* Tori's Forest for Watch App */;
+			targetProxy = 0E343ABB2A37FB33006DB1CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0E343ABF2A37FB33006DB1CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest for Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Z238234D5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tori's Forest for";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "d.Tori-s-Forest";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "d.Tori-s-Forest.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		0E343AC02A37FB33006DB1CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest for Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5Z238234D5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tori's Forest for";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "d.Tori-s-Forest";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "d.Tori-s-Forest.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 		13E09BC52A2AD971009543C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -702,6 +883,7 @@
 		13E09BC82A2AD971009543C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -732,6 +914,7 @@
 		13E09BC92A2AD971009543C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -762,6 +945,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E343ABE2A37FB33006DB1CB /* Build configuration list for PBXNativeTarget "Tori's Forest for Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E343ABF2A37FB33006DB1CB /* Debug */,
+				0E343AC02A37FB33006DB1CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		13E09BB42A2AD970009543C6 /* Build configuration list for PBXProject "Tori's Forest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
