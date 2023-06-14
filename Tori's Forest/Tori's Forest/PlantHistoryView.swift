@@ -15,6 +15,9 @@ struct PlantHistoryView: View {
 
     @FetchRequest(sortDescriptors: [])
     var plants: FetchedResults<Plant>
+    
+    @FetchRequest(sortDescriptors: [])
+    var missions: FetchedResults<Mission>
 
     @FetchRequest(sortDescriptors: [])
     var posts: FetchedResults<Post>
@@ -28,21 +31,32 @@ struct PlantHistoryView: View {
         
         ScrollView {
             VStack {
-                Text(chapters[idx!].chapterHeader!)
+                Text(missions[(idx!)*3].missionHeader!)
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundColor(Color("STR_Brown"))
                 Text(plants[(idx!)*3].plantName!)
-                Image("test")
-                Text(plants[(idx!)*3].plantDescription!)
+                    .font(.system(size: 15, weight: .medium))
+                    .foregroundColor(Color("STR_Green"))
+//                Image("test")
+//                Text(plants[(idx!)*3].plantDescription!)
                 LazyVStack {
                     ForEach(posts) { item in
                         if item.chapterID == (idx!+1) {
-                            HStack {
-                                Image(uiImage: UIImage(data: Data(base64Encoded: item.imageName!)!)!)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color("STR_Brown").opacity(0.3), lineWidth: 2)
+                                
                                 VStack {
-                                    Text(item.postDescription!)
                                     Text(formatDate(item.createdAt!))
+                                    Image(uiImage: UIImage(data: Data(base64Encoded: item.imageName!)!)!)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: 321, height: 321)
+                                        .clipped()
+                                        .cornerRadius(8)
+                                    Text(item.postDescription!)
                                 }
+                                .padding(.bottom)
                             }
                         }
                     }
@@ -54,14 +68,10 @@ struct PlantHistoryView: View {
 
     func formatDate(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
+        dateFormatter.dateFormat = "yyyy.MM.dd"
 
         return dateFormatter.string(from: date)
     }
 }
 
-struct PlantHistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        GardenView(chapterIndex: .constant(0), plantIndex: .constant(0), postIndex: .constant(0))
-    }
-}
+

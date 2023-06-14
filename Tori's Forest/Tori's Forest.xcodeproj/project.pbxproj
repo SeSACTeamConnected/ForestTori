@@ -35,10 +35,8 @@
 		135FD7E72A38774700A99A50 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E62A38774700A99A50 /* Notification.swift */; };
 		135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */; };
 		13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */; };
-		13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBE2A2AD970009543C6 /* ContentView.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
 		13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */; };
-		5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */; };
 		5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FAD2A2CCC3500E426EE /* MainView.swift */; };
 		5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */; };
 		5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FB12A2CCFB200E426EE /* PlantPotView.swift */; };
@@ -173,10 +171,8 @@
 		135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSkipBtn.swift; sourceTree = "<group>"; };
 		13E09BB92A2AD970009543C6 /* Tori's Forest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_ForestApp.swift; sourceTree = "<group>"; };
-		13E09BBE2A2AD970009543C6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13E09BC02A2AD971009543C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewChangeButton.swift; sourceTree = "<group>"; };
 		5B254FAD2A2CCC3500E426EE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBox.swift; sourceTree = "<group>"; };
 		5B254FB12A2CCFB200E426EE /* PlantPotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPotView.swift; sourceTree = "<group>"; };
@@ -366,9 +362,7 @@
 				135FD7D62A3874F800A99A50 /* View */,
 				5BCD49802A3554200058079D /* Objects */,
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
-				5B254FA92A2CCC1B00E426EE /* ViewChangeButton.swift */,
 				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
-				13E09BBE2A2AD970009543C6 /* ContentView.swift */,
 				5B254FAD2A2CCC3500E426EE /* MainView.swift */,
 				5B254FB32A2CD1C600E426EE /* MissionBox.swift */,
 				5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */,
@@ -762,7 +756,6 @@
 			files = (
 				5B254FC42A2DF98300E426EE /* CustomProgressBar.swift in Sources */,
 				5B6FE3792A34B0D600B86712 /* DataModel.xcdatamodeld in Sources */,
-				13E09BBF2A2AD970009543C6 /* ContentView.swift in Sources */,
 				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
 				0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */,

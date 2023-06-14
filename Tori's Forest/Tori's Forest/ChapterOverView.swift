@@ -15,6 +15,8 @@ struct ChapterOverView: View {
     
     @Binding var chapterIndex: Int
     @Binding var plantIndex: Int
+//    @Binding var dialogIndex: Int
+//    @Binding var missionIndex: Int
     @Binding var postIndex: Int
     @Binding var isChapterCompleted: Bool
     
