@@ -24,7 +24,7 @@ struct PlantCardView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(Color("STR_White"))
-                VStack{
+                VStack(spacing: 1){
                     Text(header)
                         .font(.system(size: 18,weight:.semibold))
                         .foregroundColor(Color("STR_Green"))
@@ -44,7 +44,7 @@ struct PlantCardView: View {
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color("STR_Brown"))
+                            .foregroundColor(Color("STR_brown"))
                         Text("선택하기")
                             .foregroundColor(Color("STR_White"))
                             .font(.system(size: 14, weight: .semibold))
@@ -54,7 +54,7 @@ struct PlantCardView: View {
                         isShowPlantSelectView.toggle()
                         isEmpty.toggle()
                     }
-                    .frame(width: 265,height: 35)
+                    .frame(width: 265,height: 30)
                 }
             }
             .frame(width: 306,height: 426)

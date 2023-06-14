@@ -34,7 +34,7 @@ struct PlantHistoryView: View {
             VStack {
                 Text(missions[(idx!)*3].missionHeader!)
                     .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(Color("STR_Brown"))
+                    .foregroundColor(Color("STR_brown"))
                     .padding(.top, 30)
                 
                 Text(plants[(idx!)*3].plantName!)
@@ -58,7 +58,7 @@ struct PlantHistoryView: View {
                         if item.chapterID == (idx!+1) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("STR_Brown").opacity(0.3), lineWidth: 2)
+                                    .stroke(Color("STR_brown").opacity(0.3), lineWidth: 2)
                                     .frame(width: 336.47)
                                 
                                 VStack(alignment: .leading) {

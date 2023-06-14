@@ -18,7 +18,7 @@ struct MissionBox: View {
     
     var body: some View {
         let circleName: String = isTapped ? "checkmark.circle.fill" : "circle"
-        let circleColor: String = isTapped ? "STR_Green" : "STR_Brown"
+        let circleColor: String = isTapped ? "STR_Green" : "STR_brown"
         let circleOpacity: Double = isTapped ? 1 : 0.15
         
         ZStack {
@@ -28,7 +28,7 @@ struct MissionBox: View {
             HStack {
                 Text(missions[missionIndex].missionDescription!)
                     .font(.system(size: 18))
-                    .foregroundColor(Color("STR_Brown"))
+                    .foregroundColor(Color("STR_brown"))
                     .fontWeight(.bold)
 
                 Spacer()

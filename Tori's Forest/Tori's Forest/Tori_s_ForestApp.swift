@@ -43,10 +43,9 @@ struct Tori_s_ForestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                MainView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
+            OnboardingView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+          
         }
     }
 }

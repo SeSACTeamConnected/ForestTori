@@ -45,7 +45,7 @@ struct Onboarding2: View {
                                         name = String(name.prefix(9))
                                     }
                                 }
-                                .underline(true, color: Color("STR_Brown"))
+                                .underline(true, color: Color("STR_brown"))
                                 .foregroundColor(name.count > 8 ? .red : .green)
                                 .fixedSize()
                                 .font(.system(size: 20))
@@ -70,14 +70,14 @@ struct Onboarding2: View {
                     .padding(EdgeInsets(top: 320, leading: 91, bottom: 0, trailing: 91))
                     ZStack{
                         RoundedRectangle(cornerRadius: 100)
-                            .stroke(name.count > 0 && name.count < 9 ? Color.clear : Color("STR_Brown"), lineWidth: 2)
+                            .stroke(name.count > 0 && name.count < 9 ? Color.clear : Color("STR_brown"), lineWidth: 2)
                         
                         RoundedRectangle(cornerRadius: 100)
-                            .fill(name.count > 0 && name.count < 9 ? Color("STR_Brown") : Color.clear)
+                            .fill(name.count > 0 && name.count < 9 ? Color("STR_brown") : Color.clear)
                         
                         
                         Text("이름 알려주기")
-                            .foregroundColor(name.count > 0 && name.count < 9 ? Color("STR_White") : Color("STR_Brown"))
+                            .foregroundColor(name.count > 0 && name.count < 9 ? Color("STR_White") : Color("STR_brown"))
                     }
                     .frame(maxWidth: .infinity)
                     .frame(height: 60)

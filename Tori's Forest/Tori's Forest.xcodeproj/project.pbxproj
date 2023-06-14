@@ -34,6 +34,9 @@
 		135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E42A38767300A99A50 /* OnboardingTap.swift */; };
 		135FD7E72A38774700A99A50 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E62A38774700A99A50 /* Notification.swift */; };
 		135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */; };
+		135FD8002A3A5B3900A99A50 /* OnboardingAftertab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7FF2A3A5B3900A99A50 /* OnboardingAftertab.swift */; };
+		135FD8022A3A5D0500A99A50 /* OnboardingFinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD8012A3A5D0500A99A50 /* OnboardingFinal.swift */; };
+		135FD8042A3A711800A99A50 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD8032A3A711800A99A50 /* EndingView.swift */; };
 		13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
 		13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */; };
@@ -171,6 +174,9 @@
 		135FD7E42A38767300A99A50 /* OnboardingTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTap.swift; sourceTree = "<group>"; };
 		135FD7E62A38774700A99A50 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSkipBtn.swift; sourceTree = "<group>"; };
+		135FD7FF2A3A5B3900A99A50 /* OnboardingAftertab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAftertab.swift; sourceTree = "<group>"; };
+		135FD8012A3A5D0500A99A50 /* OnboardingFinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFinal.swift; sourceTree = "<group>"; };
+		135FD8032A3A711800A99A50 /* EndingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingView.swift; sourceTree = "<group>"; };
 		13E09BB92A2AD970009543C6 /* Tori's Forest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_ForestApp.swift; sourceTree = "<group>"; };
 		13E09BC02A2AD971009543C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -314,6 +320,7 @@
 			children = (
 				135FD7D72A38750E00A99A50 /* SplashView.swift */,
 				135FD7DE2A38761800A99A50 /* OnboardingView.swift */,
+				135FD8032A3A711800A99A50 /* EndingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +333,8 @@
 				135FD7E02A38762E00A99A50 /* Onboarding2.swift */,
 				135FD7E22A38765900A99A50 /* Onboarding3.swift */,
 				135FD7E42A38767300A99A50 /* OnboardingTap.swift */,
+				135FD7FF2A3A5B3900A99A50 /* OnboardingAftertab.swift */,
+				135FD8012A3A5D0500A99A50 /* OnboardingFinal.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -762,6 +771,7 @@
 			files = (
 				5B254FC42A2DF98300E426EE /* CustomProgressBar.swift in Sources */,
 				5B6FE3792A34B0D600B86712 /* DataModel.xcdatamodeld in Sources */,
+				135FD8042A3A711800A99A50 /* EndingView.swift in Sources */,
 				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
 				0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */,
@@ -774,6 +784,7 @@
 				135FD7E12A38762E00A99A50 /* Onboarding2.swift in Sources */,
 				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
 				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
+				135FD8002A3A5B3900A99A50 /* OnboardingAftertab.swift in Sources */,
 				0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */,
 				5B96CABE2A3A3BDD004182BE /* KeyboardHandler.swift in Sources */,
 				135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */,
@@ -788,6 +799,7 @@
 				135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */,
 				0E343AF12A3916B7006DB1CB /* RealityKitView.swift in Sources */,
 				135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */,
+				135FD8022A3A5D0500A99A50 /* OnboardingFinal.swift in Sources */,
 				135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */,
 				0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */,
 			);
@@ -812,7 +824,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest for Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z238234D5;
+				DEVELOPMENT_TEAM = 34K3V5D9X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tori's Forest for";
@@ -843,7 +855,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest for Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z238234D5;
+				DEVELOPMENT_TEAM = 34K3V5D9X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tori's Forest for";
@@ -989,7 +1001,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z238234D5;
+				DEVELOPMENT_TEAM = 34K3V5D9X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1021,7 +1033,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest/Preview Content\"";
-				DEVELOPMENT_TEAM = 5Z238234D5;
+				DEVELOPMENT_TEAM = 34K3V5D9X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";

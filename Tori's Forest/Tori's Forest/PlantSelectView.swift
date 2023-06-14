@@ -53,13 +53,18 @@ struct PlantSelectView: View {
                                 .padding(.trailing,10)
                         }
                     }
+                    .onAppear {
+                               withAnimation {
+                                   proxy.scrollTo(21, anchor: .center)
+                               }
+                           }
                 }
                 .scrollDisabled(true)
                 .gesture(
                     DragGesture()
                         .onEnded { value in
                             if value.translation.width > 0 {
-                                if(flag > 1){
+                                if(flag >= 1){
                                     withAnimation(.linear){
                                         flag -= 1
                                         proxy.scrollTo(flag,anchor: .center)

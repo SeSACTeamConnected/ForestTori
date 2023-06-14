@@ -15,18 +15,24 @@ struct OnboardingView: View {
                 SplashView(OnboardingViewModel: onboardingViewModel)
             }
             else if onboardingViewModel.currentPage == 2{
-                OnboardingTap(OnboardingViewModel: onboardingViewModel)
-            }
-            else if onboardingViewModel.currentPage == 3{
                 Onboarding1(OnboardingViewModel: onboardingViewModel)
             }
+            else if onboardingViewModel.currentPage == 3{
+                OnboardingTap(OnboardingViewModel: onboardingViewModel)
+            }
             else if onboardingViewModel.currentPage == 4{
-                Onboarding2(OnboardingViewModel: onboardingViewModel)
+                OnboardingAftertab(OnboardingViewModel: onboardingViewModel)
             }
             else if onboardingViewModel.currentPage == 5{
+                Onboarding2(OnboardingViewModel: onboardingViewModel)
+            }
+            else if  onboardingViewModel.currentPage == 6{
                 Onboarding3(OnboardingViewModel: onboardingViewModel)
             }
-            else{
+            else if  onboardingViewModel.currentPage == 7{
+                OnboardingFinal(OnboardingViewModel: onboardingViewModel)
+            }
+            else {
                 MainView()
             }
         }
