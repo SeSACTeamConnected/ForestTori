@@ -120,6 +120,7 @@ struct GardenSceneView: UIViewRepresentable {
     
     class Coordinator: NSObject {
         let parent: GardenSceneView
+        let objectNames: Array<String> = ["dandelion", "cactus", "maple", "cottontree"]
         
         init(_ parent: GardenSceneView) {
             self.parent = parent
@@ -131,10 +132,12 @@ struct GardenSceneView: UIViewRepresentable {
             
             if let hitNode = hitTestResults.first?.node {
                 if let selectedName = hitNode.geometry?.name {
-                    parent.isShowPlantHistoryView = true
-                    parent.selectedName = selectedName
-                    
-                    print(parent.selectedName + "is selected")
+                    if objectNames.contains(selectedName) {
+                        parent.isShowPlantHistoryView = true
+                        parent.selectedName = selectedName
+                        
+                        print("\(parent.selectedName) is selected")
+                    }
                 }
 //                parent.isShowPlantHistoryView = true
 //                parent.selectedName = hitNode.geometry?.name ?? ""

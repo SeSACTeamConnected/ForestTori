@@ -54,6 +54,8 @@
 		5B6FE38F2A34CDB600B86712 /* Plant.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE38A2A34CDB600B86712 /* Plant.csv */; };
 		5B6FE3902A34CDB600B86712 /* Mission.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE38B2A34CDB600B86712 /* Mission.csv */; };
 		5B6FE3912A34CDB600B86712 /* Post.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE38C2A34CDB600B86712 /* Post.csv */; };
+		5B96CABC2A3A3562004182BE /* PlantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96CABB2A3A3562004182BE /* PlantCardView.swift */; };
+		5B96CABE2A3A3BDD004182BE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */; };
 		5BA14FAE2A3778620042D6A4 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5BA14FAD2A3778620042D6A4 /* PopupView */; };
 		5BCD49AD2A3554200058079D /* STR_3D_cactus_2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49822A3554200058079D /* STR_3D_cactus_2.dae */; };
 		5BCD49AE2A3554200058079D /* STR_3D_cactus_3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49832A3554200058079D /* STR_3D_cactus_3.dae */; };
@@ -190,6 +192,8 @@
 		5B6FE38A2A34CDB600B86712 /* Plant.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Plant.csv; sourceTree = "<group>"; };
 		5B6FE38B2A34CDB600B86712 /* Mission.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mission.csv; sourceTree = "<group>"; };
 		5B6FE38C2A34CDB600B86712 /* Post.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Post.csv; sourceTree = "<group>"; };
+		5B96CABB2A3A3562004182BE /* PlantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCardView.swift; sourceTree = "<group>"; };
+		5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		5BCD49822A3554200058079D /* STR_3D_cactus_2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_cactus_2.dae; sourceTree = "<group>"; };
 		5BCD49832A3554200058079D /* STR_3D_cactus_3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_cactus_3.dae; sourceTree = "<group>"; };
 		5BCD49842A3554200058079D /* STR_3D_cactus_1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_cactus_1.dae; sourceTree = "<group>"; };
@@ -363,10 +367,12 @@
 				5BCD49802A3554200058079D /* Objects */,
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
 				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
+				5B96CABB2A3A3562004182BE /* PlantCardView.swift */,
 				5B254FAD2A2CCC3500E426EE /* MainView.swift */,
 				5B254FB32A2CD1C600E426EE /* MissionBox.swift */,
 				5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */,
 				5B254FC52A2E00C700E426EE /* DiaryView.swift */,
+				5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */,
 				5B254FB12A2CCFB200E426EE /* PlantPotView.swift */,
 				5B254FBD2A2CEE2300E426EE /* GardenView.swift */,
 				5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */,
@@ -762,12 +768,14 @@
 				5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */,
 				135FD7E32A38765900A99A50 /* Onboarding3.swift in Sources */,
 				5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */,
+				5B96CABC2A3A3562004182BE /* PlantCardView.swift in Sources */,
 				0E343AEF2A3916A1006DB1CB /* ARContentView.swift in Sources */,
 				13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */,
 				135FD7E12A38762E00A99A50 /* Onboarding2.swift in Sources */,
 				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
 				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
 				0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */,
+				5B96CABE2A3A3BDD004182BE /* KeyboardHandler.swift in Sources */,
 				135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */,
 				0EE457922A315A9000B2B8FC /* Garden.swift in Sources */,
 				5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */,
@@ -778,7 +786,6 @@
 				135FD7E72A38774700A99A50 /* Notification.swift in Sources */,
 				5B6FE3712A340D8100B86712 /* UserDefault.swift in Sources */,
 				135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */,
-				5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */,
 				0E343AF12A3916B7006DB1CB /* RealityKitView.swift in Sources */,
 				135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */,
 				135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */,

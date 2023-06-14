@@ -11,6 +11,8 @@ import PopupView
 struct PlantPotView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+    @StateObject private var keyboardHandler = KeyboardHandler()
+    
     @FetchRequest(sortDescriptors: [])
     var plants: FetchedResults<Plant>
     
@@ -31,6 +33,7 @@ struct PlantPotView: View {
     @State var isShowPlantSelectView: Bool = false
     @State var isShowDiaryView: Bool = false
     @State var isMissionCompleted: Bool = false
+    @State var isTapped: Bool = false
     @State var isChapterCompleted: Bool = false
     
     let backgrounds: Array<String> = ["STR_Img_bg_1_spring", "STR_Img_bg_2_summer", "STR_Img_bg_3_autumn", "STR_Img_bg_4_winter"]
@@ -49,6 +52,7 @@ struct PlantPotView: View {
                     NavigationLink(
                         destination:
                             GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
+                            .environment(\.managedObjectContext, viewContext)
                             .navigationBarBackButtonHidden(true)
                     ) {
                         Image("STR_Img_asset_button_main")
@@ -97,30 +101,42 @@ struct PlantPotView: View {
                     
                     Spacer()
                     
-                    MissionBox(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted, missionIndex: $missionIndex)
+                    MissionBox(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted, missionIndex: $missionIndex, isTapped: $isTapped)
                         .environment(\.managedObjectContext, viewContext)
                         .disabled(dialogs[dialogIndex].isPrev)
                         .opacity(isMissionCompleted==dialogs[dialogIndex].isPrev ? 1 : 0)
+                        .padding(.top, 80)
                     
                     Spacer()
                 }
             }
-            .sheet(isPresented: self.$isShowPlantSelectView) {
-                PlantSelectView(isEmpty: $isEmpty, showPlantSelectView: $isShowPlantSelectView, chapterIndex: chapterIndex, plantIndex: plantIndex, missionIndex: missionIndex)
+            .popup(isPresented: self.$isShowPlantSelectView) {
+                PlantSelectView(isEmpty: $isEmpty, isShowPlantSelectView: $isShowPlantSelectView, chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex)
                     .environment(\.managedObjectContext, viewContext)
+            } customize: {
+                $0
+                    .type(.default)
+                    .position(.bottom)
+                    .animation(.spring())
+                    .closeOnTapOutside(false)
+                    .closeOnTap(false)
+                    .backgroundColor(Color.gray.opacity(0.4))
             }
+            
             .popup(isPresented: self.$isShowDiaryView) {
-                DiaryView(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted, postIndex: $postIndex, chapterIndex: chapterIndex, missionIndex: missionIndex)
+                DiaryView(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted,
+                          isTapped: $isTapped, postIndex: $postIndex, chapterIndex: chapterIndex, missionIndex: missionIndex)
                     .environment(\.managedObjectContext, viewContext)
                     .frame(width: 356, height: 513)
                     .background(.white)
                     .cornerRadius(10)
-                    .offset(y: -20)
+                    .offset(y: keyboardHandler.keyboardHeight == 0 ? -40 : (keyboardHandler.keyboardHeight * -1 + 100))
             } customize: {
                 $0
                     .isOpaque(true)
                     .closeOnTap(false)
             }
+            
             .popup(isPresented: $isChapterCompleted) {
                 ChapterOverView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
                     .environment(\.managedObjectContext, viewContext)
