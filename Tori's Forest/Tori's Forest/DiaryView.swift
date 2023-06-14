@@ -11,14 +11,12 @@ import SwiftUI
 struct DiaryView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-//    @AppStorage("plantIndex") var plantIndex: Int = 0
-//    @AppStorage("missionIndex") var missionIndex: Int = 0
-    
     @FetchRequest(sortDescriptors: [])
     var posts: FetchedResults<Post>
     
     @Binding var isShowDiaryView: Bool
     @Binding var isMissionCompleted: Bool
+    @Binding var isTapped: Bool
     @Binding var postIndex: Int
     
     @State private var imageDescription: String = ""
@@ -27,7 +25,6 @@ struct DiaryView: View {
     @State private var isShowingCameraPicker = false
     @State private var isShowingPhotoLibraryPicker = false
     @State private var selectedImage: UIImage? = nil ?? UIImage(named: "STR_Img_splash")!
-//    @State private var defaultImage: UIImage
     
     var chapterIndex: Int
     var missionIndex: Int
@@ -51,11 +48,11 @@ struct DiaryView: View {
                         .fontWeight(.bold)
                     Spacer()
                     Button(action: {
-                        //TODO: 더미 데이터
                         addPost(Int64(postIndex+1), Int64(chapterIndex+1), Int64(missionIndex+1), (selectedImage?.pngData()?.base64EncodedString())!, imageDescription == "" ? descriptionDefault : imageDescription, Date())
 
                         isShowDiaryView.toggle()
                         isMissionCompleted.toggle()
+                        isTapped.toggle()
                     }) {
                         Text("완료")
                             .font(.system(size: 16))

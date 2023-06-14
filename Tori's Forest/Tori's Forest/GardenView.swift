@@ -20,6 +20,7 @@ struct GardenView: View {
     @State var selectedViewName: String = ""
     @State var isShowPlantHistoryView: Bool = false
     
+    
     let backgrounds: Array<String> = ["STR_Img_bg_1_spring", "STR_Img_bg_2_summer", "STR_Img_bg_3_autumn", "STR_Img_bg_4_winter"]
     
     var body: some View {
@@ -48,8 +49,8 @@ struct GardenView: View {
                 
                 //TODO: sheet 정보를 선택된 3d object 기준으로 변경
                 GardenSceneView(chapterIndex: $chapterIndex,
-                    isShowPlantHistoryView: $isShowPlantHistoryView,
-                    selectedName: $selectedViewName
+                                isShowPlantHistoryView: $isShowPlantHistoryView,
+                                selectedName: $selectedViewName
                 )
                 .frame(width: 500, height: 400)
                 .environmentObject(gardenObject)
@@ -58,18 +59,14 @@ struct GardenView: View {
                 }
                 
                 Spacer()
-              
-                Button(action: {},
-                       label: {
-                            NavigationLink(destination: {
-                                ARContentView(chapterIndex: $chapterIndex)
-                            }, label: {
-                                Image("STR_Img_asset_button_AR")
-                                  .resizable()
-                                  .frame(width: 46.45, height: 46.43)
-                                }
-                            })
-                })
+                
+                Button(action: { print("AR is on") }) {
+                    NavigationLink(destination: ARContentView(chapterIndex: $chapterIndex)) {
+                        Image("STR_Img_asset_button_AR")
+                            .resizable()
+                            .frame(width: 46.45, height: 46.43)
+                    }
+                }
             }
         }
     }

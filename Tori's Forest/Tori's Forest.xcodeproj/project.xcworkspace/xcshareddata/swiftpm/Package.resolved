@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/maxxfrazer/FocusEntity",
       "state" : {
-        "revision" : "e7ca067e1f00511f479f4ae4dd4de928cbbf5215",
-        "version" : "2.4.1"
+        "revision" : "68d404d7293225939cc717ce1115197c6e8a7af2",
+        "version" : "2.5.0"
       }
     },
     {

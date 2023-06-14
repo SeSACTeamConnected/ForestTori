@@ -14,12 +14,13 @@ struct MissionBox: View {
     @Binding var isShowDiaryView: Bool
     @Binding var isMissionCompleted: Bool
     @Binding var missionIndex: Int
-    
-    @State var circleName: String = "circle"
-    @State var circleColor: String = "STR_Brown"
-    @State var circleOpacity: Double = 0.15
+    @Binding var isTapped: Bool
     
     var body: some View {
+        let circleName: String = isTapped ? "checkmark.circle.fill" : "circle"
+        let circleColor: String = isTapped ? "STR_Green" : "STR_Brown"
+        let circleOpacity: Double = isTapped ? 1 : 0.15
+        
         ZStack {
             RoundedRectangle(cornerRadius: 100)
                 .fill(.white)
@@ -38,10 +39,8 @@ struct MissionBox: View {
                     .foregroundColor(Color(circleColor))
                     .opacity(circleOpacity)
                     .onTapGesture {
-                        circleName = "checkmark.circle.fill"
-                        circleColor = "STR_Green"
-                        circleOpacity = 1
-                        DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
+                        isTapped = true
+                        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                             isShowDiaryView.toggle()
                         }
                     }
@@ -53,9 +52,3 @@ struct MissionBox: View {
         .padding(.bottom, 20)
     }
 }
-
-//struct MissionBox_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView()
-//    }
-//}

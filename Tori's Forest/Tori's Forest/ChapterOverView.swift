@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ChapterOverView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentationMode
     
     @FetchRequest(sortDescriptors: [])
     var chapters: FetchedResults<Chapter>
     
     @Binding var chapterIndex: Int
     @Binding var plantIndex: Int
-//    @Binding var dialogIndex: Int
-//    @Binding var missionIndex: Int
     @Binding var postIndex: Int
     @Binding var isChapterCompleted: Bool
+    
+    @State var isShowGardenView: Bool = false
     
     let chapterImage = ["STR_Img_ChapterThumbnail_1", "STR_Img_ChapterThumbnail_2", "STR_Img_ChapterThumbnail_3", "STR_Img_ChapterThumbnail_4"]
     
@@ -45,27 +46,25 @@ struct ChapterOverView: View {
                 .font(.system(size: 13))
                 .foregroundColor(Color("STR_Black"))
                 .padding(.horizontal, 30)
+            
             HStack {
-                Button {
-                    //TODO: 해당 버튼 눌렀을 때는 정원으로 가기
-                    isChapterCompleted.toggle()
-                } label: {
-                    NavigationLink(
-                        destination: GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
+                NavigationLink(
+                    destination: GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
                         .environment(\.managedObjectContext, viewContext)
-                        .navigationBarBackButtonHidden()) {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color("STR_Brown"))
-                            Text("정원으로")
-                                .foregroundColor(Color("STR_White"))
-                        }
-                        .frame(width: 125, height: 35)
+                        .navigationBarBackButtonHidden(true)
+                ) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color("STR_Brown"))
+                        Text("정원으로")
+                            .foregroundColor(Color("STR_White"))
                     }
+                    .frame(width: 125, height: 35)
                 }
-                Button {
-                    isChapterCompleted.toggle()
-                } label: {
+                
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .fill(Color("STR_Brown"))
@@ -77,10 +76,5 @@ struct ChapterOverView: View {
             }
         }
     }
-}
-
-struct ChapterOverView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
+        
 }
