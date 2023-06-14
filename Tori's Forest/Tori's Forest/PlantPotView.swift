@@ -20,22 +20,14 @@ struct PlantPotView: View {
     @FetchRequest(sortDescriptors: [])
     var missions: FetchedResults<Mission>
     
-//    @AppStorage("chapterIndex") var chapterIndex: Int = 0
-//    @AppStorage("plantIndex") var plantIndex: Int = 0
-//    @AppStorage("dialogIndex") var dialogIndex: Int = 0
-//    @AppStorage("missionIndex") var missionIndex: Int = 0
-//    @AppStorage("postIndex") var postIndex: Int = 0
-    
+    @Binding var viewName: String
     @Binding var chapterIndex: Int
     @Binding var plantIndex: Int
     @Binding var dialogIndex: Int
     @Binding var missionIndex: Int
     @Binding var postIndex: Int
-    
-    @State var viewName: String = "Main"
+
     @State var isEmpty: Bool = true
-//    @State var emptyPot: String = "STR_3D_emptypot.scn"
-//    @State var potImage: String = plants[plantIndex].objectName
     @State var isShowPlantSelectView: Bool = false
     @State var isShowDiaryView: Bool = false
     @State var isMissionCompleted: Bool = false
@@ -54,8 +46,15 @@ struct PlantPotView: View {
                 .ignoresSafeArea()
             VStack {
                 HStack {
-                    ViewChangeButton(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex, viewName: $viewName)
-                        .environment(\.managedObjectContext, viewContext)
+                    NavigationLink(
+                        destination:
+                            GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
+                            .navigationBarBackButtonHidden(true)
+                    ) {
+                        Image("STR_Img_asset_button_main")
+                            .resizable()
+                            .frame(width: 45, height: 45)
+                    }
                     
                     Spacer()
                     
@@ -65,9 +64,9 @@ struct PlantPotView: View {
                 }
                 .padding()
                 
-                Spacer()
-                
                 if isEmpty {
+                    Spacer()
+                    
                     ZStack {
                         Image(systemName: "plus.square")
                             .resizable()
@@ -86,19 +85,24 @@ struct PlantPotView: View {
                     
                     Spacer()
                 } else {
-                    if isMissionCompleted != dialogs[dialogIndex].isPrev {
-                        MessageBox(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, isEmpty: $isEmpty, isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted)
-                            .environment(\.managedObjectContext, viewContext)
-                    }
+                    MessageBox(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, isEmpty: $isEmpty, isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted)
+                        .environment(\.managedObjectContext, viewContext)
+                        .opacity(isMissionCompleted != dialogs[dialogIndex].isPrev ? 1: 0)
+                    
+                    Spacer()
                     
                     PlantSceneView(sceneViewName: potName!)
                         .environment(\.managedObjectContext, viewContext)
+                        .frame(width: 250, height: 300)
                     
-                    if isMissionCompleted == dialogs[dialogIndex].isPrev {
-                        MissionBox(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted, missionIndex: $missionIndex)
-                            .environment(\.managedObjectContext, viewContext)
-                            .disabled(dialogs[dialogIndex].isPrev)
-                    }
+                    Spacer()
+                    
+                    MissionBox(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted, missionIndex: $missionIndex)
+                        .environment(\.managedObjectContext, viewContext)
+                        .disabled(dialogs[dialogIndex].isPrev)
+                        .opacity(isMissionCompleted==dialogs[dialogIndex].isPrev ? 1 : 0)
+                    
+                    Spacer()
                 }
             }
             .sheet(isPresented: self.$isShowPlantSelectView) {
@@ -115,9 +119,6 @@ struct PlantPotView: View {
             } customize: {
                 $0
                     .isOpaque(true)
-//                    .closeOnTapOutside(true)
-                //TDOD: 현재 작동하지 않음 -> 개선 필요
-//                    .dragToDismiss(true)
                     .closeOnTap(false)
             }
             .popup(isPresented: $isChapterCompleted) {

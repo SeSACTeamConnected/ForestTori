@@ -25,64 +25,67 @@ struct MainView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @ObservedObject var model = ViewModelPhone()
-
-    
-    @State var selectedTab: Int = 0
     
     @FetchRequest(sortDescriptors: [])
     private var plants: FetchedResults<Plant>
+
+    @State var selectedTab: Int = 0
+    @State var viewName: String = "Main"
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
             //TODO: 페이지 컨트롤러 간격 조정 + 선택된 탭 인식하여 selected 이미지로 변환
-        ZStack {
-            TabView(selection: $selectedTab) {
-                PlantPotView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex)
-                    .tabItem {
-                        Image("STR_Img_asset_button_pot_selected")
-                            .resizable()
-                            .frame(width: 27, height: 24)
+            ZStack {
+                TabView(selection: $selectedTab) {
+                    NavigationStack {
+                        PlantPotView(viewName: $viewName, chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex)
+                            .tabItem {
+                                Image("STR_Img_asset_button_pot_selected")
+                                    .resizable()
+                                    .frame(width: 27, height: 24)
+                            }
                     }
-                    .environment(\.managedObjectContext, viewContext)
-                    .tag(0)
+                        .environment(\.managedObjectContext, viewContext)
+                        .tag(0)
+                    
+                    PlantPotView(viewName: $viewName, chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex)
+                        .tabItem {
+                            Image("STR_Img_asset_button_pot")
+                                .resizable()
+                                .frame(width: 27, height: 24)
+                        }
+                        .environment(\.managedObjectContext, viewContext)
+                        .disabled(true)
+                        .tag(1)
+                    
+                    PlantPotView(viewName: $viewName, chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex)
+                        .tabItem {
+                            Image("STR_Img_asset_button_pot")
+                                .resizable()
+                                .frame(width: 27, height: 24)
+                        }
+                        .environment(\.managedObjectContext, viewContext)
+                        .disabled(true)
+                        .tag(2)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
                 
-                PlantPotView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex)
-                    .tabItem {
-                        Image("STR_Img_asset_button_pot")
-                            .resizable()
-                            .frame(width: 27, height: 24)
-                    }
-                    .environment(\.managedObjectContext, viewContext)
-                    .disabled(true)
-                    .tag(1)
-                
-                PlantPotView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex)
-                    .tabItem {
-                        Image("STR_Img_asset_button_pot")
-                            .resizable()
-                            .frame(width: 27, height: 24)
-                    }
-                    .environment(\.managedObjectContext, viewContext)
-                    .disabled(true)
-                    .tag(2)
-            }
-            .background(.pink)
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            
-            VStack {
-                Spacer()
-                
-                CustomTabBar(selectedTab: $selectedTab)
-            }
-                    }
+                VStack {
+                    Spacer()
+                    
+                    CustomTabBar(selectedTab: $selectedTab)
+                        .padding(.bottom)
+                }
+//            }
+            .ignoresSafeArea()
         }
         .onAppear {
-//            chapterIndex = 0
-//            plantIndex = 0
-//            dialogIndex = 0
-//            missionIndex = 0
-//            
-//            deleteAllDataFromAllEntities()
+            chapterIndex = 0
+            plantIndex = 0
+            dialogIndex = 0
+            missionIndex = 0
+            
+            deleteAllDataFromAllEntities()
             loadData()
             self.model.sendMessageToWatch(message: [
                 "민들레씨": "창문 30분 열어 환기하기",
@@ -90,20 +93,19 @@ struct MainView: View {
                 "????": "하루에 한 번 샤워하기"
             ])
         }
-//        .ignoresSafeArea()
     }
     
     func loadData() {
-        if plants.count == 0 {
-            //데이터 추가
+//        if plants.count == 0 {
+            // 데이터 추가
             print("CoreData : initialize data")
 //            deleteAllDataFromAllEntities()
             getData()
             print("CoreData: \(plants.count) plants added")
-        }
-        else{
-            print("CoreData : Already \(plants.count) plants exists")
-        }
+//        }
+//        else{
+//            print("CoreData : Already \(plants.count) plants exists")
+//        }
     }
     
     func deleteAllData(_ entityName: String) {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GardenView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.presentationMode) var presentationMode
     
     @StateObject var gardenObject = GardenObject()
     
@@ -16,7 +17,6 @@ struct GardenView: View {
     @Binding var plantIndex: Int
     @Binding var postIndex: Int
     
-    @State var viewName: String = "Garden"
     @State var selectedViewName: String = ""
     @State var isShowPlantHistoryView: Bool = false
     
@@ -31,8 +31,11 @@ struct GardenView: View {
                 .ignoresSafeArea()
             VStack {
                 HStack {
-                    ViewChangeButton(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex, viewName: $viewName)
-                        .environment(\.managedObjectContext, viewContext)
+                    Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                        Image("STR_Img_asset_button_garden")
+                            .resizable()
+                            .frame(width: 45, height: 45)
+                    }
                     
                     Spacer()
                     
@@ -57,22 +60,19 @@ struct GardenView: View {
                 Spacer()
                 
                 //TODO: AR 버튼 -> AR 뷰 이동 추가
-                ZStack {
-                    Image(systemName: "cube.transparent")
-                        .resizable()
-                        .frame(width: 23.87, height: 25.68)
-                    Image(systemName: "viewfinder")
-                        .resizable()
-                        .frame(width: 46.45, height: 46.43)
-                }
-                .foregroundColor(Color("STR_White"))
+//                ZStack {
+//                    Image(systemName: "cube.transparent")
+//                        .resizable()
+//                        .frame(width: 23.87, height: 25.68)
+//                    Image(systemName: "viewfinder")
+//                        .resizable()
+//                        .frame(width: 46.45, height: 46.43)
+//                }
+//                .foregroundColor(Color("STR_White"))
+                Image("STR_Img_asset_button_AR")
+                    .resizable()
+                    .frame(width: 46.45, height: 46.43)
             }
         }
-    }
-}
-
-struct GardenView_Previews: PreviewProvider {
-    static var previews: some View {
-        GardenView(chapterIndex: .constant(0), plantIndex: .constant(0), postIndex: .constant(0))
     }
 }

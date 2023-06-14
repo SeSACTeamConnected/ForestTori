@@ -21,11 +21,13 @@ struct DiaryView: View {
     @Binding var isMissionCompleted: Bool
     @Binding var postIndex: Int
     
-    @State private var imageDescription: String =  ""
+    @State private var imageDescription: String = ""
+    @State private var descriptionDefault: String = "숲토리: 은둔청년을 위한 은둔 극복 프로젝트"
     @State private var isShowingActionSheet = false
     @State private var isShowingCameraPicker = false
     @State private var isShowingPhotoLibraryPicker = false
-    @State private var selectedImage: UIImage?
+    @State private var selectedImage: UIImage? = nil ?? UIImage(named: "STR_Img_splash")!
+//    @State private var defaultImage: UIImage
     
     var chapterIndex: Int
     var missionIndex: Int
@@ -45,12 +47,13 @@ struct DiaryView: View {
                     }
                     Spacer()
                     Text("성장일지")
-                        .foregroundColor(Color("STR_Black"))
+                        .foregroundColor(Color("STR_Black")) 
                         .fontWeight(.bold)
                     Spacer()
                     Button(action: {
-                        //TODO: 더비 데이터
-                        addPost(Int64(postIndex+1), Int64(chapterIndex+1), Int64(missionIndex+1), (selectedImage!.pngData()?.base64EncodedString())!, imageDescription, Date())
+                        //TODO: 더미 데이터
+                        addPost(Int64(postIndex+1), Int64(chapterIndex+1), Int64(missionIndex+1), (selectedImage?.pngData()?.base64EncodedString())!, imageDescription == "" ? descriptionDefault : imageDescription, Date())
+
                         isShowDiaryView.toggle()
                         isMissionCompleted.toggle()
                     }) {
@@ -68,19 +71,16 @@ struct DiaryView: View {
                     Button(action: {
                         isShowingActionSheet = true
                     }) {
-                        if let image = selectedImage {
-                            Image(uiImage: image)
+                        if selectedImage == UIImage(named: "STR_Img_Splash") {
+                            Image(uiImage: selectedImage!)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
                                 .frame(width: 321, height: 321)
                                 .clipped()
                                 .cornerRadius(8)
-                            //                        .padding(EdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18))
                         } else {
                             RoundedRectangle(cornerRadius: 8)
-                            //                        .frame(maxWidth: .infinity)
                                 .frame(width: 321, height: 321)
-                            //                        .padding(EdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 18))
                                 .foregroundColor(Color.gray)
                                 .opacity(0.2)
                                 .overlay(

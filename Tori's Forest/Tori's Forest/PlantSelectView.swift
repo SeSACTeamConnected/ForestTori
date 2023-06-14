@@ -34,7 +34,7 @@ struct PlantSelectView: View {
     var body: some View {
         let season: String = fourSeasons[chapterIndex]
         let range: Range = season == "Winter" ? 0..<7 : 0..<5
-        var imageDefaultWithSeason = imageDefault + "_" + season
+        let imageDefaultWithSeason = imageDefault + "_" + season
         
         ZStack {
             ForEach(range) { idx in
