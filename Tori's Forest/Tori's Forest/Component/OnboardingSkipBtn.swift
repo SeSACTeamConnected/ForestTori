@@ -17,10 +17,10 @@ struct OnboardingSkipBtn: View {
                 HStack{
                     Text("Skip")
                         .font(.system(size: 16))
-                        .foregroundColor(Color("STR_Brown"))
+                        .foregroundColor(Color("STR_brown"))
                     Image(systemName: "chevron.right")
                         .font(.system(size:16))
-                        .foregroundColor(Color("STR_Brown"))
+                        .foregroundColor(Color("STR_brown"))
                 }
                 .frame(alignment: .leading)
                

@@ -41,7 +41,7 @@ struct ChapterOverView: View {
             Text(chapters[chapterIndex].chapterSubHeader!)
                 .font(.system(size: 13))
                 .fontWeight(.semibold)
-                .foregroundColor(Color("STR_Brown"))
+                .foregroundColor(Color("STR_brown"))
             Text(chapters[chapterIndex].chapterDescription!)
                 .font(.system(size: 13))
                 .foregroundColor(Color("STR_Black"))
@@ -55,7 +55,7 @@ struct ChapterOverView: View {
                 ) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Color("STR_Brown"))
+                            .fill(Color("STR_brown"))
                         Text("정원으로")
                             .foregroundColor(Color("STR_White"))
                     }
@@ -67,7 +67,7 @@ struct ChapterOverView: View {
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Color("STR_Brown"))
+                            .fill(Color("STR_brown"))
                         Text("메인으로")
                             .foregroundColor(Color("STR_White"))
                     }

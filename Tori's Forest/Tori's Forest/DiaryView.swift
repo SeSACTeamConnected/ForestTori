@@ -116,7 +116,7 @@ struct DiaryView: View {
                             .foregroundColor(Color("STR_Black"))
                             .background(
                                 RoundedRectangle(cornerRadius: 5)
-                                    .stroke(Color("STR_Brown").opacity(0.4), lineWidth: 2)
+                                    .stroke(Color("STR_brown").opacity(0.4), lineWidth: 2)
                                     .background(Color("STR_White"))
                             )
                             .onAppear {
