@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "focusentity",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/maxxfrazer/FocusEntity",
+      "state" : {
+        "revision" : "e7ca067e1f00511f479f4ae4dd4de928cbbf5215",
+        "version" : "2.4.1"
+      }
+    },
+    {
       "identity" : "popupview",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/exyte/PopupView.git",

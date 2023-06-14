@@ -14,9 +14,26 @@
 		0E343ABD2A37FB33006DB1CB /* Tori's Forest for Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 0E343AB02A37FB32006DB1CB /* Tori's Forest for Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0E343AC22A37FC5C006DB1CB /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AC12A37FC5C006DB1CB /* ViewModelWatch.swift */; };
 		0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */; };
+		0E343AEF2A3916A1006DB1CB /* ARContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AEE2A3916A1006DB1CB /* ARContentView.swift */; };
+		0E343AF12A3916B7006DB1CB /* RealityKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E343AF02A3916B7006DB1CB /* RealityKitView.swift */; };
+		0E343AF42A3916CE006DB1CB /* FocusEntity in Frameworks */ = {isa = PBXBuildFile; productRef = 0E343AF32A3916CE006DB1CB /* FocusEntity */; };
+		0E343AFB2A39177B006DB1CB /* ground_dandelion.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AF62A39177B006DB1CB /* ground_dandelion.usdz */; };
+		0E343AFC2A39177B006DB1CB /* ground_none.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AF72A39177B006DB1CB /* ground_none.usdz */; };
+		0E343AFD2A39177B006DB1CB /* ground_maple.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AF82A39177B006DB1CB /* ground_maple.usdz */; };
+		0E343AFE2A39177B006DB1CB /* ground_cottontree.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AF92A39177B006DB1CB /* ground_cottontree.usdz */; };
+		0E343AFF2A39177B006DB1CB /* ground_cactus.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AFA2A39177B006DB1CB /* ground_cactus.usdz */; };
 		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
 		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
 		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
+		135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7D72A38750E00A99A50 /* SplashView.swift */; };
+		135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */; };
+		135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DC2A38755000A99A50 /* Onboarding1.swift */; };
+		135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DE2A38761800A99A50 /* OnboardingView.swift */; };
+		135FD7E12A38762E00A99A50 /* Onboarding2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E02A38762E00A99A50 /* Onboarding2.swift */; };
+		135FD7E32A38765900A99A50 /* Onboarding3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E22A38765900A99A50 /* Onboarding3.swift */; };
+		135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E42A38767300A99A50 /* OnboardingTap.swift */; };
+		135FD7E72A38774700A99A50 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7E62A38774700A99A50 /* Notification.swift */; };
+		135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */; };
 		13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
 		13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */; };
@@ -133,9 +150,25 @@
 		0E343AB92A37FB33006DB1CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E343AC12A37FC5C006DB1CB /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
 		0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
+		0E343AEE2A3916A1006DB1CB /* ARContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContentView.swift; sourceTree = "<group>"; };
+		0E343AF02A3916B7006DB1CB /* RealityKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealityKitView.swift; sourceTree = "<group>"; };
+		0E343AF62A39177B006DB1CB /* ground_dandelion.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_dandelion.usdz; sourceTree = "<group>"; };
+		0E343AF72A39177B006DB1CB /* ground_none.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_none.usdz; sourceTree = "<group>"; };
+		0E343AF82A39177B006DB1CB /* ground_maple.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_maple.usdz; sourceTree = "<group>"; };
+		0E343AF92A39177B006DB1CB /* ground_cottontree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_cottontree.usdz; sourceTree = "<group>"; };
+		0E343AFA2A39177B006DB1CB /* ground_cactus.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_cactus.usdz; sourceTree = "<group>"; };
 		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
 		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
 		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		135FD7D72A38750E00A99A50 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		135FD7DC2A38755000A99A50 /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
+		135FD7DE2A38761800A99A50 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		135FD7E02A38762E00A99A50 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
+		135FD7E22A38765900A99A50 /* Onboarding3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding3.swift; sourceTree = "<group>"; };
+		135FD7E42A38767300A99A50 /* OnboardingTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTap.swift; sourceTree = "<group>"; };
+		135FD7E62A38774700A99A50 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSkipBtn.swift; sourceTree = "<group>"; };
 		13E09BB92A2AD970009543C6 /* Tori's Forest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_ForestApp.swift; sourceTree = "<group>"; };
 		13E09BC02A2AD971009543C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -232,6 +265,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E343AF42A3916CE006DB1CB /* FocusEntity in Frameworks */,
 				5BA14FAE2A3778620042D6A4 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +293,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0E343AF52A391753006DB1CB /* AR_Objects */ = {
+			isa = PBXGroup;
+			children = (
+				0E343AFA2A39177B006DB1CB /* ground_cactus.usdz */,
+				0E343AF92A39177B006DB1CB /* ground_cottontree.usdz */,
+				0E343AF62A39177B006DB1CB /* ground_dandelion.usdz */,
+				0E343AF82A39177B006DB1CB /* ground_maple.usdz */,
+				0E343AF72A39177B006DB1CB /* ground_none.usdz */,
+			);
+			path = AR_Objects;
+			sourceTree = "<group>";
+		};
+		135FD7D62A3874F800A99A50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				135FD7D72A38750E00A99A50 /* SplashView.swift */,
+				135FD7DE2A38761800A99A50 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		135FD7D92A38751B00A99A50 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */,
+				135FD7DC2A38755000A99A50 /* Onboarding1.swift */,
+				135FD7E02A38762E00A99A50 /* Onboarding2.swift */,
+				135FD7E22A38765900A99A50 /* Onboarding3.swift */,
+				135FD7E42A38767300A99A50 /* OnboardingTap.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		135FD7EF2A39072500A99A50 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		13E09BB02A2AD970009543C6 = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +357,9 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
+				135FD7EF2A39072500A99A50 /* Component */,
+				135FD7D92A38751B00A99A50 /* Onboarding */,
+				135FD7D62A3874F800A99A50 /* View */,
 				5BCD49802A3554200058079D /* Objects */,
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
 				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
@@ -301,6 +379,9 @@
 				0EE457912A315A9000B2B8FC /* Garden.swift */,
 				5B6FE3702A340D8100B86712 /* UserDefault.swift */,
 				0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */,
+				135FD7E62A38774700A99A50 /* Notification.swift */,
+				0E343AEE2A3916A1006DB1CB /* ARContentView.swift */,
+				0E343AF02A3916B7006DB1CB /* RealityKitView.swift */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
@@ -328,6 +409,7 @@
 		5BCD49802A3554200058079D /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				0E343AF52A391753006DB1CB /* AR_Objects */,
 				5BCD49812A3554200058079D /* STR_3D_Cactus */,
 				5BCD49852A3554200058079D /* STR_3D_emptypot.dae */,
 				5BCD49CE2A3554C20058079D /* STR_3D_emptypot.scn */,
@@ -518,6 +600,7 @@
 			name = "Tori's Forest";
 			packageProductDependencies = (
 				5BA14FAD2A3778620042D6A4 /* PopupView */,
+				0E343AF32A3916CE006DB1CB /* FocusEntity */,
 			);
 			productName = "Tori's Forest";
 			productReference = 13E09BB92A2AD970009543C6 /* Tori's Forest.app */;
@@ -552,6 +635,7 @@
 			mainGroup = 13E09BB02A2AD970009543C6;
 			packageReferences = (
 				5BA14FAC2A3778620042D6A4 /* XCRemoteSwiftPackageReference "PopupView" */,
+				0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 13E09BBA2A2AD970009543C6 /* Products */;
 			projectDirPath = "";
@@ -609,6 +693,8 @@
 				5BCD49C82A3554200058079D /* STR_3D_maple_3.dae in Resources */,
 				5BCD49C72A3554200058079D /* STR_3D_maple_2.dae in Resources */,
 				5BCD49CA2A3554200058079D /* dandelion.png in Resources */,
+				0E343AFC2A39177B006DB1CB /* ground_none.usdz in Resources */,
+				0E343AFF2A39177B006DB1CB /* ground_cactus.usdz in Resources */,
 				5BCD49B72A3554200058079D /* STR_3D_dandelion_animation_2.dae in Resources */,
 				5BCD4A012A35A29A0058079D /* STR_3D_maple_animation_2.scn in Resources */,
 				5BCD49AD2A3554200058079D /* STR_3D_cactus_2.dae in Resources */,
@@ -637,10 +723,13 @@
 				5BCD49D32A35A1830058079D /* STR_3D_dandelion_3.scn in Resources */,
 				5BCD49DB2A35A19C0058079D /* STR_3D_maple_3.scn in Resources */,
 				5BCD49CB2A3554200058079D /* STR_3D_dandelion_3.dae in Resources */,
+				0E343AFD2A39177B006DB1CB /* ground_maple.usdz in Resources */,
 				5B6FE38E2A34CDB600B86712 /* Chapter.csv in Resources */,
+				0E343AFE2A39177B006DB1CB /* ground_cottontree.usdz in Resources */,
 				5BCD49BF2A3554200058079D /* STR_3D_cactus_animation_2.dae in Resources */,
 				5BCD4A032A35A29E0058079D /* STR_3D_maple_animation_1.scn in Resources */,
 				5BCD49B12A3554200058079D /* STR_3D_freesia.dae in Resources */,
+				0E343AFB2A39177B006DB1CB /* ground_dandelion.usdz in Resources */,
 				5BCD49E72A35A24B0058079D /* STR_3D_dandelion_animation_2.scn in Resources */,
 				5BCD49D12A3554CB0058079D /* STR_3D_gardenground.scn in Resources */,
 				5BCD49C02A3554200058079D /* STR_3D_cottontree_animation_1.dae in Resources */,
@@ -671,16 +760,28 @@
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
 				0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */,
 				5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */,
+				135FD7E32A38765900A99A50 /* Onboarding3.swift in Sources */,
 				5B254FBE2A2CEE2300E426EE /* GardenView.swift in Sources */,
+				0E343AEF2A3916A1006DB1CB /* ARContentView.swift in Sources */,
 				13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */,
+				135FD7E12A38762E00A99A50 /* Onboarding2.swift in Sources */,
 				5B254FC02A2CEEEF00E426EE /* PlantHistoryView.swift in Sources */,
 				5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */,
 				0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */,
+				135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */,
 				0EE457922A315A9000B2B8FC /* Garden.swift in Sources */,
 				5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */,
 				5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */,
+				135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */,
 				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
+				135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */,
+				135FD7E72A38774700A99A50 /* Notification.swift in Sources */,
 				5B6FE3712A340D8100B86712 /* UserDefault.swift in Sources */,
+				135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */,
+				5B254FAA2A2CCC1B00E426EE /* ViewChangeButton.swift in Sources */,
+				0E343AF12A3916B7006DB1CB /* RealityKitView.swift in Sources */,
+				135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */,
+				135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */,
 				0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -885,6 +986,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves screenshots to your photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -916,6 +1018,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves screenshots to your photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -967,6 +1070,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxxfrazer/FocusEntity";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		5BA14FAC2A3778620042D6A4 /* XCRemoteSwiftPackageReference "PopupView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/PopupView.git";
@@ -978,6 +1089,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0E343AF32A3916CE006DB1CB /* FocusEntity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */;
+			productName = FocusEntity;
+		};
 		5BA14FAD2A3778620042D6A4 /* PopupView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5BA14FAC2A3778620042D6A4 /* XCRemoteSwiftPackageReference "PopupView" */;
