@@ -17,6 +17,7 @@ struct GardenView: View {
     @Binding var plantIndex: Int
     @Binding var missionIndex: Int
     @Binding var postIndex: Int
+    @Binding var isChapterCompleted: Bool
     
     @State var selectedViewName: String = ""
     @State var isShowPlantHistoryView: Bool = false
@@ -41,7 +42,10 @@ struct GardenView: View {
             VStack {
                 if chapterIndex < 4 {
                     HStack {
-                        Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                        Button(action: {
+                            isChapterCompleted = false
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
                             Image("STR_Img_asset_button_garden")
                                 .resizable()
                                 .frame(width: 45, height: 45)

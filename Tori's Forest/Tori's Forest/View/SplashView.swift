@@ -34,7 +34,7 @@ struct SplashView: View {
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                         withAnimation(.easeIn(duration: 1)) {
-                            NotificationManager.shared.scheduleNotification()
+//                            NotificationManager.shared.scheduleNotification()
                             OnboardingViewModel.nextPage()
                         }
                     }

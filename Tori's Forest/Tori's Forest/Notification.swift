@@ -40,10 +40,11 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         content.sound = UNNotificationSound.default
         
         // 알림이 표시될 시각 설정
-        var dateComponents = DateComponents()
-        dateComponents.hour = 9
-        dateComponents.minute = 58
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+//        var dateComponents = DateComponents()
+//        dateComponents.hour = 9
+//        dateComponents.minute = 58
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
         
         // 알림 요청 생성
         let request = UNNotificationRequest(identifier: "Notification", content: content, trigger: trigger)

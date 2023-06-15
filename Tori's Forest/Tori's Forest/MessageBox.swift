@@ -73,11 +73,11 @@ struct MessageBox: View {
                     isAllChapterCompleted = true
                 }
                 
-                if chapterIndex == 1 {
+                if chapterIndex == 3 {
                     self.model.sendMessageToWatch(message: [
-                        "단풍나무": "창문 30분 열어 환기하기",
-                        "???": "아침에 이불 정리하기",
-                        "????": "하루에 한 번 샤워하기"
+                        "목화나무": "봉사활동 도전하기",
+                        "???": "도서관에서 책 읽고 오기",
+                        "????": "산책 20분 하고 오기"
                     ])
                 }
                 isEmpty.toggle()
