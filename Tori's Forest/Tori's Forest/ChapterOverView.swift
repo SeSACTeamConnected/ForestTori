@@ -16,6 +16,7 @@ struct ChapterOverView: View {
     
     @Binding var chapterIndex: Int
     @Binding var plantIndex: Int
+    @Binding var missionIndex: Int
     @Binding var postIndex: Int
     @Binding var isChapterCompleted: Bool
     
@@ -30,18 +31,23 @@ struct ChapterOverView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(Color("STR_Green"))
                 .padding(3)
+            
             Text(chapters[chapterIndex].chapterHeader!)
                 .font(.system(size: 15))
                 .fontWeight(.bold)
                 .foregroundColor(Color("STR_Black"))
                 .padding(3)
+            
             Image(chapterImage[chapterIndex])
                 .resizable()
                 .frame(width: 186, height: 186)
+                .cornerRadius(8)
+            
             Text(chapters[chapterIndex].chapterSubHeader!)
                 .font(.system(size: 13))
                 .fontWeight(.semibold)
                 .foregroundColor(Color("STR_brown"))
+            
             Text(chapters[chapterIndex].chapterDescription!)
                 .font(.system(size: 13))
                 .foregroundColor(Color("STR_Black"))
@@ -49,14 +55,15 @@ struct ChapterOverView: View {
             
             HStack {
                 NavigationLink(
-                    destination: GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
+                    destination: GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)
                         .environment(\.managedObjectContext, viewContext)
                         .navigationBarBackButtonHidden(true)
                 ) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Color("STR_brown"))
+                            .fill(Color("STR_Brown"))
                         Text("정원으로")
+                            .font(.system(size: 14, weight: .bold))
                             .foregroundColor(Color("STR_White"))
                     }
                     .frame(width: 125, height: 35)
@@ -67,8 +74,9 @@ struct ChapterOverView: View {
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(Color("STR_brown"))
+                            .fill(Color("STR_Brown"))
                         Text("메인으로")
+                            .font(.system(size: 14, weight: .bold))
                             .foregroundColor(Color("STR_White"))
                     }
                     .frame(width: 125, height: 35)

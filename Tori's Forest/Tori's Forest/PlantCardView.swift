@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PlantCardView: View {
-    
     var header : String
     var plantName: String
     var imageName : String
@@ -20,7 +19,7 @@ struct PlantCardView: View {
     
     var body: some View {
         VStack{
-            Text("식물 친구를 선택해 주세요")
+//            Text("식물 친구를 선택해 주세요")
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(Color("STR_White"))
@@ -28,9 +27,10 @@ struct PlantCardView: View {
                     Text(header)
                         .font(.system(size: 18,weight:.semibold))
                         .foregroundColor(Color("STR_Green"))
+                        .padding(.top, 20)
                     
                     Text(plantName)
-                        .font(.system(size: 18,weight: .semibold))
+                        .font(.system(size: 15,weight: .semibold))
                         .foregroundColor(Color("STR_Black"))
                     
                     Image(imageName)
@@ -41,20 +41,25 @@ struct PlantCardView: View {
                     Text(description)
                         .font(.system(size:13))
                         .foregroundColor(Color("STR_Black"))
+                        .padding()
+                        .padding(.horizontal, 10)
+                    
+                    Spacer()
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color("STR_brown"))
+                            .foregroundColor(Color("STR_Brown"))
                         Text("선택하기")
                             .foregroundColor(Color("STR_White"))
                             .font(.system(size: 14, weight: .semibold))
                     }
+                    .frame(width: 263,height: 35)
+                    .padding(.bottom, 30)
                     .onTapGesture {
                         showingPopup = false
                         isShowPlantSelectView.toggle()
                         isEmpty.toggle()
                     }
-                    .frame(width: 265,height: 30)
                 }
             }
             .frame(width: 306,height: 426)

@@ -24,7 +24,7 @@ struct DiaryView: View {
     @State private var isShowingActionSheet = false
     @State private var isShowingCameraPicker = false
     @State private var isShowingPhotoLibraryPicker = false
-    @State private var selectedImage: UIImage? = nil ?? UIImage(named: "STR_Img_splash")!
+    @State private var selectedImage: UIImage? = nil
     
     var chapterIndex: Int
     var missionIndex: Int
@@ -48,7 +48,7 @@ struct DiaryView: View {
                         .fontWeight(.bold)
                     Spacer()
                     Button(action: {
-                        addPost(Int64(postIndex+1), Int64(chapterIndex+1), Int64(missionIndex+1), (selectedImage?.pngData()?.base64EncodedString())!, imageDescription == "" ? descriptionDefault : imageDescription, Date())
+                        addPost(Int64(postIndex+1), Int64(chapterIndex+1), Int64(missionIndex+1), (selectedImage?.pngData()?.base64EncodedString()) ?? "blank", imageDescription == "" ? descriptionDefault : imageDescription, Date())
 
                         isShowDiaryView.toggle()
                         isMissionCompleted.toggle()
@@ -68,7 +68,7 @@ struct DiaryView: View {
                     Button(action: {
                         isShowingActionSheet = true
                     }) {
-                        if selectedImage == UIImage(named: "STR_Img_Splash") {
+                        if selectedImage != nil {
                             Image(uiImage: selectedImage!)
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)

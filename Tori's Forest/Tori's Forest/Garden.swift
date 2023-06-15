@@ -42,7 +42,7 @@ class GardenObject: ObservableObject {
         )
         
         garden.append(
-            Garden(fileName: "STR_3D_cotton_garden_animation",
+            Garden(fileName: "STR_3D_cottontree_garden_animation",
                    positionX: -1,
                    positionY: 0.2,
                    positionZ: -1)

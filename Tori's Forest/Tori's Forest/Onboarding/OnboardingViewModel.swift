@@ -8,6 +8,7 @@
 import SwiftUI
 
 class OnboardingViewModel: ObservableObject {
+//    @AppStorage("username") var username: String = ""
     @Published var currentPage: Int = 1
     
     func nextPage() {

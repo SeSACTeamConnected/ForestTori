@@ -12,7 +12,7 @@ struct OnboardingAftertab: View {
     @State private var introIndex = 0
     @State private var isNextView = false
     var accentText : String = "토리의 숲"
-    let intro : [String] = ["식물을 키울 준비가 되었나요?\n그럼, 토리의 이름을 알려주세요"]
+    let intro : [String] = ["식물을 키울 준비가 되었나요?\n그럼, 토리의 이름을 알려주세요."]
     var body: some View {
         ZStack{
             Image("STR_Img_bg_0_default")
@@ -32,13 +32,13 @@ struct OnboardingAftertab: View {
                             (
                             Text(String(intro[introIndex][..<thisIndex]))
                                 .font(.system(size: 20).weight(.heavy))
-                                .foregroundColor(Color("STR_brown"))
+                                .foregroundColor(Color("STR_Brown"))
                             + Text(String(intro[introIndex][thisIndex..<otherIndex]))
                                 .font(.system(size: 20).weight(.heavy))
                                 .foregroundColor(Color("STR_Green"))
                             + Text(String(intro[introIndex][otherIndex...]))
                                 .font(.system(size: 20).weight(.heavy))
-                                .foregroundColor(Color("STR_brown")))
+                                .foregroundColor(Color("STR_Brown")))
                         .frame(alignment: .center)
                         .multilineTextAlignment(.center)
                     }
