@@ -20,32 +20,39 @@ struct OnboardingAftertab: View {
                 .ignoresSafeArea()
                 
             VStack(alignment: .center) {
+                Spacer()
+                
                 Image("STR_Img_Onboarding_frezia")
                     .resizable()
                     .frame(width: 347,height: 195)
                     .padding(.bottom,20)
                     
-                HStack(alignment: .center){
+                HStack(alignment: .center) {
                     if(introIndex == 0){
                         let thisIndex = intro[introIndex].firstIndex(of: "토") ?? intro[introIndex].startIndex
                         let otherIndex = intro[introIndex].firstIndex(of: "에") ?? intro[introIndex].endIndex
-                            (
-                            Text(String(intro[introIndex][..<thisIndex]))
+                            
+                        VStack {
+                            Text("식물을 키울 준비가 되었나요?")
                                 .font(.system(size: 20).weight(.heavy))
                                 .foregroundColor(Color("STR_Brown"))
-                            + Text(String(intro[introIndex][thisIndex..<otherIndex]))
-                                .font(.system(size: 20).weight(.heavy))
-                                .foregroundColor(Color("STR_Green"))
-                            + Text(String(intro[introIndex][otherIndex...]))
-                                .font(.system(size: 20).weight(.heavy))
-                                .foregroundColor(Color("STR_Brown")))
-                        .frame(alignment: .center)
+                                .padding(.bottom, 1)
+                            
+                            HStack {
+                                Text(String(intro[introIndex][thisIndex..<otherIndex]))
+                                    .font(.system(size: 20).weight(.heavy))
+                                    .foregroundColor(Color("STR_Green"))
+                                
+                                Text(String(intro[introIndex][otherIndex...]))
+                                    .font(.system(size: 20).weight(.heavy))
+                                    .foregroundColor(Color("STR_Brown"))
+                            }
+                        }
                         .multilineTextAlignment(.center)
                     }
                         
                 }
-                .frame(alignment: .center)
-                .padding(.bottom, 100)
+                Spacer()
             }
         }
             .onAppear{
@@ -55,14 +62,5 @@ struct OnboardingAftertab: View {
                     }
                 }
             }
-    }
-}
-
-
-
-
-struct OnboardingAftertab_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingAftertab(OnboardingViewModel: OnboardingViewModel())
     }
 }

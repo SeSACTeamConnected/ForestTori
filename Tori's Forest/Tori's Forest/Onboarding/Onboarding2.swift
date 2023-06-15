@@ -34,41 +34,49 @@ struct Onboarding2: View {
                     .ignoresSafeArea()
             
                 VStack{
+                    Spacer()
+                    
                     VStack(alignment: .leading,spacing: 0){
-                        Text("내이름은")
+                        Text("내 이름은")
                             .font(.system(size: 14))
+                            .foregroundColor(Color("STR_Brown"))
                             .frame(alignment: .leading)
                         
                         HStack(spacing: 0){
-                            TextField("이름을 알려주세요.", text: $name)
+                            TextField("이름을 입력하세요", text: $name)
                                 .onChange(of: name) {
                                     newValue in if name.count > 9{
                                         name = String(name.prefix(9))
                                     }
                                 }
-                                .underline(true, color: Color("STR_Brown"))
                                 .foregroundColor(name.count > 8 ? Color("STR_Red") : Color("STR_Green"))
+                                .frame(width: 160)
+                                .multilineTextAlignment(.trailing)
+                                .underline(color: name.count == 0 ? Color("STR_Brown") : name.count > 8 ? Color("STR_Red") : Color("STR_Green"))
                                 .fixedSize()
-                                .font(.system(size: 20))
                                 .onReceive(Just(name), perform: { _ in
                                     if name.containKorean() == false {
                                         name = String(name.dropLast())
                                     }
                                     print(name.containKorean())
                                 })
+                            
                             Text("토리")
+                                .foregroundColor(Color("STR_Brown"))
                                 .padding(.leading,7)
                         }
-                        .padding(.top,6)
+                        .font(.system(size: 22, weight: .heavy))
+                        .padding(.top, 6)
                        
-                        Text("8자이하만 가능해요.")
+                        Text("8자 이하만 가능해요.")
                             .foregroundColor(name.count > 8 ? .red : .clear)
                             .font(.system(size: 12))
                             .frame(alignment: .leading)
                             .padding(.top, 6)
             
                     }
-                    .padding(EdgeInsets(top: 320, leading: 91, bottom: 0, trailing: 91))
+                    
+                    Spacer()
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 100)
@@ -82,9 +90,7 @@ struct Onboarding2: View {
                             .font(.system(size: 18).weight(.bold))
                             .foregroundColor(name.count > 0 && name.count < 9 ? Color("STR_White") : Color("STR_Brown"))
                     }
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 60)
-                    .padding(EdgeInsets(top: 250, leading: 24, bottom: 0, trailing: 24))
+                    .frame(width: 342, height: 60)
                     .onTapGesture {
                         if(name.count > 0 && name.count < 9){
                             username = name
@@ -96,4 +102,11 @@ struct Onboarding2: View {
         }
     }
 }
+
+struct Onboarding2_Previews: PreviewProvider {
+    static var previews: some View {
+        Onboarding2(OnboardingViewModel: OnboardingViewModel())
+    }
+}
+
 

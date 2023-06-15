@@ -28,17 +28,25 @@ struct OnboardingFinal: View {
                     .cornerRadius(8)
                     .padding(.bottom,20)
                 
-                Text("첫 챕터는 새로운 시작을 의미하는\n새싹이 반짝이는 계절, 봄이에요.")
-                    .font(.system(size: 18).weight(.heavy))
+                Text("첫 챕터는 새로운 시작을 의미하는")
+                    .font(.system(size: 18).weight(.bold))
                     .foregroundColor(Color("STR_Brown"))
                     .multilineTextAlignment(.center)
+                    .padding(.bottom, 1)
+                
+                Text("새싹이 반짝이는 계절, 봄이에요.")
+                    .font(.system(size: 18).weight(.bold))
+                    .foregroundColor(Color("STR_Brown"))
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 1)
                 
                 HStack(spacing: 0){
                     Text(username + "토리")
-                        .font(.system(size: 18).weight(.heavy))
+                        .font(.system(size: 18).weight(.bold))
                         .foregroundColor(Color("STR_Green"))
+                    
                     Text("의 시작을 응원할게요!")
-                        .font(.system(size: 18).weight(.heavy))
+                        .font(.system(size: 18).weight(.bold))
                         .foregroundColor(Color("STR_Brown"))
                 }
                 
@@ -52,7 +60,6 @@ struct OnboardingFinal: View {
                         .foregroundColor(Color("STR_White"))
                 }
                 .frame(width: 342,height: 60)
-                .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                 .onTapGesture {
                     OnboardingViewModel.nextPage()
                 }
@@ -60,12 +67,5 @@ struct OnboardingFinal: View {
             }
             
         }
-    }
-}
-
-
-struct OnboardingFinal_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingFinal(OnboardingViewModel: OnboardingViewModel())
     }
 }

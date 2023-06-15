@@ -33,47 +33,31 @@ struct MainView: View {
     
     var body: some View {
         if !isAllChapterCompleted {
-//            ZStack {
+            ZStack {
                 TabView(selection: $selectedTab) {
                     PlantPotView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex, isAllChapterCompleted: $isAllChapterCompleted)
-                        .tabItem {
-                            Image("STR_Img_asset_button_pot")
-                                .resizable()
-                                .frame(width: 27, height: 24)
-                        }
                         .environment(\.managedObjectContext, viewContext)
                         .tag(0)
                     
                     PlantPotView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex, isAllChapterCompleted: $isAllChapterCompleted)
-                        .tabItem {
-                            Image("STR_Img_asset_button_pot")
-                                .resizable()
-                                .frame(width: 27, height: 24)
-                        }
                         .environment(\.managedObjectContext, viewContext)
                         .disabled(true)
                         .tag(1)
                     
                     PlantPotView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, postIndex: $postIndex, isAllChapterCompleted: $isAllChapterCompleted)
-                        .tabItem {
-                            Image("STR_Img_asset_button_pot")
-                                .resizable()
-                                .frame(width: 27, height: 24)
-                        }
+
                         .environment(\.managedObjectContext, viewContext)
                         .disabled(true)
                         .tag(2)
                 }
-                .tabViewStyle(.page(indexDisplayMode : .always))
                 .ignoresSafeArea()
                 
-//                VStack {
-//                    Spacer()
-//
-//                    CustomTabBar(selectedTab: $selectedTab)
-//                        .padding(.bottom)
-//                }
-//            }
+                VStack {
+                    Spacer()
+                    CustomTabBar(selectedTab: $selectedTab)
+                        .padding(.bottom)
+                }
+            }
             
         } else {
             EndingView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)

@@ -10,8 +10,7 @@ import PopupView
 
 struct PlantPotView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    
-//    @StateObject var onboardingViewModel = OnboardingViewModel()
+
     @StateObject private var keyboardHandler = KeyboardHandler()
     
     @FetchRequest(sortDescriptors: [])
@@ -82,6 +81,7 @@ struct PlantPotView: View {
                             .fontWeight(.bold)
                             .frame(width: 22, height: 22)
                             .offset(y: -100)
+                        
                         PlantSceneView(sceneViewName: emptyPot)
                             .scaledToFit()
                             .frame(width: 180, height: 300)
@@ -95,14 +95,22 @@ struct PlantPotView: View {
                 } else {
                     MessageBox(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, isEmpty: $isEmpty, isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted, isAllChapterCompleted: $isAllChapterCompleted)
                         .environment(\.managedObjectContext, viewContext)
-//                        .environmentObject(onboardingViewModel)
                         .opacity(isMissionCompleted != dialogs[dialogIndex].isPrev ? 1: 0)
                     
                     Spacer()
                     
-                    PlantSceneView(sceneViewName: potName!)
-                        .environment(\.managedObjectContext, viewContext)
-                        .frame(width: 250, height: 300)
+                    ZStack {
+                        Image("STR_Img_asset_button_info")
+                            .resizable()
+                            .opacity(isMissionCompleted == dialogs[dialogIndex].isPrev ? 1 : 0)
+                            .opacity(chapterIndex == 3 ? 1 : 0)
+                            .frame(width: 34, height: 30)
+                            .offset(y: -180)
+                        
+                        PlantSceneView(sceneViewName: potName!)
+                            .environment(\.managedObjectContext, viewContext)
+                            .frame(width: 250, height: 300)
+                    }
                     
                     Spacer()
                     
@@ -156,9 +164,3 @@ struct PlantPotView: View {
         }
     }
 }
-
-//struct PlantPotView_Previews: PreviewProvider {
-//    static var previews: some View {
-//       MainView()
-//    }
-//}
