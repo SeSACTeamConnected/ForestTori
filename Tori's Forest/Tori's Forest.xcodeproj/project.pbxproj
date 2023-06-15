@@ -66,7 +66,6 @@
 		5B96CAC92A3B2953004182BE /* STR_3D_bubble.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */; };
 		5B96CACB2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */; };
 		5B96CACC2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */; };
-		5BA14FAE2A3778620042D6A4 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5BA14FAD2A3778620042D6A4 /* PopupView */; };
 		5BCD49AD2A3554200058079D /* STR_3D_cactus_2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49822A3554200058079D /* STR_3D_cactus_2.dae */; };
 		5BCD49AE2A3554200058079D /* STR_3D_cactus_3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49832A3554200058079D /* STR_3D_cactus_3.dae */; };
 		5BCD49AF2A3554200058079D /* STR_3D_cactus_1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49842A3554200058079D /* STR_3D_cactus_1.dae */; };
@@ -286,7 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E343AF42A3916CE006DB1CB /* FocusEntity in Frameworks */,
-				5BA14FAE2A3778620042D6A4 /* PopupView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +625,6 @@
 			);
 			name = "Tori's Forest";
 			packageProductDependencies = (
-				5BA14FAD2A3778620042D6A4 /* PopupView */,
 				0E343AF32A3916CE006DB1CB /* FocusEntity */,
 			);
 			productName = "Tori's Forest";
@@ -662,7 +659,6 @@
 			);
 			mainGroup = 13E09BB02A2AD970009543C6;
 			packageReferences = (
-				5BA14FAC2A3778620042D6A4 /* XCRemoteSwiftPackageReference "PopupView" */,
 				0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */,
 			);
 			productRefGroup = 13E09BBA2A2AD970009543C6 /* Products */;
@@ -1117,14 +1113,6 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		5BA14FAC2A3778620042D6A4 /* XCRemoteSwiftPackageReference "PopupView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/PopupView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1132,11 +1120,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
-		};
-		5BA14FAD2A3778620042D6A4 /* PopupView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5BA14FAC2A3778620042D6A4 /* XCRemoteSwiftPackageReference "PopupView" */;
-			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */
 
