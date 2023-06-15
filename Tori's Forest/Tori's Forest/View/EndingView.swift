@@ -46,7 +46,7 @@ struct EndingView: View {
                     
                     Text("오랜만이에요.")
                         .font(.system(size: 20).weight(.heavy))
-                        .foregroundColor(Color("STR_Breen"))
+                        .foregroundColor(Color("STR_Brown"))
                         .padding(.bottom, 1)
                     
                 }
@@ -82,7 +82,7 @@ struct EndingView: View {
                 
                 
                 else if introIndex == 3 {
-                    Text("사실, 이새싹은 바로")
+                    Text("사실, 이 새싹은 바로")
                         .font(.system(size: 20).weight(.heavy))
                         .foregroundColor(Color("STR_Brown"))
                         .padding(.bottom, 1)

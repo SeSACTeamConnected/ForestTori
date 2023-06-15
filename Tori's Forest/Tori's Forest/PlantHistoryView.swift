@@ -92,6 +92,7 @@ struct PlantHistoryView: View {
                                     
                                     Text(item.postDescription!)
                                         .foregroundColor(Color("STR_Black"))
+                                        .lineSpacing(1)
                                         .frame(width: 303, alignment: .leading)
                                         .padding(.top, 3)
                                     
