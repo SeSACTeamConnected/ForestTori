@@ -149,7 +149,7 @@ struct PlantPotView: View {
                     .frame(width: 356, height: 513)
                     .background(.white)
                     .cornerRadius(10)
-                    .offset(y: keyboardHandler.keyboardHeight == 0 ? -20 : (keyboardHandler.keyboardHeight * -1 + 100))
+                    .offset(y: keyboardHandler.keyboardHeight == 0 ? -20 : (keyboardHandler.keyboardHeight - 320))
             }
             
             if isChapterCompleted {

@@ -50,14 +50,14 @@ struct MainView: View {
                         .disabled(true)
                         .tag(2)
                 }
-                .ignoresSafeArea()
                 
                 VStack {
                     Spacer()
                     CustomTabBar(selectedTab: $selectedTab)
-                        .padding(.bottom)
+                        .padding(.bottom, 60)
                 }
             }
+            .ignoresSafeArea()
             .onAppear(perform: {
                 UIScrollView.appearance().bounces = false
             })
