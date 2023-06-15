@@ -92,7 +92,7 @@ struct EndingView: View {
                 
                 NavigationLink(
                     destination:
-                        GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)
+                        GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex, isChapterCompleted: .constant(false))
                         .environment(\.managedObjectContext, viewContext)
                         .navigationBarBackButtonHidden(true)
                 ) {

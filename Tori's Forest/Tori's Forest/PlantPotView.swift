@@ -6,10 +6,10 @@
 //
 
 import SwiftUI
-import PopupView
 
 struct PlantPotView: View {
     @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.scenePhase) private var scenePhase
 
     @StateObject private var keyboardHandler = KeyboardHandler()
     
@@ -53,7 +53,7 @@ struct PlantPotView: View {
                 HStack {
                     NavigationLink(
                         destination:
-                            GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)
+                            GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
                             .environment(\.managedObjectContext, viewContext)
                             .navigationBarBackButtonHidden(true)
                     ) {
@@ -73,7 +73,6 @@ struct PlantPotView: View {
                 
                 if isEmpty {
                     Spacer()
-                    
                     ZStack {
                         Image(systemName: "plus.square")
                             .resizable()
@@ -123,21 +122,21 @@ struct PlantPotView: View {
                     Spacer()
                 }
             }
-            .popup(isPresented: self.$isShowPlantSelectView) {
-                PlantSelectView(isEmpty: $isEmpty, isShowPlantSelectView: $isShowPlantSelectView, chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex)
-                    .environment(\.managedObjectContext, viewContext)
-                    .offset(y: 80)
-            } customize: {
-                $0
-                    .type(.default)
-                    .position(.bottom)
-                    .animation(.spring())
-                    .closeOnTapOutside(false)
-                    .closeOnTap(false)
-                    .backgroundColor(Color.gray.opacity(0.4))
+            .onChange(of: scenePhase) { phase in
+                if phase == .background && chapterIndex == 1 {
+                    NotificationManager.shared.scheduleNotification()
+                }
             }
             
-            .popup(isPresented: self.$isShowDiaryView) {
+            if isShowPlantSelectView {
+                PlantSelectView(isEmpty: $isEmpty, isShowPlantSelectView: $isShowPlantSelectView, chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex)
+                    .environment(\.managedObjectContext, viewContext)
+                    .offset(y: 135)
+                    .animation(.spring())
+                    .background(Color.gray.opacity(0.4))
+            }
+            
+            if isShowDiaryView {
                 DiaryView(isShowDiaryView: $isShowDiaryView, isMissionCompleted: $isMissionCompleted,
                           isTapped: $isTapped, postIndex: $postIndex, chapterIndex: chapterIndex, missionIndex: missionIndex)
                     .environment(\.managedObjectContext, viewContext)
@@ -145,22 +144,24 @@ struct PlantPotView: View {
                     .background(.white)
                     .cornerRadius(10)
                     .offset(y: keyboardHandler.keyboardHeight == 0 ? -40 : (keyboardHandler.keyboardHeight * -1 + 100))
-            } customize: {
-                $0
-                    .isOpaque(true)
-                    .closeOnTap(false)
             }
             
-            .popup(isPresented: $isChapterCompleted) {
+            if isChapterCompleted {
                 ChapterOverView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
                     .environment(\.managedObjectContext, viewContext)
                     .frame(width: 306, height: 426)
                     .background(.white)
                     .cornerRadius(10)
-            } customize: {
-                $0
-                    .isOpaque(true)
+                    .shadow(radius: 2)
             }
         }
+    }
+    private func popUpView() -> some View {
+        ChapterOverView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
+            .environment(\.managedObjectContext, viewContext)
+            .frame(width: 306, height: 426)
+            .background(.white)
+            .cornerRadius(10)
+            .shadow(radius: 2)
     }
 }

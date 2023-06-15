@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChapterOverView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @Environment(\.presentationMode) var presentationMode
     
     @FetchRequest(sortDescriptors: [])
     var chapters: FetchedResults<Chapter>
@@ -55,7 +54,7 @@ struct ChapterOverView: View {
             
             HStack {
                 NavigationLink(
-                    destination: GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)
+                    destination: GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
                         .environment(\.managedObjectContext, viewContext)
                         .navigationBarBackButtonHidden(true)
                 ) {
@@ -70,7 +69,7 @@ struct ChapterOverView: View {
                 }
                 
                 Button(action: {
-                    presentationMode.wrappedValue.dismiss()
+                    isChapterCompleted.toggle()
                 }) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
