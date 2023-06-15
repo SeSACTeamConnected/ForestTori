@@ -64,7 +64,7 @@ struct PlantPotView: View {
                         Spacer()
                         
                         if !isEmpty {
-                            CustomProgressBar(missionIndex: $missionIndex, maximum: $maximum)
+                            CustomProgressBar(missionIndex: $missionIndex, maximum: $maximum, isDone: $isMissionCompleted)
                                 .environment(\.managedObjectContext, viewContext)
                         }
                     }
