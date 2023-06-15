@@ -109,6 +109,12 @@ struct PlantPotView: View {
                         PlantSceneView(sceneViewName: potName!)
                             .environment(\.managedObjectContext, viewContext)
                             .frame(width: 250, height: 300)
+                        
+                        if isMissionCompleted && chapterIndex == 0{
+                            LottieView(jsonName: "STR_Lottie_dandelion")
+                                .frame(width: 150, height: 200)
+                                .offset(x: 40, y: -130)
+                        }
                     }
                     
                     Spacer()
