@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Onboarding3: View {
-    var description: [String] = ["멋진 이름이네요", "이 숲 속의 반짝이는 무언가를 찾으면\n 훌륭한 요정이 될 수 있을 거에요"]
+    var description: [String] = ["멋진 이름이네요.", "이 숲 속의 반짝이는 무언가를 찾으면\n 훌륭한 요정이 될 수 있을 거에요."]
     @State var introIndex = 0
     @State var isNextView = false
     @ObservedObject var OnboardingViewModel : OnboardingViewModel
@@ -23,11 +23,13 @@ struct Onboarding3: View {
                     Image("STR_Img_Onboarding_frezia")
                         .resizable()
                         .frame(width: 347, height: 195)
+                        .padding()
+                    
                     if introIndex == 0 {
                         Text(description[introIndex])
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(Color("STR_brown"))
-                        Text(username)
+                            .foregroundColor(Color("STR_Brown"))
+                        Text(username + "토리")
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color("STR_Green"))
                     }
@@ -35,30 +37,30 @@ struct Onboarding3: View {
                         HStack(spacing: 0){
                             Text("여기 ")
                                 .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_brown"))
-                            Text(username)
+                                .foregroundColor(Color("STR_Brown"))
+                            Text(username + "토리")
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundColor(Color("STR_Green"))
                             Text("를 위해")
                                 .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_brown"))
+                                .foregroundColor(Color("STR_Brown"))
                         }
-                        Text("신비한 화분을 줄게요")
+                        Text("신비한 화분을 줄게요.")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(Color("STR_brown"))
+                            .foregroundColor(Color("STR_Brown"))
                     }
                     else if introIndex == 2{
                         HStack(spacing: 0){
-                            Text("이제부터")
+                            Text("이제부터 ")
                                 .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_brown"))
-                            Text( username)
+                                .foregroundColor(Color("STR_Brown"))
+                            Text(username + "토리")
                                 .font(.system(size: 20, weight: .semibold))
                                 .foregroundColor(Color("STR_Green"))
                         }
-                        Text("마법 능력으로 식물을 잘 키워주세요")
+                        Text("마법 능력으로 식물을 잘 키워주세요.")
                             .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(Color("STR_brown"))
+                            .foregroundColor(Color("STR_Brown"))
                     }
                 }
                 .onAppear {

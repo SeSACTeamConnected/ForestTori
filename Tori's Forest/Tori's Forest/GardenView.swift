@@ -15,10 +15,12 @@ struct GardenView: View {
     
     @Binding var chapterIndex: Int
     @Binding var plantIndex: Int
+    @Binding var missionIndex: Int
     @Binding var postIndex: Int
     
     @State var selectedViewName: String = ""
     @State var isShowPlantHistoryView: Bool = false
+    @State var maximum: Int = 12
     
     
     let backgrounds: Array<String> = ["STR_Img_bg_1_spring", "STR_Img_bg_2_summer", "STR_Img_bg_3_autumn", "STR_Img_bg_4_winter"]
@@ -27,23 +29,32 @@ struct GardenView: View {
         let progress = CGFloat.zero
         
         ZStack {
-            Image(backgrounds[chapterIndex])
-                .resizable()
-                .ignoresSafeArea()
+            if chapterIndex < 4 {
+                Image(backgrounds[chapterIndex])
+                    .resizable()
+                    .ignoresSafeArea()
+            } else {
+                Image("STR_Img_bg_1_spring")
+                    .resizable()
+                    .ignoresSafeArea()
+            }
             VStack {
-                HStack {
-                    Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
-                        Image("STR_Img_asset_button_garden")
-                            .resizable()
-                            .frame(width: 45, height: 45)
+                if chapterIndex < 4 {
+                    HStack {
+                        Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                            Image("STR_Img_asset_button_garden")
+                                .resizable()
+                                .frame(width: 45, height: 45)
+                        }
+                        
+                        Spacer()
+                        
+                        CustomProgressBar(missionIndex: $missionIndex, maximum: $maximum)
                     }
-                    
-                    Spacer()
-                    
-                    CustomProgressBar(progress: progress)
+                    .frame(maxWidth: 360)
+                    .padding()
                 }
-                .frame(maxWidth: 360)
-                .padding()
+                
                 
                 Spacer()
                 

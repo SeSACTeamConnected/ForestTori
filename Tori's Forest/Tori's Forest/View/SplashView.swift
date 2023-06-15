@@ -18,12 +18,14 @@ struct SplashView: View {
     @ObservedObject var model = ViewModelPhone()
     
     @FetchRequest(sortDescriptors: [])
-    private var plants: FetchedResults<Mission>
+    private var plants: FetchedResults<Plant>
+    
     var body: some View {
         VStack {
-            ZStack(alignment: .center) {
+            ZStack {
                     Image("STR_Img_splash")
                         .resizable()
+//                        .scaledToFill()
                         .ignoresSafeArea()
                 }
                 .onAppear {
@@ -37,19 +39,30 @@ struct SplashView: View {
                         }
                     }
                 }
-            }
         }
+        .onAppear {
+            chapterIndex = 0
+            plantIndex = 0
+            dialogIndex = 0
+            missionIndex = 0
+            postIndex = 0
+            
+            deleteAllDataFromAllEntities()
+            loadData()
+        }
+    }
+    
     func loadData() {
-        if plants.count == 0 {
+//        if plants.count == 0 {
             // 데이터 추가
             print("CoreData : initialize data")
             deleteAllDataFromAllEntities()
             getData()
             print("CoreData: \(plants.count) plants added")
-        }
-        else{
-            print("CoreData : Already \(plants.count) plants exists")
-        }
+//        }
+//        else{
+//            print("CoreData : Already \(plants.count) plants exists")
+//        }
     }
     
     func deleteAllData(_ entityName: String) {
@@ -69,7 +82,7 @@ struct SplashView: View {
         deleteAllData("Plant")
         deleteAllData("Dialog")
         deleteAllData("Chapter")
-//        deleteAllData("Post")
+        deleteAllData("Post")
         deleteAllData("Mission")
     }
     

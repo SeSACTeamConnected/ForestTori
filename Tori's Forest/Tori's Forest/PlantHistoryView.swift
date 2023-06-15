@@ -34,7 +34,7 @@ struct PlantHistoryView: View {
             VStack {
                 Text(missions[(idx!)*3].missionHeader!)
                     .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(Color("STR_brown"))
+                    .foregroundColor(Color("STR_Brown"))
                     .padding(.top, 30)
                 
                 Text(plants[(idx!)*3].plantName!)
@@ -58,22 +58,34 @@ struct PlantHistoryView: View {
                         if item.chapterID == (idx!+1) {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color("STR_brown").opacity(0.3), lineWidth: 2)
+                                    .stroke(Color("STR_Brown").opacity(0.3), lineWidth: 2)
                                     .frame(width: 336.47)
                                 
-                                VStack(alignment: .leading) {
-                                    Text(formatDate(item.createdAt!))
-                                        .font(.system(size: 18, weight: .bold))
-                                        .foregroundColor(Color("STR_Black"))
-                                        .padding(.top)
-                                        .padding(.leading, 3)
+                                VStack {
+                                    VStack(alignment: .leading) {
+                                        Text(formatDate(item.createdAt!))
+                                            .font(.system(size: 18, weight: .bold))
+                                            .foregroundColor(Color("STR_Black"))
+                                            .padding(.top)
+                                            .padding(.leading, 3)
+                                    }
                                     
-                                    Image(uiImage: UIImage(data: Data(base64Encoded: item.imageName!)!)!)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 302.97, height: 302.97)
-                                        .clipped()
-                                        .cornerRadius(8)
+                                    if item.imageName! != "blank" {
+                                        Image(uiImage: UIImage(data: Data(base64Encoded: item.imageName!)!)!)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .rotationEffect(Angle(degrees: 90))
+                                            .frame(width: 302.97, height: 302.97)
+                                            .clipped()
+                                            .cornerRadius(8)
+                                    } else {
+                                        Image(uiImage: UIImage(named: "STR_Img_splash")!)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fill)
+                                            .frame(width: 302.97, height: 302.97)
+                                            .clipped()
+                                            .cornerRadius(8)
+                                    }
                                     
                                     Text(item.postDescription!)
                                         .foregroundColor(Color("STR_Black"))

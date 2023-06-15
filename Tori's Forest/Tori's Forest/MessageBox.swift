@@ -10,7 +10,10 @@ import WatchConnectivity
 
 struct MessageBox: View {
 //    @Environment(\.managedObjectContext) private var viewContext
+//    @EnvironmentObject var onboardingViewModel : OnboardingViewModel
+    
     @ObservedObject var model = ViewModelPhone()
+    
     @FetchRequest(sortDescriptors: [])
     var dialogs: FetchedResults<Dialog>
     
@@ -27,22 +30,30 @@ struct MessageBox: View {
     @Binding var isEmpty: Bool
     @Binding var isMissionCompleted: Bool
     @Binding var isChapterCompleted: Bool
+    @Binding var isAllChapterCompleted: Bool
 
     var body: some View {
+//        let username = onboardingViewModel.username
+        
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(Color("STR_White"))
-                .opacity(0.75)
-                
-            Text(dialogs[dialogIndex].dialogLine!)
-                .font(.system(size: 16))
-                .foregroundColor(Color("STR_Black"))
-                .padding(.horizontal)
+            Image("STR_Img_asset_frame_dialog")
+                .resizable()
+                .frame(width: 342, height: 100)
+            
+            if let username = UserDefaults.standard.string(forKey: "username") {
+                VStack(alignment: .leading) {
+                    Text(dialogs[dialogIndex].dialogLine!.replacingOccurrences(of: "(username)", with: username))
+                        .font(.system(size: 16))
+                        .foregroundColor(Color("STR_Black"))
+                        .padding(.horizontal)
+                }
+                .frame(width: 338, height: 72)
+            }
             
             Image("STR_Img_asset_button_dialog")
                 .resizable()
                 .frame(width: 15, height: 10)
-                .offset(x: 150, y: 20)
+                .offset(x: 150, y: 25)
             }
         .frame(width: 342, height: 72)
         .padding()
@@ -58,6 +69,9 @@ struct MessageBox: View {
             }
             if (chapterIndex + 1) < missions[missionIndex].chapterID {
                 chapterIndex += 1
+                if chapterIndex > 3 {
+                    isAllChapterCompleted = true
+                }
                 
                 if chapterIndex == 1 {
                     self.model.sendMessageToWatch(message: [

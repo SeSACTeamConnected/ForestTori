@@ -11,6 +11,7 @@ import PopupView
 struct PlantPotView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
+//    @StateObject var onboardingViewModel = OnboardingViewModel()
     @StateObject private var keyboardHandler = KeyboardHandler()
     
     @FetchRequest(sortDescriptors: [])
@@ -22,36 +23,38 @@ struct PlantPotView: View {
     @FetchRequest(sortDescriptors: [])
     var missions: FetchedResults<Mission>
     
-    @Binding var viewName: String
     @Binding var chapterIndex: Int
     @Binding var plantIndex: Int
     @Binding var dialogIndex: Int
     @Binding var missionIndex: Int
     @Binding var postIndex: Int
+    @Binding var isAllChapterCompleted: Bool
 
     @State var isEmpty: Bool = true
     @State var isShowPlantSelectView: Bool = false
     @State var isShowDiaryView: Bool = false
     @State var isMissionCompleted: Bool = false
-    @State var isTapped: Bool = false
     @State var isChapterCompleted: Bool = false
+    @State var isTapped: Bool = false
+    @State var maximum: Int = 3
     
     let backgrounds: Array<String> = ["STR_Img_bg_1_spring", "STR_Img_bg_2_summer", "STR_Img_bg_3_autumn", "STR_Img_bg_4_winter"]
     
     var body: some View {
-        let progress = isEmpty ? CGFloat.zero : CGFloat(1)
         let emptyPot = "STR_3D_emptypot.scn"
         let potName = plants[Int(missions[missionIndex].plantID)-1].objectName
         
         ZStack {
-            Image(backgrounds[chapterIndex])
-                .resizable()
-                .ignoresSafeArea()
+            if chapterIndex < 4 {
+                Image(backgrounds[chapterIndex])
+                    .resizable()
+                    .ignoresSafeArea()
+            }
             VStack {
                 HStack {
                     NavigationLink(
                         destination:
-                            GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex)
+                            GardenView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)
                             .environment(\.managedObjectContext, viewContext)
                             .navigationBarBackButtonHidden(true)
                     ) {
@@ -63,7 +66,8 @@ struct PlantPotView: View {
                     Spacer()
                     
                     if !isEmpty {
-                        CustomProgressBar(progress: progress)
+                        CustomProgressBar(missionIndex: $missionIndex, maximum: $maximum)
+                            .environment(\.managedObjectContext, viewContext)
                     }
                 }
                 .padding()
@@ -74,7 +78,7 @@ struct PlantPotView: View {
                     ZStack {
                         Image(systemName: "plus.square")
                             .resizable()
-                            .foregroundColor(Color("STR_Green"))
+                            .foregroundColor(Color("STR_White"))
                             .fontWeight(.bold)
                             .frame(width: 22, height: 22)
                             .offset(y: -100)
@@ -89,8 +93,9 @@ struct PlantPotView: View {
                     
                     Spacer()
                 } else {
-                    MessageBox(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, isEmpty: $isEmpty, isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted)
+                    MessageBox(chapterIndex: $chapterIndex, plantIndex: $plantIndex, dialogIndex: $dialogIndex, missionIndex: $missionIndex, isEmpty: $isEmpty, isMissionCompleted: $isMissionCompleted, isChapterCompleted: $isChapterCompleted, isAllChapterCompleted: $isAllChapterCompleted)
                         .environment(\.managedObjectContext, viewContext)
+//                        .environmentObject(onboardingViewModel)
                         .opacity(isMissionCompleted != dialogs[dialogIndex].isPrev ? 1: 0)
                     
                     Spacer()
@@ -113,6 +118,7 @@ struct PlantPotView: View {
             .popup(isPresented: self.$isShowPlantSelectView) {
                 PlantSelectView(isEmpty: $isEmpty, isShowPlantSelectView: $isShowPlantSelectView, chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex)
                     .environment(\.managedObjectContext, viewContext)
+                    .offset(y: 80)
             } customize: {
                 $0
                     .type(.default)
@@ -138,7 +144,7 @@ struct PlantPotView: View {
             }
             
             .popup(isPresented: $isChapterCompleted) {
-                ChapterOverView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
+                ChapterOverView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex, isChapterCompleted: $isChapterCompleted)
                     .environment(\.managedObjectContext, viewContext)
                     .frame(width: 306, height: 426)
                     .background(.white)
@@ -151,8 +157,8 @@ struct PlantPotView: View {
     }
 }
 
-struct PlantPotView_Previews: PreviewProvider {
-    static var previews: some View {
-       MainView()
-    }
-}
+//struct PlantPotView_Previews: PreviewProvider {
+//    static var previews: some View {
+//       MainView()
+//    }
+//}

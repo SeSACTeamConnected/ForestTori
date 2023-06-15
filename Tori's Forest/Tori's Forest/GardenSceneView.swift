@@ -72,7 +72,7 @@ struct GardenSceneView: UIViewRepresentable {
         let addNode = SCNNode()
         let garden = gardenObject.garden
         
-        for i in 0..<chapterIndex {
+        for i in 0..<min(chapterIndex, 4) {
             guard let node = loadSCNFile(named: garden[i].fileName) else {
                 return nil
             }
@@ -86,6 +86,20 @@ struct GardenSceneView: UIViewRepresentable {
             node.scale = SCNVector3(x: 0.5, y: 0.5, z: 0.5)
             
             addNode.addChildNode(node)
+        }
+        
+        if chapterIndex < 4 {
+            let bubble = loadSCNFile(named: "STR_3D_bubble")!
+            
+            bubble.position = SCNVector3(
+                x: -garden[chapterIndex].positionX,
+                y: garden[chapterIndex].positionY + 1.5,
+                z: -garden[chapterIndex].positionZ
+                )
+            
+            bubble.scale = SCNVector3(x: 0.5, y: 0.5, z: 0.5)
+            
+            addNode.addChildNode(bubble)
         }
         
         return addNode

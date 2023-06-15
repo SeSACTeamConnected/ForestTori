@@ -56,9 +56,16 @@
 		5B6FE38E2A34CDB600B86712 /* Chapter.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE3892A34CDB600B86712 /* Chapter.csv */; };
 		5B6FE38F2A34CDB600B86712 /* Plant.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE38A2A34CDB600B86712 /* Plant.csv */; };
 		5B6FE3902A34CDB600B86712 /* Mission.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE38B2A34CDB600B86712 /* Mission.csv */; };
-		5B6FE3912A34CDB600B86712 /* Post.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE38C2A34CDB600B86712 /* Post.csv */; };
 		5B96CABC2A3A3562004182BE /* PlantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96CABB2A3A3562004182BE /* PlantCardView.swift */; };
 		5B96CABE2A3A3BDD004182BE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */; };
+		5B96CAC32A3B2937004182BE /* STR_3D_bubble.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */; };
+		5B96CAC42A3B2937004182BE /* STR_3D_bubble.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */; };
+		5B96CAC52A3B2937004182BE /* STR_3D_gardenground.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */; };
+		5B96CAC62A3B2937004182BE /* STR_3D_gardenground.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */; };
+		5B96CAC82A3B2953004182BE /* STR_3D_bubble.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */; };
+		5B96CAC92A3B2953004182BE /* STR_3D_bubble.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */; };
+		5B96CACB2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */; };
+		5B96CACC2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */; };
 		5BA14FAE2A3778620042D6A4 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 5BA14FAD2A3778620042D6A4 /* PopupView */; };
 		5BCD49AD2A3554200058079D /* STR_3D_cactus_2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49822A3554200058079D /* STR_3D_cactus_2.dae */; };
 		5BCD49AE2A3554200058079D /* STR_3D_cactus_3.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49832A3554200058079D /* STR_3D_cactus_3.dae */; };
@@ -197,9 +204,12 @@
 		5B6FE3892A34CDB600B86712 /* Chapter.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chapter.csv; sourceTree = "<group>"; };
 		5B6FE38A2A34CDB600B86712 /* Plant.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Plant.csv; sourceTree = "<group>"; };
 		5B6FE38B2A34CDB600B86712 /* Mission.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mission.csv; sourceTree = "<group>"; };
-		5B6FE38C2A34CDB600B86712 /* Post.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Post.csv; sourceTree = "<group>"; };
 		5B96CABB2A3A3562004182BE /* PlantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCardView.swift; sourceTree = "<group>"; };
 		5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_bubble.dae; sourceTree = "<group>"; };
+		5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_gardenground.dae; sourceTree = "<group>"; };
+		5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_bubble.scn; sourceTree = "<group>"; };
+		5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_gardenground.scn; sourceTree = "<group>"; };
 		5BCD49822A3554200058079D /* STR_3D_cactus_2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_cactus_2.dae; sourceTree = "<group>"; };
 		5BCD49832A3554200058079D /* STR_3D_cactus_3.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_cactus_3.dae; sourceTree = "<group>"; };
 		5BCD49842A3554200058079D /* STR_3D_cactus_1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_cactus_1.dae; sourceTree = "<group>"; };
@@ -416,7 +426,6 @@
 				5B6FE3892A34CDB600B86712 /* Chapter.csv */,
 				5B6FE38A2A34CDB600B86712 /* Plant.csv */,
 				5B6FE38B2A34CDB600B86712 /* Mission.csv */,
-				5B6FE38C2A34CDB600B86712 /* Post.csv */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -424,6 +433,10 @@
 		5BCD49802A3554200058079D /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */,
+				5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */,
+				5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */,
+				5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */,
 				0E343AF52A391753006DB1CB /* AR_Objects */,
 				5BCD49812A3554200058079D /* STR_3D_Cactus */,
 				5BCD49852A3554200058079D /* STR_3D_emptypot.dae */,
@@ -667,6 +680,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B96CAC42A3B2937004182BE /* STR_3D_bubble.dae in Resources */,
+				5B96CAC62A3B2937004182BE /* STR_3D_gardenground.dae in Resources */,
+				5B96CAC92A3B2953004182BE /* STR_3D_bubble.scn in Resources */,
+				5B96CACC2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */,
 				0E343ABA2A37FB33006DB1CB /* Preview Assets.xcassets in Resources */,
 				0E343AB72A37FB33006DB1CB /* Assets.xcassets in Resources */,
 			);
@@ -692,7 +709,6 @@
 				5BCD49E32A35A1B90058079D /* STR_3D_cactus_2.scn in Resources */,
 				5BCD49B62A3554200058079D /* STR_3D_dandelion_animation_3.dae in Resources */,
 				5B6FE38D2A34CDB600B86712 /* Dialog.csv in Resources */,
-				5B6FE3912A34CDB600B86712 /* Post.csv in Resources */,
 				5BCD49C12A3554200058079D /* STR_3D_cottontree_animation_2.dae in Resources */,
 				5BCD49F72A35A27F0058079D /* STR_3D_cactus_animation_2.scn in Resources */,
 				13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */,
@@ -704,9 +720,12 @@
 				5BCD49F52A35A27A0058079D /* STR_3D_cactus_animation_3.scn in Resources */,
 				5BCD49B22A3554200058079D /* STR_3D_cotton_1.dae in Resources */,
 				5BCD4A052A35A2A40058079D /* STR_3D_freesia_animation.scn in Resources */,
+				5B96CACB2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */,
 				5BCD49CD2A3554200058079D /* STR_3D_dandelion_1.dae in Resources */,
 				5BCD49C82A3554200058079D /* STR_3D_maple_3.dae in Resources */,
 				5BCD49C72A3554200058079D /* STR_3D_maple_2.dae in Resources */,
+				5B96CAC32A3B2937004182BE /* STR_3D_bubble.dae in Resources */,
+				5B96CAC52A3B2937004182BE /* STR_3D_gardenground.dae in Resources */,
 				5BCD49CA2A3554200058079D /* dandelion.png in Resources */,
 				0E343AFC2A39177B006DB1CB /* ground_none.usdz in Resources */,
 				0E343AFF2A39177B006DB1CB /* ground_cactus.usdz in Resources */,
@@ -717,6 +736,7 @@
 				13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */,
 				5BCD49D52A35A1890058079D /* STR_3D_dandelion_2.scn in Resources */,
 				5BCD49B32A3554200058079D /* STR_3D_cotton_3.dae in Resources */,
+				5B96CAC82A3B2953004182BE /* STR_3D_bubble.scn in Resources */,
 				5BCD49C32A3554200058079D /* STR_3D_maple_animation_3.dae in Resources */,
 				5BCD49F32A35A2750058079D /* STR_3D_cactus_animation_1.scn in Resources */,
 				5BCD49D72A35A1900058079D /* STR_3D_dandelion_1.scn in Resources */,
@@ -824,7 +844,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest for Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 34K3V5D9X5;
+				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tori's Forest for";
@@ -855,7 +875,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest for Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 34K3V5D9X5;
+				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Tori's Forest for";
@@ -1001,7 +1021,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest/Preview Content\"";
-				DEVELOPMENT_TEAM = 34K3V5D9X5;
+				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -1033,7 +1053,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest/Preview Content\"";
-				DEVELOPMENT_TEAM = 34K3V5D9X5;
+				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
