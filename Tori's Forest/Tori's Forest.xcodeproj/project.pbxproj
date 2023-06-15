@@ -22,6 +22,9 @@
 		0E343AFD2A39177B006DB1CB /* ground_maple.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AF82A39177B006DB1CB /* ground_maple.usdz */; };
 		0E343AFE2A39177B006DB1CB /* ground_cottontree.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AF92A39177B006DB1CB /* ground_cottontree.usdz */; };
 		0E343AFF2A39177B006DB1CB /* ground_cactus.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0E343AFA2A39177B006DB1CB /* ground_cactus.usdz */; };
+		0EC15DA22A3B927800088CDD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC15DA12A3B927800088CDD /* Lottie */; };
+		0EC15DA42A3B928000088CDD /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC15DA32A3B928000088CDD /* LottieView.swift */; };
+		0EC15DA62A3B932400088CDD /* STR_Lottie_dandelion.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */; };
 		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
 		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
 		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
@@ -168,6 +171,8 @@
 		0E343AF82A39177B006DB1CB /* ground_maple.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_maple.usdz; sourceTree = "<group>"; };
 		0E343AF92A39177B006DB1CB /* ground_cottontree.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_cottontree.usdz; sourceTree = "<group>"; };
 		0E343AFA2A39177B006DB1CB /* ground_cactus.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_cactus.usdz; sourceTree = "<group>"; };
+		0EC15DA32A3B928000088CDD /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = STR_Lottie_dandelion.json; sourceTree = "<group>"; };
 		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
 		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
 		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
@@ -285,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E343AF42A3916CE006DB1CB /* FocusEntity in Frameworks */,
+				0EC15DA22A3B927800088CDD /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +384,7 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
+				0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */,
 				135FD7EF2A39072500A99A50 /* Component */,
 				135FD7D92A38751B00A99A50 /* Onboarding */,
 				135FD7D62A3874F800A99A50 /* View */,
@@ -405,6 +412,7 @@
 				135FD7E62A38774700A99A50 /* Notification.swift */,
 				0E343AEE2A3916A1006DB1CB /* ARContentView.swift */,
 				0E343AF02A3916B7006DB1CB /* RealityKitView.swift */,
+				0EC15DA32A3B928000088CDD /* LottieView.swift */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
@@ -626,6 +634,7 @@
 			name = "Tori's Forest";
 			packageProductDependencies = (
 				0E343AF32A3916CE006DB1CB /* FocusEntity */,
+				0EC15DA12A3B927800088CDD /* Lottie */,
 			);
 			productName = "Tori's Forest";
 			productReference = 13E09BB92A2AD970009543C6 /* Tori's Forest.app */;
@@ -660,6 +669,7 @@
 			mainGroup = 13E09BB02A2AD970009543C6;
 			packageReferences = (
 				0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */,
+				0EC15DA02A3B927800088CDD /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 13E09BBA2A2AD970009543C6 /* Products */;
 			projectDirPath = "";
@@ -757,6 +767,7 @@
 				0E343AFD2A39177B006DB1CB /* ground_maple.usdz in Resources */,
 				5B6FE38E2A34CDB600B86712 /* Chapter.csv in Resources */,
 				0E343AFE2A39177B006DB1CB /* ground_cottontree.usdz in Resources */,
+				0EC15DA62A3B932400088CDD /* STR_Lottie_dandelion.json in Resources */,
 				5BCD49BF2A3554200058079D /* STR_3D_cactus_animation_2.dae in Resources */,
 				5BCD4A032A35A29E0058079D /* STR_3D_maple_animation_1.scn in Resources */,
 				5BCD49B12A3554200058079D /* STR_3D_freesia.dae in Resources */,
@@ -786,6 +797,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B254FC42A2DF98300E426EE /* CustomProgressBar.swift in Sources */,
+				0EC15DA42A3B928000088CDD /* LottieView.swift in Sources */,
 				5B6FE3792A34B0D600B86712 /* DataModel.xcdatamodeld in Sources */,
 				135FD8042A3A711800A99A50 /* EndingView.swift in Sources */,
 				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
@@ -1113,6 +1125,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		0EC15DA02A3B927800088CDD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1120,6 +1140,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0E343AF22A3916CE006DB1CB /* XCRemoteSwiftPackageReference "FocusEntity" */;
 			productName = FocusEntity;
+		};
+		0EC15DA12A3B927800088CDD /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EC15DA02A3B927800088CDD /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 
