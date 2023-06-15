@@ -36,10 +36,12 @@ struct PlantHistoryView: View {
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(Color("STR_Brown"))
                     .padding(.top, 30)
+                    .padding(.bottom, 1)
                 
                 Text(plants[(idx!)*3].plantName!)
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundColor(Color("STR_Green"))
+                    .padding(.bottom, 10)
                 
                 ZStack {
                     Image(backgrounds[idx!])
@@ -52,7 +54,8 @@ struct PlantHistoryView: View {
                     PlantSceneView(sceneViewName: plants[(idx!)*3].objectName!)
                         .frame(width: 200, height: 300)
                 }
-
+                .padding(.bottom, 3)
+                
                 LazyVStack {
                     ForEach(posts) { item in
                         if item.chapterID == (idx!+1) {
@@ -62,13 +65,11 @@ struct PlantHistoryView: View {
                                     .frame(width: 336.47)
                                 
                                 VStack {
-                                    VStack(alignment: .leading) {
-                                        Text(formatDate(item.createdAt!))
-                                            .font(.system(size: 18, weight: .bold))
-                                            .foregroundColor(Color("STR_Black"))
-                                            .padding(.top)
-                                            .padding(.leading, 3)
-                                    }
+                                    Text(formatDate(item.createdAt!))
+                                        .font(.system(size: 16, weight: .bold))
+                                        .foregroundColor(Color("STR_Black"))
+                                        .frame(width: 303, alignment: .leading)
+                                        .padding(.top)
                                     
                                     if item.imageName! != "blank" {
                                         Image(uiImage: UIImage(data: Data(base64Encoded: item.imageName!)!)!)
@@ -78,6 +79,7 @@ struct PlantHistoryView: View {
                                             .frame(width: 302.97, height: 302.97)
                                             .clipped()
                                             .cornerRadius(8)
+                                            .padding(.bottom, 3)
                                     } else {
                                         Image(uiImage: UIImage(named: "STR_Img_splash")!)
                                             .resizable()
@@ -85,12 +87,14 @@ struct PlantHistoryView: View {
                                             .frame(width: 302.97, height: 302.97)
                                             .clipped()
                                             .cornerRadius(8)
+                                            .padding(.bottom, 3)
                                     }
                                     
                                     Text(item.postDescription!)
                                         .foregroundColor(Color("STR_Black"))
+                                        .frame(width: 303, alignment: .leading)
                                         .padding(.top, 3)
-                                        .padding(.leading, 3)
+                                    
                                 }
                                 .padding(.bottom)
                             }

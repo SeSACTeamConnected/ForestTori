@@ -29,28 +29,35 @@ struct ChapterOverView: View {
                 .font(.system(size: 17))
                 .fontWeight(.heavy)
                 .foregroundColor(Color("STR_Green"))
-                .padding(3)
+                .padding(.top, 3)
+                .padding(.bottom, 3)
             
             Text(chapters[chapterIndex].chapterHeader!)
                 .font(.system(size: 15))
                 .fontWeight(.bold)
                 .foregroundColor(Color("STR_Black"))
-                .padding(3)
+                .padding(.bottom, 10)
             
             Image(chapterImage[chapterIndex])
                 .resizable()
                 .frame(width: 186, height: 186)
                 .cornerRadius(8)
+                .padding(.bottom, 5)
             
-            Text(chapters[chapterIndex].chapterSubHeader!)
-                .font(.system(size: 13))
-                .fontWeight(.semibold)
-                .foregroundColor(Color("STR_brown"))
-            
-            Text(chapters[chapterIndex].chapterDescription!)
-                .font(.system(size: 13))
-                .foregroundColor(Color("STR_Black"))
-                .padding(.horizontal, 30)
+            VStack(alignment: .leading) {
+                Text(chapters[chapterIndex].chapterSubHeader!)
+                    .font(.system(size: 13, weight: .heavy))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("STR_Brown"))
+                    .padding(.horizontal, 25)
+                    .padding(.bottom, 1)
+                
+                Text(chapters[chapterIndex].chapterDescription!)
+                    .font(.system(size: 13))
+                    .foregroundColor(Color("STR_Black"))
+                    .padding(.horizontal, 25)
+                    .padding(.bottom, 3)
+            }
             
             HStack {
                 NavigationLink(
@@ -81,6 +88,7 @@ struct ChapterOverView: View {
                     .frame(width: 125, height: 35)
                 }
             }
+            .padding(.top, 3)
         }
     }
 }

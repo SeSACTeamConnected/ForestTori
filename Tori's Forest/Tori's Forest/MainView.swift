@@ -58,6 +58,9 @@ struct MainView: View {
                         .padding(.bottom)
                 }
             }
+            .onAppear(perform: {
+                UIScrollView.appearance().bounces = false
+            })
             
         } else {
             EndingView(chapterIndex: $chapterIndex, plantIndex: $plantIndex, missionIndex: $missionIndex, postIndex: $postIndex)
