@@ -51,7 +51,7 @@ struct GardenView: View {
                         
                         Spacer()
                         
-                        CustomProgressBar(missionIndex: $missionIndex, maximum: $maximum)
+                        CustomProgressBar(missionIndex: $missionIndex, maximum: $maximum, isDone: $isChapterCompleted)
                     }
                     .frame(maxWidth: 360)
                     .padding()
