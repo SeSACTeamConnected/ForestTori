@@ -25,6 +25,21 @@
 		0EC15DA22A3B927800088CDD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0EC15DA12A3B927800088CDD /* Lottie */; };
 		0EC15DA42A3B928000088CDD /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC15DA32A3B928000088CDD /* LottieView.swift */; };
 		0EC15DA62A3B932400088CDD /* STR_Lottie_dandelion.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */; };
+		0EC15DD52A3BAA8D00088CDD /* Untitled 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DC72A3BAA8D00088CDD /* Untitled 1.png */; };
+		0EC15DD62A3BAA8D00088CDD /* IMG_1526.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DC82A3BAA8D00088CDD /* IMG_1526.jpg */; };
+		0EC15DD72A3BAA8D00088CDD /* Untitled 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DC92A3BAA8D00088CDD /* Untitled 2.png */; };
+		0EC15DD82A3BAA8D00088CDD /* Confirmation_1365.html in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DCA2A3BAA8D00088CDD /* Confirmation_1365.html */; };
+		0EC15DD92A3BAA8D00088CDD /* IMG_2844.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DCB2A3BAA8D00088CDD /* IMG_2844.png */; };
+		0EC15DDA2A3BAA8D00088CDD /* IMG_2845.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DCC2A3BAA8D00088CDD /* IMG_2845.png */; };
+		0EC15DDB2A3BAA8D00088CDD /* IMG_1530.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DCD2A3BAA8D00088CDD /* IMG_1530.jpeg */; };
+		0EC15DDC2A3BAA8D00088CDD /* IMG_2843.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DCE2A3BAA8D00088CDD /* IMG_2843.png */; };
+		0EC15DDD2A3BAA8D00088CDD /* IMG_1529.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DCF2A3BAA8D00088CDD /* IMG_1529.jpeg */; };
+		0EC15DDE2A3BAA8D00088CDD /* image.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DD02A3BAA8D00088CDD /* image.jpeg */; };
+		0EC15DDF2A3BAA8D00088CDD /* IMG_1528.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DD12A3BAA8D00088CDD /* IMG_1528.jpeg */; };
+		0EC15DE02A3BAA8D00088CDD /* IMG_1535.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DD22A3BAA8D00088CDD /* IMG_1535.jpeg */; };
+		0EC15DE12A3BAA8D00088CDD /* Untitled.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DD32A3BAA8D00088CDD /* Untitled.png */; };
+		0EC15DE22A3BAA8D00088CDD /* HowToUse1365.html in Resources */ = {isa = PBXBuildFile; fileRef = 0EC15DD42A3BAA8D00088CDD /* HowToUse1365.html */; };
+		0EC15DE42A3BAA9B00088CDD /* HTMLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC15DE32A3BAA9B00088CDD /* HTMLView.swift */; };
 		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
 		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
 		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
@@ -174,6 +189,21 @@
 		0E343AFA2A39177B006DB1CB /* ground_cactus.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = ground_cactus.usdz; sourceTree = "<group>"; };
 		0EC15DA32A3B928000088CDD /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = STR_Lottie_dandelion.json; sourceTree = "<group>"; };
+		0EC15DC72A3BAA8D00088CDD /* Untitled 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled 1.png"; sourceTree = "<group>"; };
+		0EC15DC82A3BAA8D00088CDD /* IMG_1526.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1526.jpg; sourceTree = "<group>"; };
+		0EC15DC92A3BAA8D00088CDD /* Untitled 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled 2.png"; sourceTree = "<group>"; };
+		0EC15DCA2A3BAA8D00088CDD /* Confirmation_1365.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Confirmation_1365.html; sourceTree = "<group>"; };
+		0EC15DCB2A3BAA8D00088CDD /* IMG_2844.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2844.png; sourceTree = "<group>"; };
+		0EC15DCC2A3BAA8D00088CDD /* IMG_2845.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2845.png; sourceTree = "<group>"; };
+		0EC15DCD2A3BAA8D00088CDD /* IMG_1530.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1530.jpeg; sourceTree = "<group>"; };
+		0EC15DCE2A3BAA8D00088CDD /* IMG_2843.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_2843.png; sourceTree = "<group>"; };
+		0EC15DCF2A3BAA8D00088CDD /* IMG_1529.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1529.jpeg; sourceTree = "<group>"; };
+		0EC15DD02A3BAA8D00088CDD /* image.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpeg; sourceTree = "<group>"; };
+		0EC15DD12A3BAA8D00088CDD /* IMG_1528.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1528.jpeg; sourceTree = "<group>"; };
+		0EC15DD22A3BAA8D00088CDD /* IMG_1535.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1535.jpeg; sourceTree = "<group>"; };
+		0EC15DD32A3BAA8D00088CDD /* Untitled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Untitled.png; sourceTree = "<group>"; };
+		0EC15DD42A3BAA8D00088CDD /* HowToUse1365.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = HowToUse1365.html; sourceTree = "<group>"; };
+		0EC15DE32A3BAA9B00088CDD /* HTMLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLView.swift; sourceTree = "<group>"; };
 		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
 		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
 		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
@@ -331,6 +361,27 @@
 			path = AR_Objects;
 			sourceTree = "<group>";
 		};
+		0EC15DC62A3BAA8D00088CDD /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				0EC15DC72A3BAA8D00088CDD /* Untitled 1.png */,
+				0EC15DC82A3BAA8D00088CDD /* IMG_1526.jpg */,
+				0EC15DC92A3BAA8D00088CDD /* Untitled 2.png */,
+				0EC15DCA2A3BAA8D00088CDD /* Confirmation_1365.html */,
+				0EC15DCB2A3BAA8D00088CDD /* IMG_2844.png */,
+				0EC15DCC2A3BAA8D00088CDD /* IMG_2845.png */,
+				0EC15DCD2A3BAA8D00088CDD /* IMG_1530.jpeg */,
+				0EC15DCE2A3BAA8D00088CDD /* IMG_2843.png */,
+				0EC15DCF2A3BAA8D00088CDD /* IMG_1529.jpeg */,
+				0EC15DD02A3BAA8D00088CDD /* image.jpeg */,
+				0EC15DD12A3BAA8D00088CDD /* IMG_1528.jpeg */,
+				0EC15DD22A3BAA8D00088CDD /* IMG_1535.jpeg */,
+				0EC15DD32A3BAA8D00088CDD /* Untitled.png */,
+				0EC15DD42A3BAA8D00088CDD /* HowToUse1365.html */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
 		1325A9802A3BA09300B73B7B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +445,7 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
+				0EC15DC62A3BAA8D00088CDD /* HTML */,
 				1325A9802A3BA09300B73B7B /* Model */,
 				0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */,
 				135FD7EF2A39072500A99A50 /* Component */,
@@ -424,6 +476,7 @@
 				0E343AEE2A3916A1006DB1CB /* ARContentView.swift */,
 				0E343AF02A3916B7006DB1CB /* RealityKitView.swift */,
 				0EC15DA32A3B928000088CDD /* LottieView.swift */,
+				0EC15DE32A3BAA9B00088CDD /* HTMLView.swift */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
@@ -712,26 +765,36 @@
 			files = (
 				5BCD49C52A3554200058079D /* STR_3D_maple_animation_1.dae in Resources */,
 				5B6FE3902A34CDB600B86712 /* Mission.csv in Resources */,
+				0EC15DDD2A3BAA8D00088CDD /* IMG_1529.jpeg in Resources */,
+				0EC15DE22A3BAA8D00088CDD /* HowToUse1365.html in Resources */,
 				5B6FE38F2A34CDB600B86712 /* Plant.csv in Resources */,
 				5BE4D2ED2A37F01600348CD2 /* STR_3D_maple_garden_animation.dae in Resources */,
 				5BCD49B02A3554200058079D /* STR_3D_emptypot.dae in Resources */,
 				5BCD49F92A35A2860058079D /* STR_3D_cottontree_animation_1.scn in Resources */,
 				5BCD49D92A35A1960058079D /* STR_3D_maple_1.scn in Resources */,
+				0EC15DE12A3BAA8D00088CDD /* Untitled.png in Resources */,
 				5BE4D2EF2A37F01600348CD2 /* STR_3D_dandelion_garden_animation.scn in Resources */,
+				0EC15DD82A3BAA8D00088CDD /* Confirmation_1365.html in Resources */,
 				5BCD49B42A3554200058079D /* STR_3D_cotton_2.dae in Resources */,
 				5BCD49C22A3554200058079D /* STR_3D_cottontree_animation_3.dae in Resources */,
 				5BCD49C62A3554200058079D /* STR_3D_freesia_animation.dae in Resources */,
+				0EC15DD62A3BAA8D00088CDD /* IMG_1526.jpg in Resources */,
 				5BCD49B82A3554200058079D /* STR_3D_dandelion_animation_1.dae in Resources */,
 				5BCD49AE2A3554200058079D /* STR_3D_cactus_3.dae in Resources */,
 				5BCD49E32A35A1B90058079D /* STR_3D_cactus_2.scn in Resources */,
 				5BCD49B62A3554200058079D /* STR_3D_dandelion_animation_3.dae in Resources */,
+				0EC15DD92A3BAA8D00088CDD /* IMG_2844.png in Resources */,
 				5B6FE38D2A34CDB600B86712 /* Dialog.csv in Resources */,
 				5BCD49C12A3554200058079D /* STR_3D_cottontree_animation_2.dae in Resources */,
+				0EC15DDF2A3BAA8D00088CDD /* IMG_1528.jpeg in Resources */,
 				5BCD49F72A35A27F0058079D /* STR_3D_cactus_animation_2.scn in Resources */,
+				0EC15DE02A3BAA8D00088CDD /* IMG_1535.jpeg in Resources */,
 				13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */,
 				5BCD49E52A35A2440058079D /* STR_3D_dandelion_animation_3.scn in Resources */,
+				0EC15DDE2A3BAA8D00088CDD /* image.jpeg in Resources */,
 				5BE4D2F32A37F01600348CD2 /* STR_3D_dandelion_garden_animation.dae in Resources */,
 				5BE4D2EE2A37F01600348CD2 /* STR_3D_cactus_garden_animation.scn in Resources */,
+				0EC15DDC2A3BAA8D00088CDD /* IMG_2843.png in Resources */,
 				5BCD49BE2A3554200058079D /* STR_3D_cactus_animation_3.dae in Resources */,
 				5BCD49FB2A35A28A0058079D /* STR_3D_cottontree_animation_2.scn in Resources */,
 				5BCD49F52A35A27A0058079D /* STR_3D_cactus_animation_3.scn in Resources */,
@@ -751,6 +814,7 @@
 				5BCD49AD2A3554200058079D /* STR_3D_cactus_2.dae in Resources */,
 				5BE4D2F02A37F01600348CD2 /* STR_3D_cottontree_garden_animation.dae in Resources */,
 				13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */,
+				0EC15DD52A3BAA8D00088CDD /* Untitled 1.png in Resources */,
 				5BCD49D52A35A1890058079D /* STR_3D_dandelion_2.scn in Resources */,
 				5BCD49B32A3554200058079D /* STR_3D_cotton_3.dae in Resources */,
 				5B96CAC82A3B2953004182BE /* STR_3D_bubble.scn in Resources */,
@@ -758,6 +822,7 @@
 				5BCD49F32A35A2750058079D /* STR_3D_cactus_animation_1.scn in Resources */,
 				5BCD49D72A35A1900058079D /* STR_3D_dandelion_1.scn in Resources */,
 				5BCD49FF2A35A2960058079D /* STR_3D_maple_animation_3.scn in Resources */,
+				0EC15DDA2A3BAA8D00088CDD /* IMG_2845.png in Resources */,
 				5BCD49CF2A3554C20058079D /* STR_3D_emptypot.scn in Resources */,
 				5BCD49FD2A35A28F0058079D /* STR_3D_cottontree_animation_3.scn in Resources */,
 				5BE4D2F12A37F01600348CD2 /* STR_3D_maple_garden_animation.scn in Resources */,
@@ -779,11 +844,13 @@
 				5B6FE38E2A34CDB600B86712 /* Chapter.csv in Resources */,
 				0E343AFE2A39177B006DB1CB /* ground_cottontree.usdz in Resources */,
 				0EC15DA62A3B932400088CDD /* STR_Lottie_dandelion.json in Resources */,
+				0EC15DDB2A3BAA8D00088CDD /* IMG_1530.jpeg in Resources */,
 				5BCD49BF2A3554200058079D /* STR_3D_cactus_animation_2.dae in Resources */,
 				5BCD4A032A35A29E0058079D /* STR_3D_maple_animation_1.scn in Resources */,
 				5BCD49B12A3554200058079D /* STR_3D_freesia.dae in Resources */,
 				0E343AFB2A39177B006DB1CB /* ground_dandelion.usdz in Resources */,
 				5BCD49E72A35A24B0058079D /* STR_3D_dandelion_animation_2.scn in Resources */,
+				0EC15DD72A3BAA8D00088CDD /* Untitled 2.png in Resources */,
 				5BCD49D12A3554CB0058079D /* STR_3D_gardenground.scn in Resources */,
 				5BCD49C02A3554200058079D /* STR_3D_cottontree_animation_1.dae in Resources */,
 				5BCD49C42A3554200058079D /* STR_3D_maple_animation_2.dae in Resources */,
@@ -840,6 +907,7 @@
 				0E343AF12A3916B7006DB1CB /* RealityKitView.swift in Sources */,
 				135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */,
 				135FD8022A3A5D0500A99A50 /* OnboardingFinal.swift in Sources */,
+				0EC15DE42A3BAA9B00088CDD /* HTMLView.swift in Sources */,
 				135FD7DF2A38761800A99A50 /* OnboardingView.swift in Sources */,
 				0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */,
 			);
