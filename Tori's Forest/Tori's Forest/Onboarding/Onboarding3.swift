@@ -16,70 +16,80 @@ struct Onboarding3: View {
     
     var body: some View {
         ZStack {
-                Image("STR_Img_bg_0_default")
+            Image("STR_Img_bg_0_default")
+                .resizable()
+                .ignoresSafeArea()
+            VStack {
+                Image("STR_Img_Onboarding_frezia")
                     .resizable()
-                    .ignoresSafeArea()
-                VStack {
-                    Image("STR_Img_Onboarding_frezia")
-                        .resizable()
-                        .frame(width: 347, height: 195)
-                        .padding()
+                    .frame(width: 347, height: 195)
+                    .padding(.bottom, 20)
+                
+                if introIndex == 0 {
+                    Text(description[introIndex])
+                        .font(.system(size: 20, weight: .heavy))
+                        .foregroundColor(Color("STR_Brown"))
+                        .padding(.bottom, 1)
                     
-                    if introIndex == 0 {
-                        Text(description[introIndex])
-                            .font(.system(size: 20, weight: .semibold))
+                    Text(username + "토리")
+                        .font(.system(size: 20, weight: .heavy))
+                        .foregroundColor(Color("STR_Green"))
+                        .padding(.bottom, 1)
+                }
+                else if introIndex == 1 {
+                    HStack(spacing: 0){
+                        Text("여기 ")
+                            .font(.system(size: 20, weight: .heavy))
                             .foregroundColor(Color("STR_Brown"))
+                        
                         Text(username + "토리")
-                            .font(.system(size: 20, weight: .semibold))
+                            .font(.system(size: 20, weight: .heavy))
+                            .foregroundColor(Color("STR_Green"))
+                        
+                        Text("를 위해")
+                            .font(.system(size: 20, weight: .heavy))
+                            .foregroundColor(Color("STR_Brown"))
+                    }
+                    .padding(.bottom, 1)
+                    
+                    Text("신비한 화분을 줄게요.")
+                        .font(.system(size: 20, weight: .heavy))
+                        .foregroundColor(Color("STR_Brown"))
+                }
+                else if introIndex == 2{
+                    HStack(spacing: 0){
+                        Text("이제부터 ")
+                            .font(.system(size: 20, weight: .heavy))
+                            .foregroundColor(Color("STR_Brown"))
+                        
+                        Text(username + "토리")
+                            .font(.system(size: 20, weight: .heavy))
                             .foregroundColor(Color("STR_Green"))
                     }
-                    else if introIndex == 1 {
-                        HStack(spacing: 0){
-                            Text("여기 ")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_Brown"))
-                            Text(username + "토리")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_Green"))
-                            Text("를 위해")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_Brown"))
-                        }
-                        Text("신비한 화분을 줄게요.")
-                            .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(Color("STR_Brown"))
-                    }
-                    else if introIndex == 2{
-                        HStack(spacing: 0){
-                            Text("이제부터 ")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_Brown"))
-                            Text(username + "토리")
-                                .font(.system(size: 20, weight: .semibold))
-                                .foregroundColor(Color("STR_Green"))
-                        }
-                        Text("마법 능력으로 식물을 잘 키워주세요.")
-                            .font(.system(size: 20, weight: .semibold))
-                            .foregroundColor(Color("STR_Brown"))
+                    .padding(.bottom, 1)
+                    
+                    Text("마법 능력으로 식물을 잘 키워주세요.")
+                        .font(.system(size: 20, weight: .heavy))
+                        .foregroundColor(Color("STR_Brown"))
+                }
+            }
+            .onAppear {
+                withAnimation(.linear(duration: 2.0)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        introIndex = 1
                     }
                 }
-                .onAppear {
-                               withAnimation(.linear(duration: 2.0)) {
-                                   DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                                       introIndex = 1
-                                   }
-                               }
-                               withAnimation(.linear(duration: 4.0)) {
-                                   DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
-                                       introIndex = 2
-                                   }
-                               }
-                               withAnimation(.linear(duration: 2.0)) {
-                                   DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
-                                       OnboardingViewModel.nextPage()
-                                   }
-                               }
-                           }
+                withAnimation(.linear(duration: 4.0)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        introIndex = 2
+                    }
+                }
+                withAnimation(.linear(duration: 2.0)) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                        OnboardingViewModel.nextPage()
+                    }
+                }
+            }
         }
     }
 }

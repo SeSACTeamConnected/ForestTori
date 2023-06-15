@@ -83,5 +83,4 @@ struct ChapterOverView: View {
             }
         }
     }
-        
 }

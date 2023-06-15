@@ -27,8 +27,6 @@ struct GardenView: View {
     let backgrounds: Array<String> = ["STR_Img_bg_1_spring", "STR_Img_bg_2_summer", "STR_Img_bg_3_autumn", "STR_Img_bg_4_winter"]
     
     var body: some View {
-        let progress = CGFloat.zero
-        
         ZStack {
             if chapterIndex < 4 {
                 Image(backgrounds[chapterIndex])

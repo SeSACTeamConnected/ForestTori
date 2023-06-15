@@ -14,6 +14,8 @@ struct DiaryView: View {
     @FetchRequest(sortDescriptors: [])
     var posts: FetchedResults<Post>
     
+    @FocusState private var textEditorIsFocused: Bool
+    
     @Binding var isShowDiaryView: Bool
     @Binding var isMissionCompleted: Bool
     @Binding var isTapped: Bool
@@ -107,6 +109,7 @@ struct DiaryView: View {
                     
                     ZStack(alignment: .topLeading) {
                         TextEditor(text: $imageDescription)
+                            .focused($textEditorIsFocused)
                             .scrollContentBackground(.hidden)
                             .background(Color("STR_White"))
                             .foregroundColor(Color("STR_Black"))
@@ -127,6 +130,9 @@ struct DiaryView: View {
                                     imageDescription.removeLast()
                                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                 }
+                            }
+                            .onTapGesture {
+                                textEditorIsFocused = true
                             }
                         
                         if imageDescription == "" {

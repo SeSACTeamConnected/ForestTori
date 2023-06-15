@@ -12,7 +12,7 @@ struct Onboarding1: View {
     @State private var introIndex = 0
     @State private var isNextView = false
     var accentText: String = "토리의 숲"
-    let intro: [String] = ["반가워요,\n토리의 숲에 오신걸 환영해요!", "저는 문지기 요정 프리지아에요.\n토리의 숲을 안내해 드릴게요?"]
+    let intro: [String] = ["토리의 숲에 오신걸 환영해요!", "저는 문지기 요정 프리지아에요.\n토리의 숲을 안내해 드릴게요?"]
     
     var body: some View {
         ZStack {
@@ -27,23 +27,26 @@ struct Onboarding1: View {
                     .resizable()
                     .frame(width: 347, height: 195)
                     .padding(.bottom, 20)
-                    .padding()
+//                    .padding()
                 
                 if introIndex == 0 {
                     let thisIndex = intro[0].firstIndex(of: "토") ?? intro[introIndex].startIndex
                     let otherIndex = intro[0].firstIndex(of: "에") ?? intro[introIndex].endIndex
-                    
-                    (Text(String(intro[introIndex][..<thisIndex]))
+
+                    Text("반가워요.")
                         .font(.system(size: 20).weight(.heavy))
                         .foregroundColor(Color("STR_Brown"))
-                     
-                     + Text(String(intro[introIndex][thisIndex..<otherIndex]))
-                        .font(.system(size: 20).weight(.heavy))
-                        .foregroundColor(Color("STR_Green"))
-                     
-                     + Text(String(intro[introIndex][otherIndex...]))
-                        .font(.system(size: 20).weight(.heavy))
-                        .foregroundColor(Color("STR_Brown")))
+                        .padding(.bottom, 1)
+                    
+                    HStack(spacing: 0) {
+                        Text(String(intro[introIndex][thisIndex..<otherIndex]))
+                            .font(.system(size: 20).weight(.heavy))
+                            .foregroundColor(Color("STR_Green"))
+                        
+                        Text(String(intro[introIndex][otherIndex...]))
+                            .font(.system(size: 20).weight(.heavy))
+                            .foregroundColor(Color("STR_Brown"))
+                    }
                     .multilineTextAlignment(.center)
                     
                     Spacer()
@@ -52,6 +55,7 @@ struct Onboarding1: View {
                     Text("저는 문지기 요정, 프리지아에요.")
                         .font(.system(size: 20).weight(.heavy))
                         .foregroundColor(Color("STR_Brown"))
+                        .padding(.bottom, 1)
                     
                     HStack(spacing: 0) {
                         Text("토리의 숲")
