@@ -36,6 +36,7 @@ struct PlantPotView: View {
     @State var isChapterCompleted: Bool = false
     @State var isTapped: Bool = false
     @State var maximum: Int = 3
+    @State var isShowHTMLModal: Bool = false
     
     let backgrounds: Array<String> = ["STR_Img_bg_1_spring", "STR_Img_bg_2_summer", "STR_Img_bg_3_autumn", "STR_Img_bg_4_winter"]
     
@@ -98,12 +99,19 @@ struct PlantPotView: View {
                         Spacer()
                         
                         ZStack {
-                            Image("STR_Img_asset_button_info")
-                                .resizable()
-                                .opacity(isMissionCompleted == dialogs[dialogIndex].isPrev ? 1 : 0)
-                                .opacity(chapterIndex == 3 ? 1 : 0)
-                                .frame(width: 34, height: 30)
-                                .offset(y: -180)
+                            Button(action: {
+                                isShowHTMLModal = true
+                            }, label: {
+                                Image("STR_Img_asset_button_info")
+                                    .resizable()
+                                    .opacity(isMissionCompleted == dialogs[dialogIndex].isPrev ? 1 : 0)
+                                    .opacity(((chapterIndex == 3) && (plantIndex != 10)) ? 1 : 0)
+                                    .frame(width: 34, height: 30)
+                                    
+                            })
+                            .opacity(isMissionCompleted == dialogs[dialogIndex].isPrev ? 1 : 0)
+                            .opacity(chapterIndex == 3 ? 1 : 0)
+                            .offset(y: -180)
                             
                             PlantSceneView(sceneViewName: potName!)
                                 .environment(\.managedObjectContext, viewContext)
@@ -125,6 +133,16 @@ struct PlantPotView: View {
                             .padding(.top, 80)
                         
                         Spacer()
+                    }
+                }
+                .sheet(isPresented: $isShowHTMLModal){
+                    let filleName = (plantIndex == 9) ? "HowToUse1365" : "Confirmation_1365"
+                    if let htmlPath = Bundle.main.path(forResource: filleName, ofType: "html"),
+                    let htmlString = try? String(contentsOfFile: htmlPath) {
+                        HTMLView(htmlString: htmlString)
+                            .padding(8)
+                    } else {
+                        Text("HTML file not found")
                     }
                 }
                 .onChange(of: scenePhase) { phase in
