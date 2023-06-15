@@ -46,7 +46,7 @@ struct PlantSelectView: View {
         GeometryReader { _ in
             ScrollViewReader { proxy in
                 VStack {
-                    Text("식물친구를 선택해 주세요")
+                    Text("식물친구를 선택해 주세요.")
                         .foregroundColor(Color("STR_White"))
                     ScrollView(.horizontal) {
                         HStack {

@@ -20,12 +20,17 @@ extension String {
 
 struct Onboarding2: View {
     @ObservedObject var OnboardingViewModel : OnboardingViewModel
+    
     @AppStorage("username") var username: String = ""
+    
+    @FocusState private var textFieldIsFocused: Bool
+    
     @State private var introIndex = 0
     @State private var isNextView = false
+    @State var name: String = ""
+    
     let intro : [String] = ["안녕하세요,\n여기는 토리의 숲이에요","마법이 있어야만\n자랄 수 있어요"]
     let maxCharacterLength = Int(8)
-    @State var name: String = ""
     
     var body: some View {
         ZStack{
@@ -44,10 +49,14 @@ struct Onboarding2: View {
                         
                         HStack(spacing: 0){
                             TextField("이름을 입력하세요", text: $name)
+                                .focused($textFieldIsFocused)
                                 .onChange(of: name) {
                                     newValue in if name.count > 9{
                                         name = String(name.prefix(9))
                                     }
+                                }
+                                .onTapGesture {
+                                    textFieldIsFocused = true
                                 }
                                 .foregroundColor(name.count > 8 ? Color("STR_Red") : Color("STR_Green"))
                                 .frame(width: 160)

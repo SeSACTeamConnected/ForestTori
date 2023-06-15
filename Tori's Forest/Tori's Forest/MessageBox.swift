@@ -39,21 +39,21 @@ struct MessageBox: View {
             Image("STR_Img_asset_frame_dialog")
                 .resizable()
                 .frame(width: 342, height: 100)
+                .offset(y: 10)
             
             if let username = UserDefaults.standard.string(forKey: "username") {
-                VStack(alignment: .leading) {
                     Text(dialogs[dialogIndex].dialogLine!.replacingOccurrences(of: "(username)", with: username))
                         .font(.system(size: 16))
                         .foregroundColor(Color("STR_Black"))
-                        .padding(.horizontal)
-                }
-                .frame(width: 338, height: 72)
+                        .padding(.horizontal, 20)
+                        .frame(width: 342, height: 59, alignment: .leading)
+                        .lineSpacing(1)
             }
             
             Image("STR_Img_asset_button_dialog")
                 .resizable()
                 .frame(width: 15, height: 10)
-                .offset(x: 150, y: 25)
+                .offset(x: 150, y: 23)
             }
         .frame(width: 342, height: 72)
         .padding()

@@ -23,26 +23,30 @@ struct PlantCardView: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundColor(Color("STR_White"))
+                
                 VStack(spacing: 1){
                     Text(header)
                         .font(.system(size: 18,weight:.semibold))
                         .foregroundColor(Color("STR_Green"))
                         .padding(.top, 20)
+                        .padding(.bottom, 3)
                     
                     Text(plantName)
                         .font(.system(size: 15,weight: .semibold))
                         .foregroundColor(Color("STR_Black"))
+                        .padding(.bottom, 10)
                     
                     Image(imageName)
                         .resizable()
                         .frame(width: 264,height: 209)
-                        .cornerRadius(10)
+                        .cornerRadius(8)
                     
                     Text(description)
                         .font(.system(size:13))
                         .foregroundColor(Color("STR_Black"))
-                        .padding()
-                        .padding(.horizontal, 10)
+                        .lineSpacing(1)
+                        .padding(.vertical, 10)
+                        .padding(.horizontal, 20)
                     
                     Spacer()
                     
@@ -51,10 +55,10 @@ struct PlantCardView: View {
                             .foregroundColor(Color("STR_Brown"))
                         Text("선택하기")
                             .foregroundColor(Color("STR_White"))
-                            .font(.system(size: 14, weight: .semibold))
+                            .font(.system(size: 14, weight: .bold))
                     }
-                    .frame(width: 263,height: 35)
-                    .padding(.bottom, 30)
+                    .frame(width: 263, height: 35)
+                    .padding(.bottom, 20)
                     .onTapGesture {
                         showingPopup = false
                         isShowPlantSelectView.toggle()

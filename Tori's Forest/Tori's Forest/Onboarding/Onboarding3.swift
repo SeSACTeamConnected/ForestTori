@@ -74,18 +74,18 @@ struct Onboarding3: View {
                 }
             }
             .onAppear {
-                withAnimation(.linear(duration: 2.0)) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        introIndex = 1
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+                    withAnimation(.linear(duration: 0.5)) {
+                        OnboardingViewModel.nextPage()
                     }
                 }
-                withAnimation(.linear(duration: 4.0)) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                        introIndex = 2
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4) {
+                    withAnimation(.linear(duration: 0.5)) {
+                        OnboardingViewModel.nextPage()
                     }
                 }
-                withAnimation(.linear(duration: 2.0)) {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 6) {
+                    withAnimation(.linear(duration: 0.5)) {
                         OnboardingViewModel.nextPage()
                     }
                 }

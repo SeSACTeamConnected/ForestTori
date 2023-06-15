@@ -63,7 +63,7 @@ struct DiaryView: View {
                     }
                 }
                 .padding(.horizontal, 25)
-                .padding(.top, 30)
+                .padding(.top, 20)
                 .padding(.bottom, 10)
                 
                 VStack {
