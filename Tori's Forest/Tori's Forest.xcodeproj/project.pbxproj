@@ -28,6 +28,7 @@
 		0EE4578E2A3155AB00B2B8FC /* PlantSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */; };
 		0EE457902A3157B600B2B8FC /* GardenSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */; };
 		0EE457922A315A9000B2B8FC /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE457912A315A9000B2B8FC /* Garden.swift */; };
+		1325A9822A3BA0A600B73B7B /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1325A9812A3BA0A600B73B7B /* CardModel.swift */; };
 		135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7D72A38750E00A99A50 /* SplashView.swift */; };
 		135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */; };
 		135FD7DD2A38755000A99A50 /* Onboarding1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD7DC2A38755000A99A50 /* Onboarding1.swift */; };
@@ -176,6 +177,7 @@
 		0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantSceneView.swift; sourceTree = "<group>"; };
 		0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenSceneView.swift; sourceTree = "<group>"; };
 		0EE457912A315A9000B2B8FC /* Garden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garden.swift; sourceTree = "<group>"; };
+		1325A9812A3BA0A600B73B7B /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		135FD7D72A38750E00A99A50 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		135FD7DC2A38755000A99A50 /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
@@ -329,6 +331,14 @@
 			path = AR_Objects;
 			sourceTree = "<group>";
 		};
+		1325A9802A3BA09300B73B7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1325A9812A3BA0A600B73B7B /* CardModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		135FD7D62A3874F800A99A50 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +394,7 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
+				1325A9802A3BA09300B73B7B /* Model */,
 				0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */,
 				135FD7EF2A39072500A99A50 /* Component */,
 				135FD7D92A38751B00A99A50 /* Onboarding */,
@@ -820,6 +831,7 @@
 				5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */,
 				5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */,
 				135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */,
+				1325A9822A3BA0A600B73B7B /* CardModel.swift in Sources */,
 				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
 				135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */,
 				135FD7E72A38774700A99A50 /* Notification.swift in Sources */,
