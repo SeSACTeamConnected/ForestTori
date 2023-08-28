@@ -58,7 +58,6 @@
 		135FD8042A3A711800A99A50 /* EndingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135FD8032A3A711800A99A50 /* EndingView.swift */; };
 		13E09BBD2A2AD970009543C6 /* Tori_s_ForestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */; };
 		13E09BC12A2AD971009543C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC02A2AD971009543C6 /* Assets.xcassets */; };
-		13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */; };
 		5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FAD2A2CCC3500E426EE /* MainView.swift */; };
 		5B254FB02A2CCD9D00E426EE /* MessageBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */; };
 		5B254FB22A2CCFB200E426EE /* PlantPotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FB12A2CCFB200E426EE /* PlantPotView.swift */; };
@@ -69,7 +68,10 @@
 		5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */; };
 		5B254FC42A2DF98300E426EE /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */; };
 		5B254FC62A2E00C700E426EE /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B254FC52A2E00C700E426EE /* DiaryView.swift */; };
-		5B6FE3712A340D8100B86712 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FE3702A340D8100B86712 /* UserDefault.swift */; };
+		5B27D1682A95DDB100753481 /* Colors+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B27D1672A95DDB100753481 /* Colors+.swift */; };
+		5B27D16C2A95E0E200753481 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5B27D16B2A95E0E200753481 /* .swiftlint.yml */; };
+		5B27D16F2A95E26600753481 /* STR_3D_gardenground.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD498C2A3554200058079D /* STR_3D_gardenground.dae */; };
+		5B4CBEC42A94358200B3C12D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4CBEC32A94358200B3C12D /* CoreDataManager.swift */; };
 		5B6FE3792A34B0D600B86712 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FE3772A34B0D600B86712 /* DataModel.xcdatamodeld */; };
 		5B6FE38D2A34CDB600B86712 /* Dialog.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE3882A34CDB600B86712 /* Dialog.csv */; };
 		5B6FE38E2A34CDB600B86712 /* Chapter.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FE3892A34CDB600B86712 /* Chapter.csv */; };
@@ -79,8 +81,6 @@
 		5B96CABE2A3A3BDD004182BE /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */; };
 		5B96CAC32A3B2937004182BE /* STR_3D_bubble.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */; };
 		5B96CAC42A3B2937004182BE /* STR_3D_bubble.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */; };
-		5B96CAC52A3B2937004182BE /* STR_3D_gardenground.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */; };
-		5B96CAC62A3B2937004182BE /* STR_3D_gardenground.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */; };
 		5B96CAC82A3B2953004182BE /* STR_3D_bubble.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */; };
 		5B96CAC92A3B2953004182BE /* STR_3D_bubble.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */; };
 		5B96CACB2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */; };
@@ -115,7 +115,6 @@
 		5BCD49CC2A3554200058079D /* STR_3D_dandelion_2.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49AB2A3554200058079D /* STR_3D_dandelion_2.dae */; };
 		5BCD49CD2A3554200058079D /* STR_3D_dandelion_1.dae in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49AC2A3554200058079D /* STR_3D_dandelion_1.dae */; };
 		5BCD49CF2A3554C20058079D /* STR_3D_emptypot.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49CE2A3554C20058079D /* STR_3D_emptypot.scn */; };
-		5BCD49D12A3554CB0058079D /* STR_3D_gardenground.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49D02A3554CB0058079D /* STR_3D_gardenground.scn */; };
 		5BCD49D32A35A1830058079D /* STR_3D_dandelion_3.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49D22A35A1830058079D /* STR_3D_dandelion_3.scn */; };
 		5BCD49D52A35A1890058079D /* STR_3D_dandelion_2.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49D42A35A1890058079D /* STR_3D_dandelion_2.scn */; };
 		5BCD49D72A35A1900058079D /* STR_3D_dandelion_1.scn in Resources */ = {isa = PBXBuildFile; fileRef = 5BCD49D62A35A1900058079D /* STR_3D_dandelion_1.scn */; };
@@ -223,7 +222,6 @@
 		13E09BB92A2AD970009543C6 /* Tori's Forest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tori's Forest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tori_s_ForestApp.swift; sourceTree = "<group>"; };
 		13E09BC02A2AD971009543C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5B254FAD2A2CCC3500E426EE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBox.swift; sourceTree = "<group>"; };
 		5B254FB12A2CCFB200E426EE /* PlantPotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantPotView.swift; sourceTree = "<group>"; };
@@ -234,7 +232,10 @@
 		5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterOverView.swift; sourceTree = "<group>"; };
 		5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		5B254FC52A2E00C700E426EE /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
-		5B6FE3702A340D8100B86712 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		5B27D1672A95DDB100753481 /* Colors+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+.swift"; sourceTree = "<group>"; };
+		5B27D16B2A95E0E200753481 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		5B4CBEBD2A93694300B3C12D /* Tori-s-Forest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Tori-s-Forest-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5B4CBEC32A94358200B3C12D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		5B6FE3782A34B0D600B86712 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		5B6FE3882A34CDB600B86712 /* Dialog.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dialog.csv; sourceTree = "<group>"; };
 		5B6FE3892A34CDB600B86712 /* Chapter.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Chapter.csv; sourceTree = "<group>"; };
@@ -276,7 +277,6 @@
 		5BCD49AB2A3554200058079D /* STR_3D_dandelion_2.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_dandelion_2.dae; sourceTree = "<group>"; };
 		5BCD49AC2A3554200058079D /* STR_3D_dandelion_1.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = STR_3D_dandelion_1.dae; sourceTree = "<group>"; };
 		5BCD49CE2A3554C20058079D /* STR_3D_emptypot.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_emptypot.scn; sourceTree = "<group>"; };
-		5BCD49D02A3554CB0058079D /* STR_3D_gardenground.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_gardenground.scn; sourceTree = "<group>"; };
 		5BCD49D22A35A1830058079D /* STR_3D_dandelion_3.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_dandelion_3.scn; sourceTree = "<group>"; };
 		5BCD49D42A35A1890058079D /* STR_3D_dandelion_2.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_dandelion_2.scn; sourceTree = "<group>"; };
 		5BCD49D62A35A1900058079D /* STR_3D_dandelion_1.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = STR_3D_dandelion_1.scn; sourceTree = "<group>"; };
@@ -382,28 +382,37 @@
 			path = HTML;
 			sourceTree = "<group>";
 		};
-		1325A9802A3BA09300B73B7B /* Model */ = {
+		1325A9802A3BA09300B73B7B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5B27D1612A95031600753481 /* Data */,
 				1325A9812A3BA0A600B73B7B /* CardModel.swift */,
+				0EE457912A315A9000B2B8FC /* Garden.swift */,
+				0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */,
+				135FD7E62A38774700A99A50 /* Notification.swift */,
+				5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		135FD7D62A3874F800A99A50 /* View */ = {
+		135FD7D62A3874F800A99A50 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				135FD7EF2A39072500A99A50 /* Components */,
 				135FD7D72A38750E00A99A50 /* SplashView.swift */,
-				135FD7DE2A38761800A99A50 /* OnboardingView.swift */,
 				135FD8032A3A711800A99A50 /* EndingView.swift */,
+				135FD7D92A38751B00A99A50 /* Onboarding */,
+				5B4CBEBF2A9375A700B3C12D /* Chapter */,
+				5B4CBEBE2A93753F00B3C12D /* Garden */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		135FD7D92A38751B00A99A50 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				135FD7DA2A38753D00A99A50 /* OnboardingViewModel.swift */,
+				135FD7DE2A38761800A99A50 /* OnboardingView.swift */,
 				135FD7DC2A38755000A99A50 /* Onboarding1.swift */,
 				135FD7E02A38762E00A99A50 /* Onboarding2.swift */,
 				135FD7E22A38765900A99A50 /* Onboarding3.swift */,
@@ -414,22 +423,25 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		135FD7EF2A39072500A99A50 /* Component */ = {
+		135FD7EF2A39072500A99A50 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				135FD7F02A39073C00A99A50 /* OnboardingSkipBtn.swift */,
+				5B254FB32A2CD1C600E426EE /* MissionBox.swift */,
+				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
+				5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */,
 			);
-			path = Component;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		13E09BB02A2AD970009543C6 = {
 			isa = PBXGroup;
 			children = (
-				5B6FE3772A34B0D600B86712 /* DataModel.xcdatamodeld */,
-				5B6FE3872A34CDB600B86712 /* Files */,
+				5B27D16B2A95E0E200753481 /* .swiftlint.yml */,
 				13E09BBB2A2AD970009543C6 /* Tori's Forest */,
 				0E343AB12A37FB32006DB1CB /* Tori's Forest for Watch App */,
 				13E09BBA2A2AD970009543C6 /* Products */,
+				5B27D16E2A95E1D200753481 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -445,48 +457,121 @@
 		13E09BBB2A2AD970009543C6 /* Tori's Forest */ = {
 			isa = PBXGroup;
 			children = (
-				0EC15DC62A3BAA8D00088CDD /* HTML */,
-				1325A9802A3BA09300B73B7B /* Model */,
-				0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */,
-				135FD7EF2A39072500A99A50 /* Component */,
-				135FD7D92A38751B00A99A50 /* Onboarding */,
-				135FD7D62A3874F800A99A50 /* View */,
-				5BCD49802A3554200058079D /* Objects */,
 				13E09BBC2A2AD970009543C6 /* Tori_s_ForestApp.swift */,
-				5B254FAF2A2CCD9D00E426EE /* MessageBox.swift */,
-				5B96CABB2A3A3562004182BE /* PlantCardView.swift */,
-				5B254FAD2A2CCC3500E426EE /* MainView.swift */,
-				5B254FB32A2CD1C600E426EE /* MissionBox.swift */,
-				5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */,
-				5B254FC52A2E00C700E426EE /* DiaryView.swift */,
-				5B96CABD2A3A3BDD004182BE /* KeyboardHandler.swift */,
-				5B254FB12A2CCFB200E426EE /* PlantPotView.swift */,
-				5B254FBD2A2CEE2300E426EE /* GardenView.swift */,
-				5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */,
-				5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */,
-				5B254FC32A2DF98300E426EE /* CustomProgressBar.swift */,
-				13E09BC02A2AD971009543C6 /* Assets.xcassets */,
-				13E09BC22A2AD971009543C6 /* Preview Content */,
-				0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */,
-				0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */,
-				0EE457912A315A9000B2B8FC /* Garden.swift */,
-				5B6FE3702A340D8100B86712 /* UserDefault.swift */,
-				0E343AC32A37FC6D006DB1CB /* ViewModelPhone.swift */,
-				135FD7E62A38774700A99A50 /* Notification.swift */,
-				0E343AEE2A3916A1006DB1CB /* ARContentView.swift */,
-				0E343AF02A3916B7006DB1CB /* RealityKitView.swift */,
-				0EC15DA32A3B928000088CDD /* LottieView.swift */,
-				0EC15DE32A3BAA9B00088CDD /* HTMLView.swift */,
+				5B4CBEBD2A93694300B3C12D /* Tori-s-Forest-Info.plist */,
+				5B27D1662A95DD7700753481 /* Extensions */,
+				1325A9802A3BA09300B73B7B /* Models */,
+				135FD7D62A3874F800A99A50 /* Views */,
+				5B4CBEC22A93770E00B3C12D /* Utils */,
+				5BCD49802A3554200058079D /* Resources */,
 			);
 			path = "Tori's Forest";
 			sourceTree = "<group>";
 		};
-		13E09BC22A2AD971009543C6 /* Preview Content */ = {
+		5B27D1612A95031600753481 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				13E09BC32A2AD971009543C6 /* Preview Assets.xcassets */,
+				5B6FE3772A34B0D600B86712 /* DataModel.xcdatamodeld */,
+				5B6FE3872A34CDB600B86712 /* Files */,
+				5B4CBEC32A94358200B3C12D /* CoreDataManager.swift */,
 			);
-			path = "Preview Content";
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B27D1622A95D83200753481 /* 3D_Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5B27D1642A95D89B00753481 /* 3D_Components */,
+				5B27D1632A95D86B00753481 /* 3D_Plants */,
+				0E343AF52A391753006DB1CB /* AR_Objects */,
+				5BCD498D2A3554200058079D /* WithAnimation */,
+			);
+			path = 3D_Objects;
+			sourceTree = "<group>";
+		};
+		5B27D1632A95D86B00753481 /* 3D_Plants */ = {
+			isa = PBXGroup;
+			children = (
+				5BCD49812A3554200058079D /* STR_3D_Cactus */,
+				5BCD49A82A3554200058079D /* STR_3D_Dandelion */,
+				5BCD49A42A3554200058079D /* STR_3D_Maple */,
+				5BCD49882A3554200058079D /* STR_3D_Cotton */,
+				5BCD49862A3554200058079D /* STR_3D_Freesia */,
+			);
+			path = 3D_Plants;
+			sourceTree = "<group>";
+		};
+		5B27D1642A95D89B00753481 /* 3D_Components */ = {
+			isa = PBXGroup;
+			children = (
+				5BCD49852A3554200058079D /* STR_3D_emptypot.dae */,
+				5BCD49CE2A3554C20058079D /* STR_3D_emptypot.scn */,
+				5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */,
+				5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */,
+				5BCD498C2A3554200058079D /* STR_3D_gardenground.dae */,
+				5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */,
+			);
+			path = 3D_Components;
+			sourceTree = "<group>";
+		};
+		5B27D1652A95D8FC00753481 /* Freesia_WithAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				5BCD49A32A3554200058079D /* STR_3D_freesia_animation.dae */,
+				5BCD4A042A35A2A40058079D /* STR_3D_freesia_animation.scn */,
+			);
+			path = Freesia_WithAnimation;
+			sourceTree = "<group>";
+		};
+		5B27D1662A95DD7700753481 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B27D1672A95DDB100753481 /* Colors+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B27D16E2A95E1D200753481 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5B4CBEBE2A93753F00B3C12D /* Garden */ = {
+			isa = PBXGroup;
+			children = (
+				5B254FBF2A2CEEEF00E426EE /* PlantHistoryView.swift */,
+				0EE4578F2A3157B600B2B8FC /* GardenSceneView.swift */,
+				0E343AEE2A3916A1006DB1CB /* ARContentView.swift */,
+				0E343AF02A3916B7006DB1CB /* RealityKitView.swift */,
+				5B254FBD2A2CEE2300E426EE /* GardenView.swift */,
+			);
+			path = Garden;
+			sourceTree = "<group>";
+		};
+		5B4CBEBF2A9375A700B3C12D /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				5B254FAD2A2CCC3500E426EE /* MainView.swift */,
+				5B254FC52A2E00C700E426EE /* DiaryView.swift */,
+				0EE4578D2A3155AB00B2B8FC /* PlantSceneView.swift */,
+				5B254FB12A2CCFB200E426EE /* PlantPotView.swift */,
+				5B254FB52A2CD5CD00E426EE /* PlantSelectView.swift */,
+				5B96CABB2A3A3562004182BE /* PlantCardView.swift */,
+				5B254FC12A2D1A6C00E426EE /* ChapterOverView.swift */,
+				0EC15DA32A3B928000088CDD /* LottieView.swift */,
+				0EC15DE32A3BAA9B00088CDD /* HTMLView.swift */,
+			);
+			path = Chapter;
+			sourceTree = "<group>";
+		};
+		5B4CBEC22A93770E00B3C12D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		5B6FE3872A34CDB600B86712 /* Files */ = {
@@ -500,26 +585,15 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
-		5BCD49802A3554200058079D /* Objects */ = {
+		5BCD49802A3554200058079D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5B96CAC12A3B2936004182BE /* STR_3D_bubble.dae */,
-				5B96CAC72A3B2953004182BE /* STR_3D_bubble.scn */,
-				5B96CAC22A3B2936004182BE /* STR_3D_gardenground.dae */,
-				5B96CACA2A3B2963004182BE /* STR_3D_gardenground.scn */,
-				0E343AF52A391753006DB1CB /* AR_Objects */,
-				5BCD49812A3554200058079D /* STR_3D_Cactus */,
-				5BCD49852A3554200058079D /* STR_3D_emptypot.dae */,
-				5BCD49CE2A3554C20058079D /* STR_3D_emptypot.scn */,
-				5BCD49862A3554200058079D /* STR_3D_Freesia */,
-				5BCD49882A3554200058079D /* STR_3D_Cotton */,
-				5BCD498C2A3554200058079D /* STR_3D_gardenground.dae */,
-				5BCD49D02A3554CB0058079D /* STR_3D_gardenground.scn */,
-				5BCD498D2A3554200058079D /* WithAnimation */,
-				5BCD49A42A3554200058079D /* STR_3D_Maple */,
-				5BCD49A82A3554200058079D /* STR_3D_Dandelion */,
+				13E09BC02A2AD971009543C6 /* Assets.xcassets */,
+				0EC15DA52A3B932400088CDD /* STR_Lottie_dandelion.json */,
+				0EC15DC62A3BAA8D00088CDD /* HTML */,
+				5B27D1622A95D83200753481 /* 3D_Objects */,
 			);
-			path = Objects;
+			path = Resources;
 			sourceTree = SOURCE_ROOT;
 		};
 		5BCD49812A3554200058079D /* STR_3D_Cactus */ = {
@@ -561,8 +635,7 @@
 				5BCD49972A3554200058079D /* Cactus_WithAnimation */,
 				5BCD499B2A3554200058079D /* Cottontree_WithAnimation */,
 				5BCD499F2A3554200058079D /* Maple_WithAnimation */,
-				5BCD49A32A3554200058079D /* STR_3D_freesia_animation.dae */,
-				5BCD4A042A35A2A40058079D /* STR_3D_freesia_animation.scn */,
+				5B27D1652A95D8FC00753481 /* Freesia_WithAnimation */,
 			);
 			path = WithAnimation;
 			sourceTree = "<group>";
@@ -751,7 +824,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B96CAC42A3B2937004182BE /* STR_3D_bubble.dae in Resources */,
-				5B96CAC62A3B2937004182BE /* STR_3D_gardenground.dae in Resources */,
+				5B27D16F2A95E26600753481 /* STR_3D_gardenground.dae in Resources */,
 				5B96CAC92A3B2953004182BE /* STR_3D_bubble.scn in Resources */,
 				5B96CACC2A3B2963004182BE /* STR_3D_gardenground.scn in Resources */,
 				0E343ABA2A37FB33006DB1CB /* Preview Assets.xcassets in Resources */,
@@ -763,6 +836,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B27D16C2A95E0E200753481 /* .swiftlint.yml in Resources */,
 				5BCD49C52A3554200058079D /* STR_3D_maple_animation_1.dae in Resources */,
 				5B6FE3902A34CDB600B86712 /* Mission.csv in Resources */,
 				0EC15DDD2A3BAA8D00088CDD /* IMG_1529.jpeg in Resources */,
@@ -789,7 +863,6 @@
 				0EC15DDF2A3BAA8D00088CDD /* IMG_1528.jpeg in Resources */,
 				5BCD49F72A35A27F0058079D /* STR_3D_cactus_animation_2.scn in Resources */,
 				0EC15DE02A3BAA8D00088CDD /* IMG_1535.jpeg in Resources */,
-				13E09BC42A2AD971009543C6 /* Preview Assets.xcassets in Resources */,
 				5BCD49E52A35A2440058079D /* STR_3D_dandelion_animation_3.scn in Resources */,
 				0EC15DDE2A3BAA8D00088CDD /* image.jpeg in Resources */,
 				5BE4D2F32A37F01600348CD2 /* STR_3D_dandelion_garden_animation.dae in Resources */,
@@ -805,7 +878,6 @@
 				5BCD49C82A3554200058079D /* STR_3D_maple_3.dae in Resources */,
 				5BCD49C72A3554200058079D /* STR_3D_maple_2.dae in Resources */,
 				5B96CAC32A3B2937004182BE /* STR_3D_bubble.dae in Resources */,
-				5B96CAC52A3B2937004182BE /* STR_3D_gardenground.dae in Resources */,
 				5BCD49CA2A3554200058079D /* dandelion.png in Resources */,
 				0E343AFC2A39177B006DB1CB /* ground_none.usdz in Resources */,
 				0E343AFF2A39177B006DB1CB /* ground_cactus.usdz in Resources */,
@@ -851,7 +923,6 @@
 				0E343AFB2A39177B006DB1CB /* ground_dandelion.usdz in Resources */,
 				5BCD49E72A35A24B0058079D /* STR_3D_dandelion_animation_2.scn in Resources */,
 				0EC15DD72A3BAA8D00088CDD /* Untitled 2.png in Resources */,
-				5BCD49D12A3554CB0058079D /* STR_3D_gardenground.scn in Resources */,
 				5BCD49C02A3554200058079D /* STR_3D_cottontree_animation_1.dae in Resources */,
 				5BCD49C42A3554200058079D /* STR_3D_maple_animation_2.dae in Resources */,
 			);
@@ -880,6 +951,7 @@
 				135FD8042A3A711800A99A50 /* EndingView.swift in Sources */,
 				5B254FAE2A2CCC3500E426EE /* MainView.swift in Sources */,
 				5B254FC22A2D1A6C00E426EE /* ChapterOverView.swift in Sources */,
+				5B4CBEC42A94358200B3C12D /* CoreDataManager.swift in Sources */,
 				0E343AC42A37FC6D006DB1CB /* ViewModelPhone.swift in Sources */,
 				5B254FB62A2CD5CD00E426EE /* PlantSelectView.swift in Sources */,
 				135FD7E32A38765900A99A50 /* Onboarding3.swift in Sources */,
@@ -900,9 +972,9 @@
 				135FD7E52A38767300A99A50 /* OnboardingTap.swift in Sources */,
 				1325A9822A3BA0A600B73B7B /* CardModel.swift in Sources */,
 				5B254FB42A2CD1C600E426EE /* MissionBox.swift in Sources */,
+				5B27D1682A95DDB100753481 /* Colors+.swift in Sources */,
 				135FD7F12A39073C00A99A50 /* OnboardingSkipBtn.swift in Sources */,
 				135FD7E72A38774700A99A50 /* Notification.swift in Sources */,
-				5B6FE3712A340D8100B86712 /* UserDefault.swift in Sources */,
 				135FD7D82A38750E00A99A50 /* SplashView.swift in Sources */,
 				0E343AF12A3916B7006DB1CB /* RealityKitView.swift in Sources */,
 				135FD7DB2A38753D00A99A50 /* OnboardingViewModel.swift in Sources */,
@@ -951,7 +1023,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -982,7 +1054,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -1108,15 +1180,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tori-s-Forest-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves screenshots to your photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1140,15 +1212,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tori's Forest/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5Z238234D5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Tori-s-Forest-Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app saves screenshots to your photo library.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

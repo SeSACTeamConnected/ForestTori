@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var model = ViewModelWatch()
-    
+
     private var currentDate: [String] {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko")
         formatter.dateFormat = "MM dd EEEE"
         let d = formatter.string(from: Date())
-        return d.split(separator: " ").map{String($0)}
+        return d.split(separator: " ").map {String($0)}
     }
 
     var body: some View {
@@ -51,7 +51,7 @@ struct ContentView: View {
                                 .font(.system(size: 15, weight: .medium))
                         }
                         .padding(.top, 6)
-                        
+
                         Text("\(value)")
                             .foregroundColor(Color("ListRowForegroundColor"))
                             .font(.system(size: 18, weight: .heavy))
@@ -59,7 +59,7 @@ struct ContentView: View {
                     }
                     .listRowBackground(Color("ListRowBackground").cornerRadius(10))
                     .listRowInsets(EdgeInsets(top: 2, leading: 9.44, bottom: 5, trailing: 9.44))
-                
+
                 }
             }
         }

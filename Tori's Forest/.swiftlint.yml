@@ -1,0 +1,16 @@
+disabled_rules:
+- line_length
+- trailing_whitespace
+- file_length
+- multiple_closures_with_trailing_closure
+- closing_brace
+
+opt_in_rules:
+- function_body_length
+
+excluded:
+- Pods
+
+function_body_length:
+  - 25 # warning
+  - 40 # error
